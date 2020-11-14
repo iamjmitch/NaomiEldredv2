@@ -6,9 +6,7 @@ import { Container } from "../styles/shared"
 import { NAVTRANSPARENT, NAVSOLID, WHITE, NAVHOVER } from "../styles/colors"
 import { FONT_FAMILY_HEADING, WEIGHT } from "../styles/typography"
 
-import HeaderLogoFull from "../assets/img/global/HeaderLogoFull.png"
-import HeaderLogo500 from "../assets/img/global/HeaderLogo500.png"
-import HeaderLogo400 from "../assets/img/global/HeaderLogo400.png"
+import HeaderLogo from "../assets/img/global/logo.png"
 
 const StyledNav = styled(Container)`
   position: fixed;
@@ -41,6 +39,7 @@ const ImgContainer = styled.div`
   img {
     max-width: 300px;
     margin: 0 20px;
+    padding-top: 5px;
   }
 `
 
@@ -51,7 +50,7 @@ const Nav = () => {
     if (typeof window !== `undefined`) {
       //typeof check added to prevent error on gatsby build
       document.addEventListener("scroll", () => {
-        window.pageYOffset === 0 ? setScrolled(false) : setScrolled(true)
+        window.pageYOffset <= 5 ? setScrolled(false) : setScrolled(true)
       })
     }
   })
@@ -64,11 +63,7 @@ const Nav = () => {
       <StyledLink to="/">Home</StyledLink>
       <StyledLink to="/services">Services</StyledLink>
       <ImgContainer>
-        <img
-          srcSet={`${HeaderLogoFull} 600w, ${HeaderLogo500} 500w, ${HeaderLogo400} 400w`}
-          src={HeaderLogoFull}
-          alt="Naomi Eldred - Makeup Artist"
-        ></img>
+        <img src={HeaderLogo} />
       </ImgContainer>
       <StyledLink to="/faq">FAQ</StyledLink>
       <StyledLink to="/contact">Contact</StyledLink>

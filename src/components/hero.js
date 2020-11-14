@@ -2,15 +2,15 @@ import React from "react"
 import styled from "styled-components"
 
 import { Container } from "../styles/shared"
-import { NAVTRANSPARENT, NAVSOLID, WHITE, NAVHOVER } from "../styles/colors"
-import { FONT_HERO, WEIGHT } from "../styles/typography"
+import { WHITE } from "../styles/colors"
+import { FONT_HERO } from "../styles/typography"
 
 import heroImgFull from "../assets/img/home/hero/2250.jpg"
 import heroImg1920 from "../assets/img/home/hero/1920.jpg"
 import heroImg1280 from "../assets/img/home/hero/1280.jpg"
-import HeroLogo from "../assets/svg/heroLogo.svg"
+import HeroL from "../assets/svg/heroLogo.svg"
 
-const StyledContainer = styled(Container)`
+const SStyledContainer = styled(Container)`
   position: relative;
   padding-bottom: 50px;
   svg {
@@ -39,14 +39,14 @@ const HeroHeading = styled.h1`
 
 const Hero = () => {
   return (
-    <StyledContainer height="100vh" flexDirection="column">
+    <SStyledContainer height="100vh" flexDirection="column">
       <HeroImageBG
         srcSet={`${heroImgFull} 2250w, ${heroImg1920} 1920w, ${heroImg1280} 1280w`}
         src={heroImg1280}
       />
-      <HeroLogo />
+      <HeroL />
       <HeroHeading>MAKEUP ARTIST</HeroHeading>
-    </StyledContainer>
+    </SStyledContainer>
   )
 }
 
