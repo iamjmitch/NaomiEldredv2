@@ -32,8 +32,8 @@ const StyledLink = styled(props => <Link {...props} />)`
   font-weight: 900;
   cursor: pointer;
   &:hover {
-    color: ${NAVHOVER};
     border-bottom: 1px solid ${NAVHOVER};
+    color: ${NAVHOVER};
   }
 `
 
