@@ -8,10 +8,11 @@ const StyledLayout = styled.div`
   width: 100%;
 `
 
-const Layout = () => {
+const Layout = (props) => {
   return (
     <StyledLayout>
       <Nav />
+      {props.children}
     </StyledLayout>
   )
 }

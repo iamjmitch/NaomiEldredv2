@@ -31,7 +31,6 @@ const StyledLink = styled(props => <Link {...props} />)`
   &:hover {
     color: ${NAVHOVER};
     border-bottom: 1px solid ${NAVHOVER};
-    
   }
 `
 
