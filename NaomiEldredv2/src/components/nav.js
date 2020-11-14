@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
@@ -15,6 +15,9 @@ const StyledNav = styled(Container)`
   top: 0;
   left: 0;
   font-family: ${FONT_FAMILY_HEADING};
+  z-index: 1000;
+  padding: ${props => props.padding};
+  transition: 0.5s;
 `
 
 const StyledLink = styled(props => <Link {...props} />)`
@@ -42,8 +45,22 @@ const ImgContainer = styled.div`
 `
 
 const Nav = () => {
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    if (typeof window !== `undefined`) {
+      //typeof check added to prevent error on gatsby build
+      document.addEventListener("scroll", () => {
+        window.pageYOffset === 0 ? setScrolled(false) : setScrolled(true)
+      })
+    }
+  })
+
   return (
-    <StyledNav background={NAVSOLID} padding="10px 0">
+    <StyledNav
+      background={`${scrolled ? NAVSOLID : NAVTRANSPARENT}`}
+      padding={`${scrolled ? "12px 0" : "20px 0"}`}
+    >
       <StyledLink to="/">Home</StyledLink>
       <StyledLink to="/services">Services</StyledLink>
       <ImgContainer>

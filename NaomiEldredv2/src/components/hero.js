@@ -3,26 +3,46 @@ import styled from "styled-components"
 
 import { Container } from "../styles/shared"
 import { NAVTRANSPARENT, NAVSOLID, WHITE, NAVHOVER } from "../styles/colors"
-import { FONT_FAMILY_HEADING, WEIGHT } from "../styles/typography"
+import { FONT_HERO, WEIGHT } from "../styles/typography"
 
 import heroImg from "../assets/img/home/hero.jpg"
+import HeroLogo from "../assets/svg/heroLogo.svg"
 
 const StyledContainer = styled(Container)`
-background-repeat: no-repeat;
-background-size: cover;
+  position: relative;
+  padding-bottom: 50px;
+  svg {
+    max-width: 50vw;
+  }
 `
 
-const Hero = () =>{
-return(
-    <StyledContainer height="100vh" background = {`url(${heroImg})`}>
-        
+const HeroImageBG = styled.img`
+  position: absolute;
+  z-index: -2;
+  width: 100%;
+  min-height: 100%;
+  top: -20px;
+  filter: contrast(80%);
+`
 
+const HeroHeading = styled.h1`
+  font-size: 3.5rem;
+  letter-spacing: 20px;
+  color: ${WHITE};
+  margin: 0;
+  text-shadow: rgb(0 0 0 / 52%) 2px 2px;
+  font-family: ${FONT_HERO};
+  font-weight: 300;
+`
+
+const Hero = () => {
+  return (
+    <StyledContainer height="100vh" flexDirection="column">
+      <HeroImageBG src={heroImg} />
+      <HeroLogo />
+      <HeroHeading>MAKEUP ARTIST</HeroHeading>
     </StyledContainer>
-
-
-
-)
-
+  )
 }
 
 export default Hero
