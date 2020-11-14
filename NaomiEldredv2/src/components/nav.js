@@ -3,8 +3,8 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 
 import { Container } from "../styles/shared"
-import { NAVTRANSPARENT, NAVSOLID, WHITE } from "../styles/colors"
-import { FONT_FAILY_HEADING, WEIGHT } from "../styles/typography"
+import { NAVTRANSPARENT, NAVSOLID, WHITE, NAVHOVER } from "../styles/colors"
+import { FONT_FAMILY_HEADING, WEIGHT } from "../styles/typography"
 
 import HeaderLogoFull from "../assets/img/global/HeaderLogoFull.png"
 import HeaderLogo500 from "../assets/img/global/HeaderLogo500.png"
@@ -14,7 +14,7 @@ const StyledNav = styled(Container)`
   position: fixed;
   top: 0;
   left: 0;
-  font-family: ${FONT_FAILY_HEADING};
+  font-family: ${FONT_FAMILY_HEADING};
 `
 
 const StyledLink = styled(props => <Link {...props} />)`
@@ -26,11 +26,12 @@ const StyledLink = styled(props => <Link {...props} />)`
   letter-spacing: 3px;
   border-bottom: 1px solid transparent;
   transition: 0.5s ease;
-  font-weight: ${WEIGHT.NORMAL};
+  font-weight: 900;
   cursor: pointer;
   &:hover {
-    color: red;
-    border-bottom: 1px solid red;
+    color: ${NAVHOVER};
+    border-bottom: 1px solid ${NAVHOVER};
+    
   }
 `
 
@@ -43,7 +44,7 @@ const ImgContainer = styled.div`
 
 const Nav = () => {
   return (
-    <StyledNav background={NAVTRANSPARENT} padding="10px 0">
+    <StyledNav background={NAVSOLID} padding="10px 0">
       <StyledLink to="/">Home</StyledLink>
       <StyledLink to="/services">Services</StyledLink>
       <ImgContainer>

@@ -1,4 +1,7 @@
+import React from "react"
 import styled from "styled-components"
+import {Link} from "gatsby"
+
 
 export const Container = styled.div`
   background: ${props => (props.background ? props.background : "transparent")};
@@ -12,3 +15,5 @@ export const Container = styled.div`
   padding: ${props => (props.padding ? props.padding : "0")};
   margin: ${props => (props.margin ? props.margin : "0")};
 `
+
+
