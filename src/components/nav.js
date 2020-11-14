@@ -38,6 +38,7 @@ const StyledLink = styled(props => <Link {...props} />)`
 const ImgContainer = styled.div`
   img {
     max-width: 300px;
+    width: 19vw;
     margin: 0 20px;
     padding-top: 5px;
   }
