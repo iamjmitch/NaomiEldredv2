@@ -1,0 +1,5 @@
+export const WHITE = "#fff"
+export const BLACK = "#000000"
+export const LIGHTGREY = "#f0f0f0"
+export const NAVTRANSPARENT = "rgba(35, 35, 35, 0.5)"
+export const NAVSOLID = "#232323"
