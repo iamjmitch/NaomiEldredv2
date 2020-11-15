@@ -12,7 +12,8 @@ import HeroL from "../assets/svg/heroLogo.svg"
 
 const SStyledContainer = styled(Container)`
   position: relative;
-  padding-bottom: 50px;
+  padding-bottom: 300px;
+  overflow: hidden;
   svg {
     max-width: 50vw;
   }
@@ -21,7 +22,7 @@ const SStyledContainer = styled(Container)`
 const HeroImageBG = styled.img`
   position: absolute;
   z-index: -2;
-  width: 100%;
+  min-width: 100%;
   min-height: 100%;
   top: -20px;
   filter: contrast(80%);
@@ -39,7 +40,11 @@ const HeroHeading = styled.h1`
 
 const Hero = () => {
   return (
-    <SStyledContainer height="100vh" flexDirection="column">
+    <SStyledContainer
+      height="100vh"
+      flexDirection="column"
+      boxSizing="content-box"
+    >
       <HeroImageBG
         srcSet={`${heroImgFull} 2250w, ${heroImg1920} 1920w, ${heroImg1280} 1280w`}
         src={heroImg1280}

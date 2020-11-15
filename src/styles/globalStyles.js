@@ -1,8 +1,10 @@
 import React from "react"
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
-  body {
+ 
+
+body {
     padding: 0;
     margin: 0;
   }
