@@ -46,7 +46,7 @@ const AboutPhoto = styled.img`
 const AboutMe = () => {
   return (
     <StyledContainerGrid
-      width="1280px"
+      width="1200px"
       gridTemplateCol="70% 30%"
       background="white"
     >
