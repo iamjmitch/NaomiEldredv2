@@ -63,6 +63,7 @@ const Nav = () => {
     >
       <StyledLink to="/">Home</StyledLink>
       <StyledLink to="/services">Services</StyledLink>
+      <StyledLink to="/gallery">Gallery</StyledLink>
       <ImgContainer>
         <img src={HeaderLogo} />
       </ImgContainer>
