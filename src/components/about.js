@@ -59,7 +59,7 @@ const AboutMe = () => {
           About Naomi
         </HeadingH2>
 
-        <HeadingH3 fontSize="22px" textTransform="none">
+        <HeadingH3 fontSize="22px" textTransform="none" color="#000000b0">
           Makeup has been Naomi’s passion and obsession from a very early age.
         </HeadingH3>
         <Span />
