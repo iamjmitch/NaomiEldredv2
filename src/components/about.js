@@ -24,11 +24,11 @@ const Span = styled.span`
   height: 5px;
   background-image: linear-gradient(
     to right,
-    #00000029 40%,
+    #00000029 50%,
     rgba(255, 255, 255, 0) 0%
   );
   background-position: bottom;
-  background-size: 40px 3px;
+  background-size: 5% 3px;
   background-repeat: repeat-x;
   margin: 15px 0;
   box-sizing: border-box;
