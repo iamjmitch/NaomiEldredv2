@@ -1,6 +1,4 @@
-import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
 import { FONT_FAMILY, FONT_FAMILY_HEADING, WEIGHT } from "./typography"
 
 export const Container = styled.div`

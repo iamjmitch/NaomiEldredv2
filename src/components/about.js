@@ -8,8 +8,8 @@ import {
   HeadingH3,
   ContainerGrid,
 } from "../styles/shared"
-import { FONT_FAMILY_HEADING, FONT_FAMILY, WEIGHT } from "../styles/typography"
-import { NAVHOVER, LIGHTGREY } from "../styles/colors"
+
+import { NAVHOVER } from "../styles/colors"
 
 import AboutBorder from "../assets/img/home/aboutBorder.jpg"
 import AboutImg from "../assets/img/home/naomi.jpg"
