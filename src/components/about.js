@@ -75,6 +75,14 @@ const HalfStyledContainer = styled(Container)`
   }
 `
 
+const StyledParagraph = styled(Paragraph)`
+  @media screen and (max-width: 1100px) {
+    &.notMobile {
+      display: none;
+    }
+  }
+`
+
 const AboutMe = () => {
   return (
     <StyledContainer background="white">
@@ -93,7 +101,12 @@ const AboutMe = () => {
           Makeup has been Naomi’s passion and obsession from a very early age.
         </HeadingH3>
         <Span />
-        <Paragraph textTransform="none" lineHeight="25px" fontSize="20px">
+        <StyledParagraph
+          className="notMobile"
+          textTransform="none"
+          lineHeight="25px"
+          fontSize="20px"
+        >
           As a qualified makeup artist with over 12 years industry experience,
           Naomi has worked for some of the worlds leading makeup companies, with
           most of her time spent with M.A.C cosmetics. Her years of experience
@@ -101,18 +114,23 @@ const AboutMe = () => {
           needed to create modern, up-to-date, and on trend looks which are
           adaptable to suit anyone’s makeup style and ensure you look and feel
           beautiful – whether it be soft and natural or full glam!
-        </Paragraph>
-        <Paragraph textTransform="none" lineHeight="25px" fontSize="20px">
+        </StyledParagraph>
+        <StyledParagraph textTransform="none" lineHeight="25px" fontSize="20px">
           With her passion for the industry and knowing the importance for
           beautiful makeup, Naomi will always provide a professional friendly
           service, taking pride in flawless application, attention to detail and
           distinctive individual creativity.
-        </Paragraph>
-        <Paragraph textTransform="none" lineHeight="25px" fontSize="20px">
+        </StyledParagraph>
+        <StyledParagraph
+          className="notMobile"
+          textTransform="none"
+          lineHeight="25px"
+          fontSize="20px"
+        >
           Naomi is based at her home makeup studio in North Brisbane, North
           Lakes / Mango Hill. All bridal trials, special occasion and formal
           makeup appointments are conducted at her home studio.
-        </Paragraph>
+        </StyledParagraph>
       </HalfStyledContainer>
       <HalfStyledContainer
         maxWidth="384px"
