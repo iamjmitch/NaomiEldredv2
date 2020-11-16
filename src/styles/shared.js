@@ -21,6 +21,10 @@ export const Container = styled.div`
     props.backgroundPos ? props.backgroundPos : ""};
   background-size: cover;
   box-sizing: ${props => (props.boxSizing ? props.boxSizing : "border-box")};
+  min-height: ${props => (props.minHeight ? props.minHeight : "unset")};
+  min-width: ${props => (props.minWidth ? props.minWidth : "unset")};
+  max-height: ${props => (props.maxHeight ? props.maxHeight : "unset")};
+  max-width: ${props => (props.maxWidth ? props.maxWidth : "unset")};
 `
 
 export const ContainerGrid = styled.div`

@@ -14,8 +14,12 @@ const SStyledContainer = styled(Container)`
   position: relative;
   padding-bottom: 300px;
   overflow: hidden;
+
   svg {
     max-width: 50vw;
+  }
+  @media screen and (max-width: 1100px) {
+    padding-bottom: 0;
   }
 `
 

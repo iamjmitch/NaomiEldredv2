@@ -14,9 +14,26 @@ import { NAVHOVER, LIGHTGREY } from "../styles/colors"
 import AboutBorder from "../assets/img/home/aboutBorder.jpg"
 import AboutImg from "../assets/img/home/naomi.jpg"
 
-const StyledContainerGrid = styled(ContainerGrid)`
+const StyledContainer = styled(Container)`
+  width: 1280px;
   transform: translateY(-50%);
+  justify-content: unset;
+  align-items: unset;
   box-shadow: 1px 1px 6px 1px #0000002e;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 1300px) {
+    width: 90%;
+  }
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(0%);
+    box-shadow: none;
+  }
 `
 
 const Span = styled.span`
@@ -36,24 +53,37 @@ const Span = styled.span`
 `
 
 const AboutPhoto = styled.img`
-  width: 80%;
+  max-width: 100%;
+  transform: translateX(-50px);
   border: 20px solid white;
   align-self: right;
-  transform: translateX(-15%);
   box-shadow: 1px 1px 6px 1px #0000002e;
+  box-sizing: border-box;
+  @media screen and (max-width: 1100px) {
+    transform: translateX(0);
+    max-width: 90%;
+    margin: 30px;
+  }
+`
+const HalfStyledContainer = styled(Container)`
+  @media screen and (max-width: 1100px) {
+    width: 90%;
+    max-width: unset;
+    min-width: unset;
+    margin: 0;
+    padding: 0;
+  }
 `
 
 const AboutMe = () => {
   return (
-    <StyledContainerGrid
-      width="1200px"
-      gridTemplateCol="70% 30%"
-      background="white"
-    >
-      <Container
+    <StyledContainer background="white">
+      <HalfStyledContainer
         className="rightCol"
         flexDirection="column"
-        padding="20px 50px 20px 30px"
+        padding="20px 70px 20px 30px"
+        maxWidth="896px"
+        minWidth="600px"
       >
         <HeadingH2 fontSize="70px" letterSpacing="5px" color={NAVHOVER}>
           About Naomi
@@ -83,17 +113,20 @@ const AboutMe = () => {
           Lakes / Mango Hill. All bridal trials, special occasion and formal
           makeup appointments are conducted at her home studio.
         </Paragraph>
-      </Container>
-      <Container
-        flexGrow="1"
+      </HalfStyledContainer>
+      <HalfStyledContainer
+        maxWidth="384px"
+        height="unset"
         background={`url(${AboutBorder})`}
         backgroundPos="left"
-        height="100%"
         className="leftCol"
+        padding="50px 0 "
+        alignItems="center"
+        minWidth="300px"
       >
         <AboutPhoto src={AboutImg} />
-      </Container>
-    </StyledContainerGrid>
+      </HalfStyledContainer>
+    </StyledContainer>
   )
 }
 
