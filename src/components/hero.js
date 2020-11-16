@@ -8,19 +8,47 @@ import { FONT_HERO } from "../styles/typography"
 import heroImgFull from "../assets/img/home/hero/2250.jpg"
 import heroImg1920 from "../assets/img/home/hero/1920.jpg"
 import heroImg1280 from "../assets/img/home/hero/1280.jpg"
-import HeroL from "../assets/svg/heroLogo.svg"
+import HeroLogoNaomi from "../assets/svg/heroLogoNaomi.svg"
+import HeroLogoEldred from "../assets/svg/heroLogoEldred.svg"
 
 const SStyledContainer = styled(Container)`
-  position: relative;
-  padding-bottom: 300px;
+  padding-bottom: 200px;
+  text-align: center;
   overflow: hidden;
-
+  background: url(${heroImg1280}) no-repeat fixed center top;
+  background-size: cover;
   svg {
     max-width: 50vw;
     min-width: 300px;
   }
-  @media screen and (max-width: 1100px) {
+
+  @media (min-width: 1280px) and (max-width: 1919px) {
+    background: url(${heroImg1920}) no-repeat fixed center top;
+    background-size: cover;
+  }
+  @media screen and (min-width: 1920px) {
+    background: url(${heroImgFull}) no-repeat fixed center top;
+    background-size: cover;
+  }
+  @media screen and (max-width: 725px) {
     padding-bottom: 0;
+  }
+`
+
+const LogoContainer = styled(Container)`
+  padding-bottom: 20px;
+  svg {
+    padding: 10px;
+    width: 30%;
+    height: auto;
+  }
+  @media screen and (max-width: 1100px) {
+    svg {
+      padding: 10px;
+      width: 80%;
+      height: auto;
+    }
+    flex-direction: column;
   }
 `
 
@@ -36,11 +64,17 @@ const HeroImageBG = styled.img`
 const HeroHeading = styled.h1`
   font-size: 3.5rem;
   letter-spacing: 20px;
+  text-indent: 20px;
   color: ${WHITE};
   margin: 0;
   text-shadow: rgb(0 0 0 / 52%) 2px 2px;
   font-family: ${FONT_HERO};
   font-weight: 300;
+  @media screen and (max-width: 400px) {
+    font-size: 2.5rem;
+    letter-spacing: 10px;
+    text-indent: 10px;
+  }
 `
 
 const Hero = () => {
@@ -50,11 +84,11 @@ const Hero = () => {
       flexDirection="column"
       boxSizing="content-box"
     >
-      <HeroImageBG
-        srcSet={`${heroImgFull} 2250w, ${heroImg1920} 1920w, ${heroImg1280} 1280w`}
-        src={heroImg1280}
-      />
-      <HeroL />
+      <LogoContainer>
+        <HeroLogoNaomi />
+
+        <HeroLogoEldred />
+      </LogoContainer>
       <HeroHeading>MAKEUP ARTIST</HeroHeading>
     </SStyledContainer>
   )

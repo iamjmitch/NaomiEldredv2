@@ -16,22 +16,34 @@ import AboutImg from "../assets/img/home/naomi.jpg"
 
 const StyledContainer = styled(Container)`
   width: 1280px;
-  transform: translateY(-50%);
+  margin-top: -200px;
   justify-content: unset;
   align-items: unset;
-  box-shadow: 1px 1px 6px 1px #0000002e;
+  box-shadow: 1px 2px 6px 1px #00000040;
   flex-wrap: nowrap;
   box-sizing: border-box;
 
-  @media screen and (max-width: 1300px) {
-    width: 90%;
+  @media screen and (max-width: 1350px) {
+    width: 95%;
   }
-  @media screen and (max-width: 1100px) {
-    width: 100%;
+
+  @media screen and (max-width: 850px) {
+    h2 {
+      font-size: 50px;
+    }
+    h3 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 17px;
+    }
+  }
+
+  @media screen and (max-width: 725px) {
     flex-direction: column-reverse;
-    align-items: center;
-    justify-content: center;
-    transform: translateY(0%);
+    margin-top: 0;
+    width: 100%;
+    padding: 15px;
     box-shadow: none;
   }
 `
@@ -57,21 +69,18 @@ const AboutPhoto = styled.img`
   transform: translateX(-50px);
   border: 20px solid white;
   align-self: right;
-  box-shadow: 1px 1px 6px 1px #0000002e;
+  box-shadow: 1px 2px 6px 1px #00000040;
   box-sizing: border-box;
-  @media screen and (max-width: 1100px) {
-    transform: translateX(0);
-    max-width: 90%;
-    margin: 30px;
+  @media screen and (max-width: 725px) {
+    transform: rotate(2deg);
+    max-width: 80%;
   }
 `
 const HalfStyledContainer = styled(Container)`
-  @media screen and (max-width: 1100px) {
-    width: 90%;
+  @media screen and (max-width: 725px) {
+    width: 100%;
     max-width: unset;
-    min-width: unset;
-    margin: 0;
-    padding: 0;
+    padding: 20px 0;
   }
 `
 
@@ -91,13 +100,17 @@ const AboutMe = () => {
         flexDirection="column"
         padding="20px 70px 20px 30px"
         maxWidth="896px"
-        minWidth="600px"
       >
         <HeadingH2 fontSize="70px" letterSpacing="5px" color={NAVHOVER}>
           About Naomi
         </HeadingH2>
 
-        <HeadingH3 fontSize="22px" textTransform="none" color="#000000b0">
+        <HeadingH3
+          fontSize="22px"
+          textTransform="none"
+          color="#000000b0"
+          padding="5px 15px"
+        >
           Makeup has been Naomi’s passion and obsession from a very early age.
         </HeadingH3>
         <Span />
@@ -140,7 +153,7 @@ const AboutMe = () => {
         className="leftCol"
         padding="50px 0 "
         alignItems="center"
-        minWidth="300px"
+        minWidth="200px"
       >
         <AboutPhoto src={AboutImg} />
       </HalfStyledContainer>

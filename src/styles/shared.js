@@ -25,6 +25,8 @@ export const Container = styled.div`
   min-width: ${props => (props.minWidth ? props.minWidth : "unset")};
   max-height: ${props => (props.maxHeight ? props.maxHeight : "unset")};
   max-width: ${props => (props.maxWidth ? props.maxWidth : "unset")};
+  max-width: ${props => (props.maxWidth ? props.maxWidth : "unset")};
+  text-align: ${props => (props.textAlign ? props.textAlign : "center")};
 `
 
 export const ContainerGrid = styled.div`
