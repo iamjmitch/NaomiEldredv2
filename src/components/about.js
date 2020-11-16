@@ -49,13 +49,18 @@ const StyledContainer = styled(Container)`
 `
 
 const Span = styled.span`
-  width: 90%;
+  width: 95%;
   height: 5px;
   background-image: linear-gradient(
-    to right,
-    #00000029 50%,
-    rgba(255, 255, 255, 0) 0%
+    90deg,
+    rgba(56, 51, 51, 0) 0%,
+    rgba(58, 55, 55, 0) 25%,
+    rgba(214, 214, 214, 1) 25%,
+    rgba(214, 214, 214, 1) 75%,
+    rgba(0, 0, 0, 0) 75%,
+    rgba(57, 54, 54, 0) 100%
   );
+
   background-position: bottom;
   background-size: 5% 3px;
   background-repeat: repeat-x;

@@ -16,6 +16,9 @@ const StyledNav = styled(Container)`
   z-index: 1000;
   padding: ${props => props.padding};
   transition: 0.5s;
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
 `
 
 const StyledLink = styled(props => <Link {...props} />)`
