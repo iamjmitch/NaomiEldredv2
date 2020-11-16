@@ -30,14 +30,14 @@ const StyledLink = styled(props => <Link {...props} />)`
   font-weight: 900;
   cursor: pointer;
   &:hover {
-    // border-bottom: 1px solid ${NAVHOVER};
+    border-bottom: 1px solid ${NAVHOVER};
     color: ${NAVHOVER};
   }
 `
 
 const ImgContainer = styled.div`
   img {
-    max-width: 260px;
+    max-width: 300px;
     width: 19vw;
     margin: 0 20px;
     padding-top: 5px;
@@ -68,6 +68,7 @@ const Nav = () => {
         <img src={HeaderLogo} />
       </ImgContainer>
       <StyledLink to="/faq">FAQ</StyledLink>
+      <StyledLink to="/about">About</StyledLink>
       <StyledLink to="/contact">Contact</StyledLink>
     </StyledNav>
   )
