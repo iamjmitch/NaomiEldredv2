@@ -83,9 +83,7 @@ const Hero = () => {
   useEffect(() => {
     if (typeof window !== `undefined`) {
     const updateWindowDimensions = () => {
-      const newHeight = window.innerHeight;
-      setHeaderHeight(newHeight);
-      console.log("updating height");
+      setHeaderHeight(`${window.innerHeight}px`);
     };
 
     window.addEventListener("resize", updateWindowDimensions);
