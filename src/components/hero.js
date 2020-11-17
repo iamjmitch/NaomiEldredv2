@@ -14,6 +14,7 @@ import HeroLogoNaomi from "../assets/svg/heroLogoNaomi.svg"
 import HeroLogoEldred from "../assets/svg/heroLogoEldred.svg"
 
 const SStyledContainer = styled(Container)`
+  min-height: 100vh;
   padding-bottom: 200px;
   position: relative;
   text-align: center;
