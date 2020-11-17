@@ -66,7 +66,7 @@ const StyledSpan = styled.span`
   left: 0;
   width: 100%;
   z-index: -2000;
-  height: 100%;
+  height: 100vh;
   filter: brightness(0.9);
   img {
     width: 100%;
