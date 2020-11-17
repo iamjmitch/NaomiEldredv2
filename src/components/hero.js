@@ -68,7 +68,7 @@ const HeroHeading = styled.h1`
 `
 
 const StyledSpan = styled.span`
-  position: absolute;
+  position: fixed;
   min-height: 100%;
   top: 0;
   left: 0;
