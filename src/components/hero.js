@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 
 import { Container } from "../styles/shared"
@@ -78,9 +78,20 @@ const HeroHeading = styled.h1`
 `
 
 const Hero = () => {
+  const [headerHeight, setHeaderHeight] = useState("100vh")
+
+  useEffect(() => {
+    if (typeof window !== `undefined`) {
+      //typeof check added to prevent error on gatsby build
+      widow.addEventListener("scroll", () => {
+        window.pageYOffset <= 5 ? setScrolled(false) : setScrolled(true)
+      })
+    }
+  })
+
   return (
     <SStyledContainer
-      height="100vh"
+      height={headerHeight}
       flexDirection="column"
       boxSizing="content-box"
     >
