@@ -16,7 +16,7 @@ const SStyledContainer = styled(Container)`
   text-align: center;
   overflow: hidden;
   background: url(${heroImg1280}) no-repeat fixed center top;
-  background-size: cover;
+  background-size: auto;
   svg {
     max-width: 50vw;
     min-width: 300px;
