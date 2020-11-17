@@ -79,6 +79,7 @@ const HeroHeading = styled.h1`
 
 const Hero = () => {
   const [headerHeight, setHeaderHeight] = useState("100vh")
+  const [headerWidth, setHeaderWidth] = useState("0")
   const [ischr, setIsChr] = useState("100vh")
 
   useEffect(() => {
@@ -89,6 +90,7 @@ const Hero = () => {
       setHeaderHeight(`${window.innerHeight}px`)
     }
     setHeaderHeight(`${window.innerHeight}px`)
+    setHeaderWidth(`${window.innerWidth}px`)
     if (!isChrome){
       setIsChr(false)
     window.addEventListener("resize", updateWindowDimensions);
@@ -121,7 +123,7 @@ const Hero = () => {
 
         <HeroLogoEldred />
       </LogoContainer>
-  <HeroHeading>{ischr? "is chrom" : "Not Chrome"}</HeroHeading>
+  <HeroHeading>{headerWidth} - {ischr? "Chome" : "Not Chrome" }</HeroHeading>
     </SStyledContainer>
   )
 }
