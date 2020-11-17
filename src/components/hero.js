@@ -17,29 +17,29 @@ const SStyledContainer = styled(Container)`
   padding-bottom: 200px;
   text-align: center;
   overflow: hidden;
-  background: url(${heroImg500}) no-repeat fixed left top;
-  background-size: initial;
+  // background: url(${heroImg500}) no-repeat fixed left top;
+  // background-size: initial;
   svg {
     max-width: 50vw;
     min-width: 300px;
   }
 
-  @media (min-width: 501px) and (max-width: 724px) {
-    background: url(${heroImg725}) no-repeat fixed center top;
-    background-size: cover;
-  } 
-  @media (min-width: 726px) and (max-width: 1279px) {
-    background: url(${heroImg1280}) no-repeat fixed center top;
-    background-size: cover;
-  } 
-  @media (min-width: 1280px) and (max-width: 1919px) {
-    background: url(${heroImg1920}) no-repeat fixed center top;
-    background-size: cover;
-  }
-  @media screen and (min-width: 1920px) {
-    background: url(${heroImgFull}) no-repeat fixed center top;
-    background-size: cover;
-  }
+  // @media (min-width: 501px) and (max-width: 724px) {
+  //   background: url(${heroImg725}) no-repeat fixed center top;
+  //   background-size: cover;
+  // } 
+  // @media (min-width: 726px) and (max-width: 1279px) {
+  //   background: url(${heroImg1280}) no-repeat fixed center top;
+  //   background-size: cover;
+  // } 
+  // @media (min-width: 1280px) and (max-width: 1919px) {
+  //   background: url(${heroImg1920}) no-repeat fixed center top;
+  //   background-size: cover;
+  // }
+  // @media screen and (min-width: 1920px) {
+  //   background: url(${heroImgFull}) no-repeat fixed center top;
+  //   background-size: cover;
+  // }
   @media screen and (max-width: 725px) {
     padding-bottom: 0;
     
@@ -88,35 +88,28 @@ const HeroHeading = styled.h1`
   }
 `
 
+const StyledSpan = styled.span`
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%
+img{
+  min-width: 100%;
+  min-height: 100%;
+}
+`
+
 const Hero = () => {
-  const [headerHeight, setHeaderHeight] = useState("100vh")
-  useEffect(() => {
-    // in the current version of android chrome, as the user scrolls hiding the url bar, it causes the height of the hero div to change causing a image zoom on the background image. below code is a fix to stop that jump on android chrome
-    if (typeof window !== `undefined`) {
-    const isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime)
-    const updateWindowDimensions = () => {
-      setHeaderHeight(`${window.innerHeight}px`)
-    }
-    setHeaderHeight(`${window.innerHeight}px`)
-  
-    if (window.innerWidth > 600){
-    window.addEventListener("resize", updateWindowDimensions);
-    return () => window.removeEventListener("resize", updateWindowDimensions) 
-    } 
-      
-    
-
-  }}, [])
-
-
-
-
   return (
     <SStyledContainer
-      height={headerHeight}
+      height="100vh"
       flexDirection="column"
       boxSizing="content-box"
     >
+      <StyledSpan>
+        <img srcSet={`${heroImg500} 500w, ${heroImg725} 725w, ${heroImg1280} 1280w, ${heroImg1920} 1920w, ${heroImgFull} 2200w `} src={heroImg1280}/>
+      </StyledSpan>
       <LogoContainer>
         <HeroLogoNaomi />
 
