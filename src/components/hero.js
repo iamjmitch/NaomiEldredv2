@@ -4,7 +4,6 @@ import styled from "styled-components"
 import { Container } from "../styles/shared"
 import { WHITE } from "../styles/colors"
 import { FONT_HERO } from "../styles/typography"
-
 import heroImgFull from "../assets/img/home/hero/2250.jpg"
 import heroImg1920 from "../assets/img/home/hero/1920.jpg"
 import heroImg1280 from "../assets/img/home/hero/1280.jpg"
@@ -43,6 +42,9 @@ const LogoContainer = styled(Container)`
     }
     flex-direction: column;
   }
+  @media screen and (max-width: 725px){
+    transform: scale(1.1);
+  }
 `
 const HeroHeading = styled.h1`
   font-size: 3.5rem;
@@ -55,6 +57,11 @@ const HeroHeading = styled.h1`
   font-weight: 300;
   @media screen and (max-width: 400px) {
     font-size: 2.5rem;
+    letter-spacing: 10px;
+    text-indent: 10px;
+  }
+  @media screen and (max-width: 750px){
+    font-size: 3rem;
     letter-spacing: 10px;
     text-indent: 10px;
   }

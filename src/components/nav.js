@@ -16,14 +16,14 @@ const StyledNav = styled(Container)`
   z-index: 1000;
   padding: ${props => props.padding};
   transition: 0.5s;
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 725px) {
     display: none;
   }
 `
 
 const StyledLink = styled(props => <Link {...props} />)`
   color: ${WHITE};
-  font-size: 18px;
+  font-size: 16px;
   text-decoration: none;
   margin: 0 20px;
   text-transform: uppercase;
@@ -36,6 +36,13 @@ const StyledLink = styled(props => <Link {...props} />)`
     border-bottom: 1px solid ${NAVHOVER};
     color: ${NAVHOVER};
   }
+  @media screen and (min-width:1920px){
+    font-size: 18px;
+  }
+  @media screen and (max-width:900px){
+    font-size: 14px;
+    margin: 0 10px;
+  }
 `
 
 const ImgContainer = styled.div`
@@ -44,6 +51,10 @@ const ImgContainer = styled.div`
     width: 19vw;
     margin: 0 20px;
     padding-top: 5px;
+    @media screen and (max-width:700px){
+      margin: 0 10px;
+     
+    }
   }
 `
 
