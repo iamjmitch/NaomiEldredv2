@@ -13,11 +13,11 @@ import HeroLogoNaomi from "../assets/svg/heroLogoNaomi.svg"
 import HeroLogoEldred from "../assets/svg/heroLogoEldred.svg"
 
 const SStyledContainer = styled(Container)`
-  min-height: 100vh;
-  padding-bottom: 200px;
+  height: ${props=>props.windowHeight}px;
+  padding-bottom:200px;
   position: relative;
   text-align: center;
-  overflow: hidden;
+  
   svg {
     max-width: 50vw;
     min-width: 300px;
@@ -73,7 +73,7 @@ const StyledSpan = styled.span`
   left: 0;
   width: 100%;
   z-index: -2000;
-  height: 100vh;
+  height: 100%;
   filter: brightness(0.9);
   img {
     width: 100%;
@@ -83,15 +83,37 @@ const StyledSpan = styled.span`
   }
 `
 
+const Testdiv = styled(Container)`
+overflow: hidden;
+`
+
+
 const Hero = () => {
+  const [windowHeight, setWindowHeight] = useState("100vh")
+
+  useEffect( () => {
+    if (typeof window !== 'undefined'){
+      const updateHeight = () =>{
+        setWindowHeight(window.innerHeight)
+      }
+      setWindowHeight(window.innerHeight)
+      if (window.innerWidth > 750){
+        window.addEventListener("resize", updateHeight)
+      }
+    }
+
+
+  }, []);
   return (
-    <SStyledContainer flexDirection="column" boxSizing="content-box">
-      <StyledSpan>
+    <SStyledContainer windowHeight={windowHeight} flexDirection="column" boxSizing="content-box">
+      <Testdiv>
+      <StyledSpan windowHeight={windowHeight}>
         <img
           srcSet={`${heroImg500} 500w, ${heroImg725} 725w, ${heroImg1280} 1280w, ${heroImg1920} 1920w, ${heroImgFull} 2200w `}
           src={heroImg725}
         />
       </StyledSpan>
+      </Testdiv>
       <LogoContainer>
         <HeroLogoNaomi />
 
