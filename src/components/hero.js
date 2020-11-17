@@ -79,6 +79,7 @@ const HeroHeading = styled.h1`
 
 const Hero = () => {
   const [headerHeight, setHeaderHeight] = useState("100vh")
+  const [ischr, setIsChr] = useState("100vh")
 
   useEffect(() => {
     // in the current version of android chrome, as the user scrolls hiding the url bar, it causes the height of the hero div to change causing a image zoom on the background image. below code is a fix to stop that jump on android chrome
@@ -89,13 +90,19 @@ const Hero = () => {
     }
     setHeaderHeight(`${window.innerHeight}px`)
     if (!isChrome){
+      setIsChr(false)
     window.addEventListener("resize", updateWindowDimensions);
     return () => window.removeEventListener("resize", updateWindowDimensions) 
     } else{
       if (window.innerWidth > 600){
+        setIsChr(false)
         window.addEventListener("resize", updateWindowDimensions);
     return () => window.removeEventListener("resize", updateWindowDimensions) 
       }
+        else{
+          setIsChr(true)
+        }
+      
     }
 
   }}, [])
@@ -114,7 +121,7 @@ const Hero = () => {
 
         <HeroLogoEldred />
       </LogoContainer>
-      <HeroHeading>MAKEUP ARTIST</HeroHeading>
+  <HeroHeading>{ischr? "is chrom" : "Not Chrome"}</HeroHeading>
     </SStyledContainer>
   )
 }
