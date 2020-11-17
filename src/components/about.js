@@ -22,7 +22,6 @@ const StyledContainer = styled(Container)`
   box-shadow: 1px 2px 6px 1px #00000040;
   flex-wrap: nowrap;
   box-sizing: border-box;
-  
 
   @media screen and (max-width: 1350px) {
     width: 95%;
@@ -45,7 +44,7 @@ const StyledContainer = styled(Container)`
     margin-top: 0;
     width: 100%;
     padding: 15px;
-    box-shadow: none;
+    box-shadow: 0px -2px 6px #0000005e;
   }
 `
 
@@ -100,7 +99,6 @@ const StyledParagraph = styled(Paragraph)`
 
 const AboutMe = () => {
   return (
-    
     <StyledContainer background="white">
       <HalfStyledContainer
         className="rightCol"
@@ -165,7 +163,6 @@ const AboutMe = () => {
         <AboutPhoto src={AboutImg} />
       </HalfStyledContainer>
     </StyledContainer>
-    
   )
 }
 
