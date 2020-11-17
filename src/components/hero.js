@@ -99,6 +99,9 @@ const Hero = () => {
       setWindowHeight(window.innerHeight)
       if (window.innerWidth > 750){
         window.addEventListener("resize", updateHeight)
+      }else{
+        setWindowHeight(window.innerHeight - 55)
+        console.log(window.innerHeight - 55)
       }
     }
 
