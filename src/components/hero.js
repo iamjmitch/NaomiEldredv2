@@ -78,11 +78,7 @@ const StyledSpan = styled.span`
 
 const Hero = () => {
   return (
-    <SStyledContainer
-      height="100vh"
-      flexDirection="column"
-      boxSizing="content-box"
-    >
+    <SStyledContainer flexDirection="column" boxSizing="content-box">
       <StyledSpan>
         <img
           srcSet={`${heroImg500} 500w, ${heroImg725} 725w, ${heroImg1280} 1280w, ${heroImg1920} 1920w, ${heroImgFull} 2200w `}
