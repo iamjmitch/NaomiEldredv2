@@ -8,6 +8,7 @@ import { FONT_HERO } from "../styles/typography"
 import heroImgFull from "../assets/img/home/hero/2250.jpg"
 import heroImg1920 from "../assets/img/home/hero/1920.jpg"
 import heroImg1280 from "../assets/img/home/hero/1280.jpg"
+import heroImg787 from "../assets/img/home/hero/787.jpg"
 import HeroLogoNaomi from "../assets/svg/heroLogoNaomi.svg"
 import HeroLogoEldred from "../assets/svg/heroLogoEldred.svg"
 
@@ -15,8 +16,8 @@ const SStyledContainer = styled(Container)`
   padding-bottom: 200px;
   text-align: center;
   overflow: hidden;
-  background: url(${heroImg1280}) no-repeat fixed center top;
-  background-size: auto;
+  background: url(${heroImg787}) no-repeat fixed left top;
+  background-size: cover;
   svg {
     max-width: 50vw;
     min-width: 300px;
@@ -26,12 +27,17 @@ const SStyledContainer = styled(Container)`
     background: url(${heroImg1920}) no-repeat fixed center top;
     background-size: cover;
   }
+  @media (min-width: 726px) and (max-width: 1279px) {
+    background: url(${heroImg1280}) no-repeat fixed center top;
+    background-size: cover;
+  }
   @media screen and (min-width: 1920px) {
     background: url(${heroImgFull}) no-repeat fixed center top;
     background-size: cover;
   }
   @media screen and (max-width: 725px) {
     padding-bottom: 0;
+    
   }
 `
 
