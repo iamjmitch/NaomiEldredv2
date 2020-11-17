@@ -32,10 +32,10 @@ const StyledContainer = styled(Container)`
       font-size: 50px;
     }
     h3 {
-      font-size: 18px;
+      font-size: 19px;
     }
     p {
-      font-size: 17px;
+      font-size: 20px;
     }
   }
 
