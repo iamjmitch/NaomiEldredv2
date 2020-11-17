@@ -15,34 +15,15 @@ import HeroLogoEldred from "../assets/svg/heroLogoEldred.svg"
 
 const SStyledContainer = styled(Container)`
   padding-bottom: 200px;
+  position: relative;
   text-align: center;
   overflow: hidden;
-  // background: url(${heroImg500}) no-repeat fixed left top;
-  // background-size: initial;
   svg {
     max-width: 50vw;
     min-width: 300px;
   }
-
-  // @media (min-width: 501px) and (max-width: 724px) {
-  //   background: url(${heroImg725}) no-repeat fixed center top;
-  //   background-size: cover;
-  // } 
-  // @media (min-width: 726px) and (max-width: 1279px) {
-  //   background: url(${heroImg1280}) no-repeat fixed center top;
-  //   background-size: cover;
-  // } 
-  // @media (min-width: 1280px) and (max-width: 1919px) {
-  //   background: url(${heroImg1920}) no-repeat fixed center top;
-  //   background-size: cover;
-  // }
-  // @media screen and (min-width: 1920px) {
-  //   background: url(${heroImgFull}) no-repeat fixed center top;
-  //   background-size: cover;
-  // }
   @media screen and (max-width: 725px) {
     padding-bottom: 0;
-    
   }
 `
 
@@ -62,16 +43,6 @@ const LogoContainer = styled(Container)`
     flex-direction: column;
   }
 `
-
-const HeroImageBG = styled.img`
-  position: absolute;
-  z-index: -2;
-  min-width: 100%;
-  min-height: 100%;
-  top: -20px;
-  filter: contrast(80%);
-`
-
 const HeroHeading = styled.h1`
   font-size: 3.5rem;
   letter-spacing: 20px;
@@ -89,15 +60,17 @@ const HeroHeading = styled.h1`
 `
 
 const StyledSpan = styled.span`
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%
-img{
-  min-width: 100%;
-  min-height: 100%;
-}
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -2000;
+  height: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 `
 
 const Hero = () => {
@@ -108,14 +81,17 @@ const Hero = () => {
       boxSizing="content-box"
     >
       <StyledSpan>
-        <img srcSet={`${heroImg500} 500w, ${heroImg725} 725w, ${heroImg1280} 1280w, ${heroImg1920} 1920w, ${heroImgFull} 2200w `} src={heroImg1280}/>
+        <img
+          srcSet={`${heroImg500} 500w, ${heroImg725} 725w, ${heroImg1280} 1280w, ${heroImg1920} 1920w, ${heroImgFull} 2200w `}
+          src={heroImg725}
+        />
       </StyledSpan>
       <LogoContainer>
         <HeroLogoNaomi />
 
         <HeroLogoEldred />
       </LogoContainer>
-  <HeroHeading>MAKE-UP ARTIST</HeroHeading>
+      <HeroHeading>MAKE-UP ARTIST</HeroHeading>
     </SStyledContainer>
   )
 }
