@@ -16,7 +16,7 @@ const SStyledContainer = styled(Container)`
   text-align: center;
   overflow: hidden;
   background: url(${heroImg1280}) no-repeat fixed center top;
-  background-size: initial;
+  background-size: cover;
   svg {
     max-width: 50vw;
     min-width: 300px;
@@ -81,12 +81,22 @@ const Hero = () => {
   const [headerHeight, setHeaderHeight] = useState("100vh")
 
   useEffect(() => {
+    // in the current version of android chrome, as the user scrolls hiding the url bar, it causes the height of the hero div to change causing a image zoom on the background image. below code is a fix to stop that jump on android chrome
     if (typeof window !== `undefined`) {
+    const isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime)
     const updateWindowDimensions = () => {
-      setHeaderHeight(`${window.innerHeight}px`);
-    };
+      setHeaderHeight(`${window.innerHeight}px`)
+    }
+    setHeaderHeight(`${window.innerHeight}px`)
+    if (!isChrome){
     window.addEventListener("resize", updateWindowDimensions);
     return () => window.removeEventListener("resize", updateWindowDimensions) 
+    } else{
+      if (window.innerWidth > 600){
+        window.addEventListener("resize", updateWindowDimensions);
+    return () => window.removeEventListener("resize", updateWindowDimensions) 
+      }
+    }
 
   }}, [])
 
