@@ -4,6 +4,7 @@ import styled from "styled-components"
 import { Container } from "../styles/shared"
 
 import Nav from "../components/nav"
+import Navbar from "../components/mobileNav"
 
 const StyledLayout = styled(Container)`
   min-height: 100vh;
@@ -14,6 +15,7 @@ const Layout = props => {
   return (
     <StyledLayout flexDirection="column">
       <Nav />
+      <Navbar />
       {props.children}
     </StyledLayout>
   )
