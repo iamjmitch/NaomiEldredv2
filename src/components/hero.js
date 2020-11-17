@@ -82,12 +82,20 @@ const Hero = () => {
 
   useEffect(() => {
     if (typeof window !== `undefined`) {
-      //typeof check added to prevent error on gatsby build
-      widow.addEventListener("scroll", () => {
-        window.pageYOffset <= 5 ? setScrolled(false) : setScrolled(true)
-      })
-    }
-  })
+    const updateWindowDimensions = () => {
+      const newHeight = window.innerHeight;
+      setHeaderHeight(newHeight);
+      console.log("updating height");
+    };
+
+    window.addEventListener("resize", updateWindowDimensions);
+
+    return () => window.removeEventListener("resize", updateWindowDimensions) 
+
+  }}, [])
+
+
+
 
   return (
     <SStyledContainer
