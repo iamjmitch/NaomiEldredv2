@@ -13,11 +13,11 @@ import HeroLogoNaomi from "../assets/svg/heroLogoNaomi.svg"
 import HeroLogoEldred from "../assets/svg/heroLogoEldred.svg"
 
 const SStyledContainer = styled(Container)`
-  height: ${props=>props.windowHeight}px;
-  padding-bottom:200px;
+  min-height: 100vh;
+  padding-bottom: 200px;
   position: relative;
   text-align: center;
-  
+  overflow: hidden;
   svg {
     max-width: 50vw;
     min-width: 300px;
@@ -42,7 +42,7 @@ const LogoContainer = styled(Container)`
     }
     flex-direction: column;
   }
-  @media screen and (max-width: 725px){
+  @media screen and (max-width: 725px) {
     transform: scale(1.1);
   }
 `
@@ -60,7 +60,7 @@ const HeroHeading = styled.h1`
     letter-spacing: 10px;
     text-indent: 10px;
   }
-  @media screen and (max-width: 750px){
+  @media screen and (max-width: 750px) {
     font-size: 3rem;
     letter-spacing: 10px;
     text-indent: 10px;
@@ -68,12 +68,13 @@ const HeroHeading = styled.h1`
 `
 
 const StyledSpan = styled.span`
-  position: fixed;
+  position: absolute;
+  min-height: 100%;
   top: 0;
   left: 0;
   width: 100%;
   z-index: -2000;
-  height: 100%;
+  height: 100vh;
   filter: brightness(0.9);
   img {
     width: 100%;
@@ -83,43 +84,17 @@ const StyledSpan = styled.span`
   }
 `
 
-const Testdiv = styled(Container)`
-overflow: hidden;
-`
-
-
 const Hero = () => {
-  const [windowHeight, setWindowHeight] = useState("100vh")
-
-  useEffect( () => {
-    if (typeof window !== 'undefined'){
-      const updateHeight = () =>{
-        setWindowHeight(window.innerHeight)
-      }
-      setWindowHeight(window.innerHeight)
-      if (window.innerWidth > 750){
-        window.addEventListener("resize", updateHeight)
-      }else{
-        setWindowHeight(window.innerHeight - 55)
-        console.log(window.innerHeight - 55)
-      }
-    }
-
-
-  }, []);
   return (
-    <SStyledContainer windowHeight={windowHeight} flexDirection="column" boxSizing="content-box">
-      <Testdiv>
-      <StyledSpan windowHeight={windowHeight}>
+    <SStyledContainer flexDirection="column" boxSizing="content-box">
+      <StyledSpan>
         <img
           srcSet={`${heroImg500} 500w, ${heroImg725} 725w, ${heroImg1280} 1280w, ${heroImg1920} 1920w, ${heroImgFull} 2200w `}
           src={heroImg725}
         />
       </StyledSpan>
-      </Testdiv>
       <LogoContainer>
         <HeroLogoNaomi />
-
         <HeroLogoEldred />
       </LogoContainer>
       <HeroHeading>MAKE-UP ARTIST</HeroHeading>
