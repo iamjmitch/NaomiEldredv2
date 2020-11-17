@@ -60,7 +60,7 @@ const HeroHeading = styled.h1`
 `
 
 const StyledSpan = styled.span`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -70,6 +70,7 @@ const StyledSpan = styled.span`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top center;
   }
 `
 
