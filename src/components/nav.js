@@ -33,13 +33,12 @@ const StyledLink = styled(props => <Link {...props} />)`
   font-weight: 900;
   cursor: pointer;
   &:hover {
-    border-bottom: 1px solid ${NAVHOVER};
     color: ${NAVHOVER};
   }
-  @media screen and (min-width:1920px){
+  @media screen and (min-width: 1920px) {
     font-size: 18px;
   }
-  @media screen and (max-width:900px){
+  @media screen and (max-width: 900px) {
     font-size: 14px;
     margin: 0 10px;
   }
@@ -47,13 +46,12 @@ const StyledLink = styled(props => <Link {...props} />)`
 
 const ImgContainer = styled.div`
   img {
-    max-width: 300px;
+    max-width: 250px;
     width: 19vw;
     margin: 0 20px;
     padding-top: 5px;
-    @media screen and (max-width:700px){
+    @media screen and (max-width: 700px) {
       margin: 0 10px;
-     
     }
   }
 `
@@ -78,9 +76,12 @@ const Nav = () => {
       <StyledLink to="/">Home</StyledLink>
       <StyledLink to="/services">Services</StyledLink>
       <StyledLink to="/gallery">Gallery</StyledLink>
-      <ImgContainer>
-        <img src={HeaderLogo} />
-      </ImgContainer>
+      <StyledLink to="/">
+        <ImgContainer>
+          <img src={HeaderLogo} />
+        </ImgContainer>
+      </StyledLink>
+
       <StyledLink to="/faq">FAQ</StyledLink>
       <StyledLink to="/about">About</StyledLink>
       <StyledLink to="/contact">Contact</StyledLink>

@@ -11,6 +11,7 @@ import heroImg725 from "../assets/img/home/hero/725.jpg"
 import heroImg500 from "../assets/img/home/hero/500.jpg"
 import HeroLogoNaomi from "../assets/svg/heroLogoNaomi.svg"
 import HeroLogoEldred from "../assets/svg/heroLogoEldred.svg"
+import HeroSubWords from "../assets/svg/heroSubWords.svg"
 
 const SStyledContainer = styled(Container)`
   min-height: 100vh;
@@ -18,27 +19,28 @@ const SStyledContainer = styled(Container)`
   position: relative;
   text-align: center;
   overflow: hidden;
-  svg {
-    max-width: 50vw;
-    min-width: 300px;
-  }
   @media screen and (max-width: 725px) {
     padding-bottom: 0;
   }
 `
 
 const LogoContainer = styled(Container)`
+  max-width: 60%;
+  min-width: 340px;
   padding-bottom: 20px;
+  overflow: visible;
   svg {
-    padding: 10px;
-    width: 30%;
-    height: auto;
+    padding: 0 30px;
+    width: auto;
+    height: 20vh;
+    overflow: visible;
   }
   @media screen and (max-width: 1100px) {
     svg {
       padding: 10px;
       width: 80%;
       height: auto;
+      overflow: visible;
     }
     flex-direction: column;
   }
@@ -84,6 +86,16 @@ const StyledSpan = styled.span`
   }
 `
 
+const HeroSubText = styled.div`
+  width: 40%;
+  min-width: 300px;
+  svg {
+    width: 100%;
+    display: block;
+    height: 100%;
+  }
+`
+
 const Hero = () => {
   return (
     <SStyledContainer flexDirection="column" boxSizing="content-box">
@@ -97,7 +109,9 @@ const Hero = () => {
         <HeroLogoNaomi />
         <HeroLogoEldred />
       </LogoContainer>
-      <HeroHeading>MAKE-UP ARTIST</HeroHeading>
+      <HeroSubText>
+        <HeroSubWords />
+      </HeroSubText>
     </SStyledContainer>
   )
 }
