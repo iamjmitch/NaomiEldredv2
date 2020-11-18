@@ -30,7 +30,7 @@ const StyledMobileNavBar = styled(Container)`
   box-shadow: ${props =>
     props.scrolled || props.menuOpen ? "0px 1px 7px 1px #0000009c;" : "none"};
   flex-wrap: nowrap;
-  padding: 0 15px;
+  padding: 0 10px;
   @media screen and (max-width: 725px) {
     display: flex;
   }
@@ -38,6 +38,9 @@ const StyledMobileNavBar = styled(Container)`
 
 const StyledNavLogo = styled(Container)`
   width: unset;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   max-width: 50%;
   svg {
     transition: ${transitionTime};
@@ -65,7 +68,7 @@ const Hamburger = styled.div`
     &.line1 {
       transform: ${props =>
         props.menuOpen
-          ? "rotate(45deg) translateX(6px) translateY(6px)"
+          ? "rotate(45deg) translateX(5px) translateY(6px)"
           : "rotate(0deg)"};
     }
     &.line2 {
@@ -82,19 +85,19 @@ const Hamburger = styled.div`
 
 const StyledMenu = styled.div`
   width: 100vw;
-  padding: 40px;
+  padding: 60px 40px 0 40px;
   box-sizing: border-box;
   height: calc(100vh - 55px);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   position: absolute;
   top: 55px;
   left: 0;
   transition: ${transitionTime};
   transform: ${props =>
-    !props.menuOpen ? "translate(100%, -100%)" : "translate(0%, 0%)"};
+    !props.menuOpen ? "translate(-100%, -100%)" : "translate(0%, 0%)"};
   opacity: ${props => (!props.menuOpen ? "0" : "1")};
   background: #ffffff;
   z-index: -5;
@@ -104,12 +107,12 @@ const StyledLink = styled(props => <Link {...props} />)`
   color: black;
   width: 100%;
   border-bottom: 2px solid lightgrey;
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 24px;
+  line-height: 24px;
   font-weight: ${WEIGHT.NORMAL};
   text-decoration: none;
   margin: 0;
-  padding: 12px 5px;
+  padding: 15px 5px;
   text-indent: 5px;
   text-transform: capitalize;
   text-align: left;
@@ -143,9 +146,6 @@ const MobileNav = () => {
 
   return (
     <StyledMobileNavBar scrolled={scrolled} menuOpen={menuOpen}>
-      <StyledNavLogo scrolled={scrolled} menuOpen={menuOpen}>
-        <MobileLogo />
-      </StyledNavLogo>
       <Hamburger
         scrolled={scrolled}
         onClick={navClickHandle}
@@ -155,15 +155,29 @@ const MobileNav = () => {
         <div className="line line2"></div>
         <div className="line line3"></div>
       </Hamburger>
+      <StyledNavLogo scrolled={scrolled} menuOpen={menuOpen}>
+        <MobileLogo />
+      </StyledNavLogo>
+
       <StyledMenu menuOpen={menuOpen}>
-        <StyledLink className="top" to="/">
+        <StyledLink className="top" to="/" onClick={() => setMenuOpen(false)}>
           Home
         </StyledLink>
-        <StyledLink to="/services">Services</StyledLink>
-        <StyledLink to="/gallery">Gallery</StyledLink>
-        <StyledLink to="/faq">FAQ</StyledLink>
-        <StyledLink to="/about">About</StyledLink>
-        <StyledLink to="/contact">Contact</StyledLink>
+        <StyledLink to="/services" onClick={() => setMenuOpen(false)}>
+          Services
+        </StyledLink>
+        <StyledLink to="/gallery" onClick={() => setMenuOpen(false)}>
+          Gallery
+        </StyledLink>
+        <StyledLink to="/faq" onClick={() => setMenuOpen(false)}>
+          FAQ
+        </StyledLink>
+        <StyledLink to="/about" onClick={() => setMenuOpen(false)}>
+          About
+        </StyledLink>
+        <StyledLink to="/contact" onClick={() => setMenuOpen(false)}>
+          Contact
+        </StyledLink>
       </StyledMenu>
     </StyledMobileNavBar>
   )
