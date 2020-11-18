@@ -68,7 +68,7 @@ const Footer = () => {
           NAOMI ELDRED - ©2020
         </Paragraph>
       </StyledFooter>
-      <Container background="white" padding="10px 0">
+      <Container background="#232323" padding="10px 0">
         <a
           className="iamjmitch"
           href="https://iamjmitch.com"
