@@ -82,12 +82,12 @@ const Hamburger = styled.div`
 
 const StyledMenu = styled.div`
   width: 100vw;
-  padding: 15vh 0;
+  padding: 40px;
   box-sizing: border-box;
   height: calc(100vh - 55px);
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   position: absolute;
   top: 55px;
@@ -96,19 +96,29 @@ const StyledMenu = styled.div`
   transform: ${props =>
     !props.menuOpen ? "translate(100%, -100%)" : "translate(0%, 0%)"};
   opacity: ${props => (!props.menuOpen ? "0" : "1")};
-  background: #ffffffe6;
+  background: #ffffff;
   z-index: -5;
 `
 
 const StyledLink = styled(props => <Link {...props} />)`
   color: black;
-  font-size: 30px;
-  font-weight: ${WEIGHT.BOLD};
+  width: 100%;
+  border-bottom: 2px solid lightgrey;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: ${WEIGHT.NORMAL};
   text-decoration: none;
-  margin: 0 20px;
-  text-transform: uppercase;
+  margin: 0;
+  padding: 12px 5px;
+  text-indent: 5px;
+  text-transform: capitalize;
+  text-align: left;
+
   transition: 0.2s linear;
   letter-spacing: 3px;
+  &.top {
+    border-top: 2px solid lightgrey;
+  }
   &:hover {
     color: ${NAVHOVER};
   }
@@ -146,7 +156,9 @@ const MobileNav = () => {
         <div className="line line3"></div>
       </Hamburger>
       <StyledMenu menuOpen={menuOpen}>
-        <StyledLink to="/">Home</StyledLink>
+        <StyledLink className="top" to="/">
+          Home
+        </StyledLink>
         <StyledLink to="/services">Services</StyledLink>
         <StyledLink to="/gallery">Gallery</StyledLink>
         <StyledLink to="/faq">FAQ</StyledLink>

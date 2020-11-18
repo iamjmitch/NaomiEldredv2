@@ -40,6 +40,12 @@ const StyledContainer = styled(Container)`
   }
 
   @media screen and (max-width: 725px) {
+    h2 {
+      font-size: 11vw;
+    }
+  }
+
+  @media screen and (max-width: 725px) {
     flex-direction: column-reverse;
     margin-top: 0;
     width: 100%;
