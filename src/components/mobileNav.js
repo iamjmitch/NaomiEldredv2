@@ -7,6 +7,8 @@ import { NAVTRANSPARENT, NAVSOLID, WHITE, NAVHOVER } from "../styles/colors"
 import { FONT_FAMILY_HEADING, WEIGHT } from "../styles/typography"
 
 import MobileLogo from "../assets/svg/mobileLogo.svg"
+import Facebook from "../assets/svg/facebook.svg"
+import Instagram from "../assets/svg/instagram.svg"
 
 const transitionTime = "0.4s linear"
 
@@ -85,7 +87,7 @@ const Hamburger = styled.div`
 
 const StyledMenu = styled.div`
   width: 100vw;
-  padding: 60px 40px 0 40px;
+  padding: 40px 40px 0 40px;
   box-sizing: border-box;
   height: calc(100vh - 55px);
   display: flex;
@@ -124,6 +126,32 @@ const StyledLink = styled(props => <Link {...props} />)`
   }
   &:hover {
     color: ${NAVHOVER};
+  }
+`
+
+const SocialLinkCont = styled.div`
+  display: flex;
+  width: 100%;
+  padding-top: 25px;
+  justify-content: flex-start;
+`
+
+const SocialLink = styled.a`
+  text-decoration: none;
+  transition: ${transitionTime};
+  svg {
+    display: inline=block;
+    width: 55px;
+    height: 55px;
+    margin: 0 25px 0 5px;
+    opacity: 0.8;
+    transition: ${transitionTime};
+    &:hover {
+      path {
+        fill: ${NAVHOVER};
+        opacity: 1;
+      }
+    }
   }
 `
 
@@ -178,6 +206,22 @@ const MobileNav = () => {
         <StyledLink to="/contact" onClick={() => setMenuOpen(false)}>
           Contact
         </StyledLink>
+        <SocialLinkCont>
+          <SocialLink
+            href="https://www.facebook.com/NaomiEldredMakeup"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Facebook />
+          </SocialLink>
+          <SocialLink
+            href="https://www.instagram.com/naomieldredmakeup/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Instagram />
+          </SocialLink>
+        </SocialLinkCont>
       </StyledMenu>
     </StyledMobileNavBar>
   )
