@@ -10,7 +10,7 @@ import Service2 from "../../assets/img/home/service2.jpg"
 import Service3 from "../../assets/img/home/service3.jpg"
 
 const StyledServiceBoxContainer = styled(ContainerGrid)`
-  margin-top: 200px;
+  margin-top: 100px;
   max-width: 1280px;
   margin-bottom: 200px;
   grid-gap: 30px;
@@ -19,7 +19,7 @@ const StyledServiceBoxContainer = styled(ContainerGrid)`
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   justify-content: space-between;
   @media screen and (max-width: 1300px) {
-    padding: 0 10px;
+    padding: 0 20px;
   }
   @media screen and (max-width: 1090px) {
     justify-items: center;

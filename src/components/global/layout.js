@@ -5,6 +5,7 @@ import { Container } from "../../styles/shared"
 
 import Nav from "./nav"
 import Navbar from "./mobileNav"
+import Footer from "./footer"
 
 const StyledLayout = styled(Container)`
   min-height: 100vh;
@@ -17,6 +18,7 @@ const Layout = props => {
       <Nav pageName={props.pageName} />
       <Navbar pageName={props.pageName} />
       {props.children}
+      <Footer />
     </StyledLayout>
   )
 }

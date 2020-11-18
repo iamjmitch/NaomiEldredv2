@@ -17,7 +17,7 @@ const StyledServiceBox = styled(Container)`
   box-sizing: border-box;
   flex-direction: column;
   max-width: 600px;
-  box-shadow: 1px 2px 6px 1px #00000040;
+  //   box-shadow: 1px 2px 6px 1px #00000040;
   border: 1px solid lightgrey;
   padding-bottom: 5px;
 

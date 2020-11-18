@@ -43,7 +43,7 @@ const StyledLink = styled(props => <Link {...props} />)`
     font-size: 18px;
   }
   @media screen and (max-width: 900px) {
-    font-size: 14px;
+    font-size: 13px;
     margin: 0 10px;
   }
 `

@@ -64,7 +64,7 @@ export const ContainerGrid = styled.div`
   align-items: baseline;
 `
 export const Paragraph = styled.p`
-  font-family: ${FONT_FAMILY};
+  font-family: ${props => (props.fontFamily ? props.fontFamily : FONT_FAMILY)};
   font-size: ${props => (props.fontSize ? props.fontSize : "20px")};
   padding: ${props => (props.padding ? props.padding : "10px")};
   margin: ${props => (props.margin ? props.margin : "0")};

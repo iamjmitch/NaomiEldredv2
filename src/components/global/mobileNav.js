@@ -145,7 +145,7 @@ const SocialLink = styled.a`
   text-decoration: none;
   transition: ${transitionTime};
   svg {
-    display: inline=block;
+    display: inline-block;
     width: 55px;
     height: 55px;
     margin: 0 25px 0 5px;

@@ -13,7 +13,7 @@ const StyledContainer = styled(Container)`
   margin-top: -200px;
   justify-content: unset;
   align-items: unset;
-  box-shadow: 1px 2px 6px 1px #00000040;
+  box-shadow: 1px 2px 20px 2px #b9b9b970;
   flex-wrap: nowrap;
   box-sizing: border-box;
 
@@ -119,31 +119,21 @@ const AboutMe = () => {
           Makeup has been Naomi’s passion and obsession from a very early age.
         </HeadingH3>
         <Span />
-        <StyledParagraph
-          className="notMobile"
-          textTransform="none"
-          lineHeight="25px"
-          fontSize="20px"
-        >
-          As a qualified makeup artist with over 12 years industry experience,
-          Naomi has worked for some of the worlds leading makeup companies, with
-          most of her time spent with M.A.C cosmetics. Her years of experience
-          with this leading international brand has given her the vital skills
-          needed to create modern, up-to-date, and on trend looks which are
-          adaptable to suit anyone’s makeup style and ensure you look and feel
-          beautiful – whether it be soft and natural or full glam!
+        <StyledParagraph textTransform="none" lineHeight="30px" fontSize="22px">
+          Naomi Eldred is a freelance makeup artist servicing the Northern
+          Brisbane area based from her studio located in North Lakes.
         </StyledParagraph>
-        <StyledParagraph textTransform="none" lineHeight="25px" fontSize="20px">
-          With her passion for the industry and knowing the importance for
-          beautiful makeup, Naomi will always provide a professional friendly
-          service, taking pride in flawless application, attention to detail and
-          distinctive individual creativity.
+        <StyledParagraph textTransform="none" lineHeight="30px" fontSize="22px">
+          She specialises in bridal, formal and special occasion makeup
+          application. She prides herself on producing flawless makeup with
+          attention to detail, ensuring that you not only look beautiful but you
+          feel beautiful too.
         </StyledParagraph>
         <StyledParagraph
-          className="notMobile"
           textTransform="none"
-          lineHeight="25px"
-          fontSize="20px"
+          lineHeight="30px"
+          fontSize="22px"
+          className="notMobile"
         >
           Naomi is based at her home makeup studio in North Brisbane, North
           Lakes / Mango Hill. All bridal trials, special occasion and formal

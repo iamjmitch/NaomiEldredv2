@@ -1,6 +1,6 @@
 export const FONT_FAMILY = "Old Standard TT, sans-serif"
 export const FONT_FAMILY_HEADING = "Montserrat, sans-serif"
-export const FONT_HERO = "Roboto, sans-serif"
+export const FONT_HERO = "Montserrat, sans-serif"
 
 export const WEIGHT = {
   THIN: "200",
