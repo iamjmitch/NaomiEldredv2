@@ -44,7 +44,7 @@ const StyledContainer = styled(Container)`
     margin-top: 0;
     width: 100%;
     padding: 15px;
-    box-shadow: 0px -2px 6px #0000005e;
+    box-shadow: none;
   }
 `
 

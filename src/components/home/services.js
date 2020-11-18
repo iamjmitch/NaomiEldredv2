@@ -13,7 +13,7 @@ const StyledServiceBoxContainer = styled(ContainerGrid)`
   margin-top: 200px;
   max-width: 1280px;
   margin-bottom: 200px;
-  grid-gap: 10px;
+  grid-gap: 30px;
   box-sizing: border-box;
   align-items: flex-start;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -24,7 +24,8 @@ const StyledServiceBoxContainer = styled(ContainerGrid)`
   @media screen and (max-width: 1090px) {
     justify-items: center;
     justify-content: center;
-    grid-template-columns: repeat(auto-fit, 400px);
+
+    margin-top: 100px;
   }
 
   @media screen and (max-width: 720px) {
@@ -48,6 +49,7 @@ const ServiceBoxContainer = () => {
         title="Formals"
         subtext="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et lacinia ipsum. Donec fermentum dolor at rhoncus aliquam. Curabitur ut."
         image={Service2}
+        class="middle"
       ></ServiceBox>
       <ServiceBox
         title="Special Events"

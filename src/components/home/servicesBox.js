@@ -12,17 +12,18 @@ import { NAVHOVER } from "../../styles/colors"
 
 const StyledServiceBox = styled(Container)`
   width: 100%;
+  height: 100%;
+
   box-sizing: border-box;
   flex-direction: column;
-  max-width: 400px;
+  max-width: 600px;
   box-shadow: 1px 2px 6px 1px #00000040;
   border: 1px solid lightgrey;
   padding-bottom: 5px;
-  margin-bottom: 50px;
+
   background: ${props => (props.bottomColor ? props.bottomColor : NAVHOVER)};
-  @media screen and (max-width: 1090px) {
+  @media screen and (max-width: 1129px) {
     margin-bottom: 0;
-    grid-column: span 2;
   }
   @media screen and (max-width: 725px) {
     box-shadow: none;
@@ -41,7 +42,9 @@ const ImgContainer = styled(Container)`
 
 const TextHolder = styled(Container)`
   width: 100%;
+  flex-grow: 1;
   flex-direction: column;
+  justify-content: flex-start;
   padding: 20px 20px;
   background: white;
   @media screen and (max-width: 1230px) {
@@ -84,7 +87,7 @@ const ServiceBox = props => {
       </TextHolder>
       <ReadMore>
         <StyledLink transition="0.2s linear" to="/services">
-          READ MORE
+          FIND OUT MORE
         </StyledLink>
       </ReadMore>
     </StyledServiceBox>

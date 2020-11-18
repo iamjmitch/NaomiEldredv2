@@ -130,7 +130,7 @@ const StyledLink = styled(props => <Link {...props} />)`
   }
   &.active {
     color: ${NAVHOVER}!important;
-    font-weight: 900 !important;
+    font-weight: 600 !important;
   }
 `
 
