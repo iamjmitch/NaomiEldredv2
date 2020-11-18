@@ -14,8 +14,8 @@ const StyledLayout = styled(Container)`
 const Layout = props => {
   return (
     <StyledLayout flexDirection="column">
-      <Nav />
-      <Navbar />
+      <Nav pageName={props.pageName} />
+      <Navbar pageName={props.pageName} />
       {props.children}
     </StyledLayout>
   )

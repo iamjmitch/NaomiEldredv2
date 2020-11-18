@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 import { Container } from "../styles/shared"
 import { NAVTRANSPARENT, NAVSOLID, WHITE, NAVHOVER } from "../styles/colors"
-import { FONT_FAMILY_HEADING, WEIGHT } from "../styles/typography"
+import { FONT_FAMILY_HEADING } from "../styles/typography"
 
 import HeaderLogo from "../assets/img/global/logo.png"
 
@@ -32,8 +32,12 @@ const StyledLink = styled(props => <Link {...props} />)`
   transition: 0.5s ease;
   font-weight: 900;
   cursor: pointer;
+  padding-bottom: 2px;
   &:hover {
     color: ${NAVHOVER};
+  }
+  &.active {
+    border-bottom: 1px solid white;
   }
   @media screen and (min-width: 1920px) {
     font-size: 18px;
@@ -56,7 +60,7 @@ const ImgContainer = styled.div`
   }
 `
 
-const Nav = () => {
+const Nav = props => {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -73,18 +77,45 @@ const Nav = () => {
       background={`${scrolled ? NAVSOLID : NAVTRANSPARENT}`}
       padding={`${scrolled ? "12px 0" : "20px 0"}`}
     >
-      <StyledLink to="/">Home</StyledLink>
-      <StyledLink to="/services">Services</StyledLink>
-      <StyledLink to="/gallery">Gallery</StyledLink>
+      <StyledLink className={props.pageName === "home" ? "active" : ""} to="/">
+        Home
+      </StyledLink>
+      <StyledLink
+        className={props.pageName === "services" ? "active" : ""}
+        to="/services"
+      >
+        Services
+      </StyledLink>
+      <StyledLink
+        className={props.pageName === "gallery" ? "active" : ""}
+        to="/gallery"
+      >
+        Gallery
+      </StyledLink>
       <StyledLink to="/">
         <ImgContainer>
-          <img src={HeaderLogo} />
+          <img src={HeaderLogo} alt="Naomi Eldred Make-up Artist" />
         </ImgContainer>
       </StyledLink>
 
-      <StyledLink to="/faq">FAQ</StyledLink>
-      <StyledLink to="/about">About</StyledLink>
-      <StyledLink to="/contact">Contact</StyledLink>
+      <StyledLink
+        className={props.pageName === "faq" ? "active" : ""}
+        to="/faq"
+      >
+        FAQ
+      </StyledLink>
+      <StyledLink
+        className={props.pageName === "about" ? "active" : ""}
+        to="/about"
+      >
+        About
+      </StyledLink>
+      <StyledLink
+        className={props.page === "contact" ? "active" : ""}
+        to="/contact"
+      >
+        Contact
+      </StyledLink>
     </StyledNav>
   )
 }

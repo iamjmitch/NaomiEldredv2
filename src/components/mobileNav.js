@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 
 import { Container } from "../styles/shared"
-import { NAVTRANSPARENT, NAVSOLID, WHITE, NAVHOVER } from "../styles/colors"
+import { NAVHOVER } from "../styles/colors"
 import { FONT_FAMILY_HEADING, WEIGHT } from "../styles/typography"
 
 import MobileLogo from "../assets/svg/mobileLogo.svg"
@@ -127,6 +127,10 @@ const StyledLink = styled(props => <Link {...props} />)`
   &:hover {
     color: ${NAVHOVER};
   }
+  &.active {
+    color: ${NAVHOVER}!important;
+    font-weight: 900 !important;
+  }
 `
 
 const SocialLinkCont = styled.div`
@@ -155,7 +159,7 @@ const SocialLink = styled.a`
   }
 `
 
-const MobileNav = () => {
+const MobileNav = props => {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -188,22 +192,46 @@ const MobileNav = () => {
       </StyledNavLogo>
 
       <StyledMenu menuOpen={menuOpen}>
-        <StyledLink className="top" to="/" onClick={() => setMenuOpen(false)}>
+        <StyledLink
+          className={props.pageName === "home" ? "active top" : "top"}
+          to="/"
+          onClick={() => setMenuOpen(false)}
+        >
           Home
         </StyledLink>
-        <StyledLink to="/services" onClick={() => setMenuOpen(false)}>
+        <StyledLink
+          className={props.pageName === "services" ? "active" : ""}
+          to="/services"
+          onClick={() => setMenuOpen(false)}
+        >
           Services
         </StyledLink>
-        <StyledLink to="/gallery" onClick={() => setMenuOpen(false)}>
+        <StyledLink
+          className={props.pageName === "gallery" ? "active" : ""}
+          to="/gallery"
+          onClick={() => setMenuOpen(false)}
+        >
           Gallery
         </StyledLink>
-        <StyledLink to="/faq" onClick={() => setMenuOpen(false)}>
+        <StyledLink
+          className={props.pageName === "faq" ? "active" : ""}
+          to="/faq"
+          onClick={() => setMenuOpen(false)}
+        >
           FAQ
         </StyledLink>
-        <StyledLink to="/about" onClick={() => setMenuOpen(false)}>
+        <StyledLink
+          className={props.pageName === "about" ? "active" : ""}
+          to="/about"
+          onClick={() => setMenuOpen(false)}
+        >
           About
         </StyledLink>
-        <StyledLink to="/contact" onClick={() => setMenuOpen(false)}>
+        <StyledLink
+          className={props.pageName === "contact" ? "active" : ""}
+          to="/contact"
+          onClick={() => setMenuOpen(false)}
+        >
           Contact
         </StyledLink>
         <SocialLinkCont>

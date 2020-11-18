@@ -1,13 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import {
-  Container,
-  Paragraph,
-  HeadingH2,
-  HeadingH3,
-  ContainerGrid,
-} from "../styles/shared"
+import { Container, Paragraph, HeadingH2, HeadingH3 } from "../styles/shared"
 
 import { NAVHOVER } from "../styles/colors"
 
@@ -166,7 +160,7 @@ const AboutMe = () => {
         alignItems="center"
         minWidth="200px"
       >
-        <AboutPhoto src={AboutImg} />
+        <AboutPhoto src={AboutImg} alt="" />
       </HalfStyledContainer>
     </StyledContainer>
   )

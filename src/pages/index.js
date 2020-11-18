@@ -7,13 +7,13 @@ import { Container } from "../styles/shared"
 
 const IndexPage = () => {
   return (
-    <Layout>
+    <Layout pageName="home">
       <GlobalStyle />
       <Hero />
       <Container background="white" flexDirection="column">
-      <AboutMe /><div>Hello</div>
+        <AboutMe />
+        <div>Hello</div>
       </Container>
-      
     </Layout>
   )
 }
