@@ -24,6 +24,9 @@ const StyledServiceBox = styled(Container)`
     margin-bottom: 0;
     grid-column: span 2;
   }
+  @media screen and (max-width: 725px) {
+    box-shadow: none;
+  }
 `
 
 const ImgContainer = styled(Container)`
