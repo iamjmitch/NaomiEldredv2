@@ -2,18 +2,19 @@ import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-import { Container } from "../styles/shared"
-import { NAVHOVER } from "../styles/colors"
-import { FONT_FAMILY_HEADING, WEIGHT } from "../styles/typography"
+import { Container } from "../../styles/shared"
+import { NAVHOVER } from "../../styles/colors"
+import { FONT_FAMILY_HEADING, WEIGHT } from "../../styles/typography"
 
-import MobileLogo from "../assets/svg/mobileLogo.svg"
-import Facebook from "../assets/svg/facebook.svg"
-import Instagram from "../assets/svg/instagram.svg"
+import MobileLogo from "../../assets/svg/mobileLogo.svg"
+import Facebook from "../../assets/svg/facebook.svg"
+import Instagram from "../../assets/svg/instagram.svg"
 
 const transitionTime = "0.4s linear"
 
 const StyledMobileNavBar = styled(Container)`
   height: 55px;
+  min-width: 350px;
   background: ${props =>
     props.scrolled || props.menuOpen ? "white" : "transparent"};
   width: 100vw;

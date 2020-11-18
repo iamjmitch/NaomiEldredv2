@@ -1,15 +1,16 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Container } from "../styles/shared"
-import heroImgFull from "../assets/img/home/hero/2250.jpg"
-import heroImg1920 from "../assets/img/home/hero/1920.jpg"
-import heroImg1280 from "../assets/img/home/hero/1280.jpg"
-import heroImg725 from "../assets/img/home/hero/725.jpg"
-import heroImg500 from "../assets/img/home/hero/500.jpg"
-import HeroLogoNaomi from "../assets/svg/heroLogoNaomi.svg"
-import HeroLogoEldred from "../assets/svg/heroLogoEldred.svg"
-import HeroSubWords from "../assets/svg/heroSubWords.svg"
+import { Container } from "../../styles/shared"
+
+import heroImgFull from "../../assets/img/home/hero/2250.jpg"
+import heroImg1920 from "../../assets/img/home/hero/1920.jpg"
+import heroImg1280 from "../../assets/img/home/hero/1280.jpg"
+import heroImg725 from "../../assets/img/home/hero/725.jpg"
+import heroImg500 from "../../assets/img/home/hero/500.jpg"
+import HeroLogoNaomi from "../../assets/svg/heroLogoNaomi.svg"
+import HeroLogoEldred from "../../assets/svg/heroLogoEldred.svg"
+import HeroSubWords from "../../assets/svg/heroSubWords.svg"
 
 const SStyledContainer = styled(Container)`
   min-height: 100vh;

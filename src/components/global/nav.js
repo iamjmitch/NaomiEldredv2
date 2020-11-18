@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-import { Container } from "../styles/shared"
-import { NAVTRANSPARENT, NAVSOLID, WHITE, NAVHOVER } from "../styles/colors"
-import { FONT_FAMILY_HEADING } from "../styles/typography"
+import { Container } from "../../styles/shared"
+import { NAVTRANSPARENT, NAVSOLID, WHITE, NAVHOVER } from "../../styles/colors"
+import { FONT_FAMILY_HEADING } from "../../styles/typography"
 
-import HeaderLogo from "../assets/img/global/logo.png"
+import HeaderLogo from "../../assets/img/global/logo.png"
 
 const StyledNav = styled(Container)`
   position: fixed;
@@ -30,7 +30,7 @@ const StyledLink = styled(props => <Link {...props} />)`
   letter-spacing: 3px;
   border-bottom: 1px solid transparent;
   transition: 0.5s ease;
-  font-weight: 900;
+  font-weight: 500;
   cursor: pointer;
   padding-bottom: 2px;
   &:hover {

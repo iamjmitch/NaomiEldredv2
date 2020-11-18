@@ -12,7 +12,8 @@ module.exports = {
         fonts: [
           `Yrsa:wght@200;400;700`,
           `Old+Standard+TT:wght@200;400;700`,
-          `Roboto:wght@300;400;500`,
+          `Roboto:wght@300;400;500,700,900`,
+          `Montserrat:wght@300;400;500,600,700,800,900`,
         ],
         display: "swap",
       },

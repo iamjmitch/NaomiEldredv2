@@ -1,12 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Container, Paragraph, HeadingH2, HeadingH3 } from "../styles/shared"
+import { Container, Paragraph, HeadingH2, HeadingH3 } from "../../styles/shared"
 
-import { NAVHOVER } from "../styles/colors"
+import { NAVHOVER } from "../../styles/colors"
 
-import AboutBorder from "../assets/img/home/aboutBorder.jpg"
-import AboutImg from "../assets/img/home/naomi.jpg"
+import AboutBorder from "../../assets/img/home/aboutBorder.jpg"
+import AboutImg from "../../assets/img/home/naomi.jpg"
 
 const StyledContainer = styled(Container)`
   width: 1280px;
@@ -35,7 +35,7 @@ const StyledContainer = styled(Container)`
 
   @media screen and (max-width: 725px) {
     h2 {
-      font-size: 11vw;
+      font-size: 9vw;
     }
   }
 
@@ -111,7 +111,7 @@ const AboutMe = () => {
         </HeadingH2>
 
         <HeadingH3
-          fontSize="22px"
+          fontSize="20px"
           textTransform="none"
           color="#000000b0"
           padding="5px 15px"

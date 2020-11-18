@@ -1,8 +1,10 @@
 import React from "react"
-import Layout from "../components/layout"
-import Hero from "../components/hero"
+import Layout from "../components/global/layout"
+import Hero from "../components/home/hero"
 import GlobalStyle from "../styles/globalStyles"
-import AboutMe from "../components/about"
+import AboutMe from "../components/home/about"
+import ServiceBoxContainer from "../components/home/services"
+
 import { Container } from "../styles/shared"
 
 const IndexPage = () => {
@@ -12,7 +14,7 @@ const IndexPage = () => {
       <Hero />
       <Container background="white" flexDirection="column">
         <AboutMe />
-        <div>Hello</div>
+        <ServiceBoxContainer />
       </Container>
     </Layout>
   )

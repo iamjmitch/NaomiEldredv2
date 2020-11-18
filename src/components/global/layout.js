@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Container } from "../styles/shared"
+import { Container } from "../../styles/shared"
 
-import Nav from "../components/nav"
-import Navbar from "../components/mobileNav"
+import Nav from "./nav"
+import Navbar from "./mobileNav"
 
 const StyledLayout = styled(Container)`
   min-height: 100vh;
