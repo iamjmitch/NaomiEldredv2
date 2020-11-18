@@ -12,7 +12,7 @@ import Service3 from "../../assets/img/home/service3.jpg"
 const StyledServiceBoxContainer = styled(ContainerGrid)`
   margin-top: 100px;
   max-width: 1280px;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
   grid-gap: 30px;
   box-sizing: border-box;
   align-items: flex-start;
