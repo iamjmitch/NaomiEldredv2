@@ -111,7 +111,7 @@ const Nav = props => {
         About
       </StyledLink>
       <StyledLink
-        className={props.page === "contact" ? "active" : ""}
+        className={props.pageName === "contact" ? "active" : ""}
         to="/contact"
       >
         Contact
