@@ -17,6 +17,8 @@ const StyledMobileNavBar = styled(Container)`
   min-width: 350px;
   background: ${props =>
     props.scrolled || props.menuOpen ? "white" : "transparent"};
+  // ----------- trigger for not homepage --------------
+  ${props => props.pageName !== "home" && "background: white"};
   width: 100vw;
   position: fixed;
   font-family: ${FONT_FAMILY_HEADING};
@@ -27,11 +29,18 @@ const StyledMobileNavBar = styled(Container)`
     props.scrolled && !props.menuOpen
       ? "2px solid black"
       : "2px solid transparent"};
+  // ----------- trigger for not homepage --------------
+  ${props => props.pageName !== "home" && "border-bottom:2px solid black"};
   justify-content: space-between;
   display: none;
   transition: ${transitionTime};
   box-shadow: ${props =>
-    props.scrolled || props.menuOpen ? "0px 1px 7px 1px #0000009c;" : "none"};
+    props.scrolled || props.menuOpen || props.pageName !== "home"
+      ? "0px 1px 7px 1px #0000009c;"
+      : "none"};
+  // ----------- trigger for not homepage --------------
+  ${props =>
+    props.pageName !== "home" && "box-shadow:0px 1px 7px 1px #0000009c"};
   flex-wrap: nowrap;
   padding: 0 10px;
   @media screen and (max-width: 725px) {
@@ -50,7 +59,9 @@ const StyledNavLogo = styled(Container)`
     height: 30px;
     width: auto;
     path {
-      fill: ${props => (props.scrolled || props.menuOpen ? "black" : "white")};
+      fill: ${props =>
+        props.scrolled || props.menuOpen ? "black" : "transparent"};
+      ${props => props.pageName !== "home" && "fill:black"};
     }
   }
 `
@@ -66,6 +77,7 @@ const Hamburger = styled.div`
     transition: ${transitionTime};
     background: ${props =>
       props.scrolled || props.menuOpen ? "#000000" : "#ffffff"};
+    ${props => props.pageName !== "home" && "background:black"};
     height: 3px;
     width: 80%;
     &.line1 {
@@ -178,17 +190,26 @@ const MobileNav = props => {
   }
 
   return (
-    <StyledMobileNavBar scrolled={scrolled} menuOpen={menuOpen}>
+    <StyledMobileNavBar
+      scrolled={scrolled}
+      menuOpen={menuOpen}
+      pageName={props.pageName}
+    >
       <Hamburger
         scrolled={scrolled}
         onClick={navClickHandle}
         menuOpen={menuOpen}
+        pageName={props.pageName}
       >
         <div className="line line1"></div>
         <div className="line line2"></div>
         <div className="line line3"></div>
       </Hamburger>
-      <StyledNavLogo scrolled={scrolled} menuOpen={menuOpen}>
+      <StyledNavLogo
+        scrolled={scrolled}
+        menuOpen={menuOpen}
+        pageName={props.pageName}
+      >
         <MobileLogo />
       </StyledNavLogo>
 
