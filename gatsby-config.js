@@ -1,5 +1,11 @@
 module.exports = {
+  siteMetadata: {
+    title: `Naomi Eldred Make-up Artist`,
+    description: `Make-up Artist`,
+    author: `@iamjmitch`,
+  },
   plugins: [
+    "gatsby-plugin-react-helmet",
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {

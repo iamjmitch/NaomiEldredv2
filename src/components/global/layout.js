@@ -7,6 +7,7 @@ import Nav from "./nav"
 import Navbar from "./mobileNav"
 import Footer from "./footer"
 import GlobalStyle from "../../styles/globalStyles"
+import SEO from "../global/SEO"
 
 const StyledLayout = styled.div`
   background: ${props => (props.background ? props.background : "transparent")};
@@ -41,6 +42,7 @@ const Layout = props => {
       className="pageLayoutContainer"
       {...props}
     >
+      <SEO title={props.title} />
       <GlobalStyle />
       <Nav pageName={props.pageName} />
       <Navbar pageName={props.pageName} />

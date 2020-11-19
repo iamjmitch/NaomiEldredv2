@@ -8,7 +8,7 @@ import { Container } from "../styles/shared"
 
 const IndexPage = () => {
   return (
-    <Layout pageName="home">
+    <Layout pageName="home" title="Home">
       <Hero />
       <Container background="white" flexDirection="column">
         <AboutMe />
