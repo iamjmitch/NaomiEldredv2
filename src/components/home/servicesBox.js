@@ -9,6 +9,7 @@ import {
 } from "../../styles/shared"
 
 import { NAVHOVER } from "../../styles/colors"
+import { FONT_FAMILY_HEADING } from "../../styles/typography"
 
 const StyledServiceBox = styled(Container)`
   width: 100%;
@@ -59,11 +60,12 @@ const TextHolder = styled(Container)`
   }
 `
 
-const ReadMore = styled(Container)`
+export const ReadMore = styled(Container)`
   padding: 20px 0;
   border-top: 1px solid lightgrey;
   border-bottom: 1px solid lightgrey;
   background: white;
+  font-family: ${FONT_FAMILY_HEADING};
 `
 
 const ServiceBox = props => {

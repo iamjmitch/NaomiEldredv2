@@ -10,7 +10,7 @@ import HeaderLogo from "../../assets/img/global/logo.png"
 
 const StyledNav = styled(Container)`
   position: fixed;
-  // min-height: 112.578px;
+  min-height: 96.578px;
   top: 0;
   left: 0;
   font-family: ${FONT_FAMILY_HEADING};
@@ -18,11 +18,12 @@ const StyledNav = styled(Container)`
   padding: ${props => props.padding};
   transition: 0.5s;
   background: ${props => (props.scrolled ? NAVSOLID : NAVTRANSPARENT)};
-  padding: ${props => (props.scrolled ? "12px 0" : "20px 0")};
+  padding: ${props => (props.scrolled ? "12px 0" : "12px 0 20px 0")};
   ${props => props.pageName !== "home" && `background:${NAVSOLID}`};
   ${props => props.pageName !== "home" && `padding:12px 0`};
   @media screen and (max-width: 725px) {
     display: none;
+    min-height: unset;
   }
 `
 
@@ -47,7 +48,7 @@ const StyledLink = styled(props => <Link {...props} />)`
   @media screen and (min-width: 1920px) {
     font-size: 18px;
   }
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 960px) {
     font-size: 13px;
     margin: 0 10px;
   }

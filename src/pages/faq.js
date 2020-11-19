@@ -5,9 +5,9 @@ import { Container, HeadingH1, Paragraph } from "../styles/shared"
 import Layout from "../components/global/layout"
 import PageHeader from "../components/global/pageHeader"
 
-const FaqPage = () => {
+const FaqPage = props => {
   return (
-    <Layout margin="112.578px 0 0 0" pageName="faq">
+    <Layout margin="112.578px 0 0 0" pageName="faq" title="FAQ">
       <PageHeader title="FAQ" />
       <Paragraph>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus

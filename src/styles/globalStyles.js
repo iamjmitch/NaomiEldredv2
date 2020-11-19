@@ -13,8 +13,8 @@ body {
      overflow-x:hidden;
   }
 
-  *:focus{
-    outline:none;
+  *{
+    -webkit-tap-highlight-color: transparent;
   }
 `
 

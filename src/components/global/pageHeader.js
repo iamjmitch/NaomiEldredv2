@@ -8,13 +8,32 @@ import { Container, HeadingH1, Paragraph } from "../../styles/shared"
 import { NAVHOVER } from "../../styles/colors"
 import { FONT_FAMILY_HEADING, WEIGHT } from "../../styles/typography"
 
-const StyledPageHeader = styled(Container)``
+const ImgContainer = styled(Container)`
+  height: 250px;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @media screen and (max-width: 725px) {
+    height: 175px;
+  }
+  @media screen and (max-width: 500px) {
+    height: 100px;
+  }
+`
 
 const PageHeader = props => {
   return (
-    <StyledPageHeader>
-      <HeadingH1>{props.title}</HeadingH1>
-    </StyledPageHeader>
+    <Container flexDirection="column">
+      <ImgContainer>
+        <img src={props.img} />
+      </ImgContainer>
+      <HeadingH1 padding="50px 0" fontSize="50px">
+        {props.title}
+      </HeadingH1>
+    </Container>
   )
 }
 

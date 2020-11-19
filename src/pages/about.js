@@ -5,10 +5,13 @@ import { Container, HeadingH1, Paragraph } from "../styles/shared"
 import Layout from "../components/global/layout"
 import PageHeader from "../components/global/pageHeader"
 
-const AboutPage = () => {
+const AboutPage = props => {
   return (
-    <Layout margin="112.578px 0 0 0" pageName="about">
-      <PageHeader title="About Naomi" />
+    <Layout margin="112.578px 0 0 0" pageName="about" title="About Naomi">
+      <PageHeader
+        title="About Naomi"
+        img="https://images.unsplash.com/photo-1526045478516-99145907023c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+      />
       <Paragraph>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus
         vitae nisl sit amet faucibus. Curabitur quis volutpat massa. Morbi ac

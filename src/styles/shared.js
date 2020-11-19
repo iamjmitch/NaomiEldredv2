@@ -55,13 +55,17 @@ export const ContainerGrid = styled.div`
     props.gridTemplateCol ? props.gridTemplateCol : "50% 50%"};
   background: ${props => (props.background ? props.background : "transparent")};
   width: ${props => (props.width ? props.width : "100%")};
+  max-width: ${props => (props.maxWidth ? props.maxWidth : "100%")};
   justify-content: ${props =>
     props.justifyContent ? props.justifyContent : "center"};
+  justify-items: ${props =>
+    props.justifyItems ? props.justifyItems : "center"};
   align-items: ${props => (props.alignItems ? props.alignItems : "center")};
   padding: ${props => (props.padding ? props.padding : "0")};
   margin: ${props => (props.margin ? props.margin : "0")};
   border: ${props => (props.border ? props.border : "none")};
-  align-items: baseline;
+  align-items: ${props => (props.alignItems ? props.alignItems : "baseline")};
+  box-sizing: ${props => (props.boxSizing ? props.boxSizing : "content-box")};
 `
 export const Paragraph = styled.p`
   font-family: ${props => (props.fontFamily ? props.fontFamily : FONT_FAMILY)};
