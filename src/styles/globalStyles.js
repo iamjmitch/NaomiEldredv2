@@ -12,6 +12,10 @@ body {
      background:white;
      overflow-x:hidden;
   }
+
+  *:focus{
+    outline:none;
+  }
 `
 
 export default GlobalStyle
