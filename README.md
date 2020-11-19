@@ -9,14 +9,13 @@ Remake of website for naomieldred.com. Old design used a customised WordPress th
 ## Plugins Used
 
 - Styled Components
-- Material UI
 - React Helmet
 - gatsby-plugin-google-fonts
 
-## Font Used
+## Fonts Used
 
 - Old Standard TT (Normal)
-- Yrsa (Heading)
+- Monserrat (Heading)
 
 ## Todo's
 
@@ -30,3 +29,4 @@ Remake of website for naomieldred.com. Old design used a customised WordPress th
 
 - ~~Copy Colors~~
 - ~~Copy Assets~~
+- ~~Add SEO~~

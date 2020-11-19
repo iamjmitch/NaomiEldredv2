@@ -10,12 +10,17 @@ import HeaderLogo from "../../assets/img/global/logo.png"
 
 const StyledNav = styled(Container)`
   position: fixed;
+  // min-height: 112.578px;
   top: 0;
   left: 0;
   font-family: ${FONT_FAMILY_HEADING};
   z-index: 1000;
   padding: ${props => props.padding};
   transition: 0.5s;
+  background: ${props => (props.scrolled ? NAVSOLID : NAVTRANSPARENT)};
+  padding: ${props => (props.scrolled ? "12px 0" : "20px 0")};
+  ${props => props.pageName !== "home" && `background:${NAVSOLID}`};
+  ${props => props.pageName !== "home" && `padding:12px 0`};
   @media screen and (max-width: 725px) {
     display: none;
   }
@@ -73,10 +78,7 @@ const Nav = props => {
   })
 
   return (
-    <StyledNav
-      background={`${scrolled ? NAVSOLID : NAVTRANSPARENT}`}
-      padding={`${scrolled ? "12px 0" : "20px 0"}`}
-    >
+    <StyledNav scrolled={scrolled} {...props}>
       <StyledLink className={props.pageName === "home" ? "active" : ""} to="/">
         Home
       </StyledLink>
