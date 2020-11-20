@@ -116,7 +116,7 @@ const AboutMe = () => {
           color="#000000b0"
           padding="5px 15px"
         >
-          Makeup has been Naomi’s passion and obsession from a very early age.
+          Naomi has over 13 years of industry experience
         </HeadingH3>
         <Span />
         <StyledParagraph textTransform="none" lineHeight="30px" fontSize="22px">

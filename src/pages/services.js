@@ -79,7 +79,7 @@ const ServicesPage = props => {
         <Container
           flexDirection="column"
           padding="0 0 20px 0"
-          maxWidth="1280px"
+          maxWidth="900px"
           alignItems="center"
           media="screen and (max-width:500px){align-items:flex-start;}"
         >
@@ -115,12 +115,10 @@ const ServicesPage = props => {
             textAlign="center"
           >
             All makeup trials are at the same cost as the actual makeup
-            application. <br></br> <br></br>Naomi will work with you to create a
-            look you love and won’t let you leave until you are more than 100%
-            happy.
-            <br></br> <br></br>If you have an idea of the makeup look you would
-            like, please feel free to bring along photos for your inspiration.{" "}
-            <br></br>
+            application. <br></br>Naomi will work with you to create a look you
+            love and won’t let you leave until you are more than 100% happy.
+            <br></br> If you have an idea of the makeup look you would like,
+            please feel free to bring along photos for your inspiration.
             <br></br>
             Please allow up to 1.5 hours for your makeup trial as this is time
             to really perfect and love your look.
@@ -140,13 +138,12 @@ const ServicesPage = props => {
             textAlign="center"
           >
             All bridal trials, special occasion and formal makeup appointments
-            are conducted at her home studio in Mango Hill.<br></br> <br></br>
+            are conducted at her home studio in Mango Hill.<br></br>
             Naomi will work with you to create a look you love and won’t let you
             leave until you are more than 100% happy.
-            <br></br> <br></br>Mobile services are available to groups at a
-            minimum of 2 people or more at the one location (e.g wedding
-            parties, school formal groups, etc),
-            <br></br>
+            <br></br>Mobile services are available to groups at a minimum of 2
+            people or more at the one location (e.g wedding parties, school
+            formal groups, etc),
             <br></br>Travel fees may apply depending on distance.
           </Paragraph>
         </Container>

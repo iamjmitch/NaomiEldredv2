@@ -2,7 +2,7 @@ export const SERVICECARDINFO = [
   {
     cardTitle: "TRIAL",
     cardPrice: "90",
-    cardSubText: "Conducted at Naomi’s home studio. Includes lashes",
+    cardSubText: "Conducted at Naomi’s home studio.",
     cardSmallText: false,
   },
 

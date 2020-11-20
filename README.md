@@ -14,8 +14,8 @@ Remake of website for naomieldred.com. Old design used a customised WordPress th
 
 ## Fonts Used
 
-- Old Standard TT (Normal)
-- Monserrat (Heading)
+- ~~Old Standard TT (Normal)~~
+- Monserrat (now used for all)
 
 ## Todo's
 
@@ -23,7 +23,6 @@ Remake of website for naomieldred.com. Old design used a customised WordPress th
 - Create Portfolio
 - Create contact Page
 - Create FAQ Page
-- Work out a way to incorporate Instagram feed
 
 ## Done Todo's
 
@@ -31,3 +30,4 @@ Remake of website for naomieldred.com. Old design used a customised WordPress th
 - ~~Copy Assets~~
 - ~~Add SEO~~
 - ~~Add Services Page~~
+- ~~Work out a way to incorporate Instagram feed~~
