@@ -15,6 +15,13 @@ const StyledServiceCard = styled(Container)`
   height: 100%;
   box-sizing: border-box;
   justify-content: flex-start;
+
+  @media screen and (max-width: 500px) {
+    max-width: 100%;
+    h3 {
+      font-size: 40px;
+    }
+  }
 `
 
 const StyledPrice = styled.div`
@@ -25,6 +32,25 @@ const StyledPrice = styled.div`
   width: 70px;
   height: 70px;
   border-radius: 50%;
+  
+  @media screen and (max-width: 500px) {
+    max-width: 350px;
+    width: 150px;
+  height:150px;
+    p{
+        margin-top: -10px;
+        font-size: 40px;
+        line-height: 80px
+    }
+    .price{
+        font-size: 80px;
+        margin-top:0;
+        
+        
+    }
+  }
+ 
+}
 `
 
 const PriceBuffer = styled(Container)`
@@ -34,6 +60,9 @@ const PriceBuffer = styled(Container)`
 const Enquire = styled(ReadMore)`
   font-weight: 700;
   text-transform: uppercase;
+  @media screen and (max-width: 500px) {
+    font-size: 25px;
+  }
 `
 
 const ServiceCard = props => {
@@ -58,6 +87,7 @@ const ServiceCard = props => {
               {props.cardSmallText ? "" : "$"}
             </Paragraph>
             <Paragraph
+              className="price"
               lineHeight="30px"
               fontFamily={FONT_FAMILY_HEADING}
               fontSize={props.cardSmallText ? "22px" : "30px"}
@@ -75,6 +105,7 @@ const ServiceCard = props => {
             color="black"
             padding="20px 15px"
             textAlign="center "
+            media="screen and (max-width: 500px){font-size: 25px; line-height:25px;}"
           >
             {props.cardSubText}
           </Paragraph>

@@ -36,7 +36,7 @@ export const SERVICECARDINFO = [
   {
     cardTitle: "SPECIAL OCCASION",
     cardPrice: "80",
-    cardSubText: "(Formals, Events, Glam)Includes lashes",
+    cardSubText: "(Formals, Events, Glam) Includes lashes",
     cardSmallText: false,
   },
 ]

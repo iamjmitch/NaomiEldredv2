@@ -77,6 +77,8 @@ export const Paragraph = styled.p`
   color: ${props => (props.color ? props.color : "black")};
   text-align: ${props => (props.textAlign ? props.textAlign : "justify")};
   line-height: ${props => (props.lineHeight ? props.lineHeight : "16px")};
+  ${props => props.media && `@media ${props.media}`};
+  ${props => props.other && `${props.other}`};
 `
 
 export const HeadingH1 = styled.h1`
