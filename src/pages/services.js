@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import { Container, ContainerGrid } from "../styles/shared"
+import { Container, ContainerGrid, Paragraph } from "../styles/shared"
 
 import Layout from "../components/global/layout"
 import PageHeader from "../components/global/pageHeader"
@@ -22,7 +22,7 @@ const StyledContainerGrid = styled(ContainerGrid)`
 const StyledMobileContainer = styled(Container)`
   flex-direction: column;
   padding: 0 5px;
-  margin-bottom: 50px;
+  margin-bottom: px;
   display: none;
   @media screen and (max-width: 500px) {
     display: flex;
@@ -34,7 +34,7 @@ const ServicesPage = props => {
     <Layout margin="112.578px 0 0 0" pageName="services" title="Services">
       <PageHeader
         title="Services"
-        img="https://images.unsplash.com/photo-1533562389935-457b1ae48a39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+        img="https://naomieldred.com/wp-content/uploads/2018/06/20180604_121945-1.jpg"
       />
 
       {/* ------------------------------------------------ */}
@@ -46,7 +46,7 @@ const ServicesPage = props => {
         alignItems="center"
         boxSizing="border-box"
         padding="0 20px"
-        margin="0 0 50px 0"
+        margin="0 0 20px 0"
       >
         {SERVICECARDINFO.map(item => {
           return (
@@ -72,6 +72,85 @@ const ServicesPage = props => {
           )
         })}
       </StyledMobileContainer>
+      <Container
+        other="border-top: 1px solid lightgrey; margin-top:10px"
+        media="screen and (max-width:500px){border:none;}"
+      >
+        <Container
+          flexDirection="column"
+          padding="0 0 20px 0"
+          maxWidth="1280px"
+          alignItems="center"
+          media="screen and (max-width:500px){align-items:flex-start;}"
+        >
+          <Paragraph
+            padding="20px "
+            lineHeight="30px"
+            media="screen and (max-width:500px){font-size:22px}"
+            other="font-weight:700"
+          >
+            Notes:
+          </Paragraph>
+          <Paragraph
+            padding="0 20px"
+            lineHeight="30px"
+            textAlign="center"
+            media="screen and (max-width:500px){font-size:20px;text-align:left;}"
+          >
+            Prices current as of 01 June 2018 and subject to change without
+            notice.
+          </Paragraph>
+          <Paragraph
+            padding="50px 20px 20px 20px"
+            lineHeight="30px"
+            media="screen and (max-width:500px){font-size:22px}"
+            other="font-weight:700"
+          >
+            Trials:
+          </Paragraph>
+          <Paragraph
+            padding="0 20px"
+            lineHeight="30px"
+            media="screen and (max-width:500px){font-size:20px;text-align:left;}"
+            textAlign="center"
+          >
+            All makeup trials are at the same cost as the actual makeup
+            application. <br></br> <br></br>Naomi will work with you to create a
+            look you love and won’t let you leave until you are more than 100%
+            happy.
+            <br></br> <br></br>If you have an idea of the makeup look you would
+            like, please feel free to bring along photos for your inspiration.{" "}
+            <br></br>
+            <br></br>
+            Please allow up to 1.5 hours for your makeup trial as this is time
+            to really perfect and love your look.
+          </Paragraph>
+          <Paragraph
+            padding="50px 20px 20px 20px"
+            lineHeight="30px"
+            media="screen and (max-width:500px){font-size:22px}"
+            other="font-weight:700"
+          >
+            Travel:
+          </Paragraph>
+          <Paragraph
+            padding="0 20px"
+            lineHeight="30px"
+            media="screen and (max-width:500px){font-size:20px;text-align:left;}"
+            textAlign="center"
+          >
+            All bridal trials, special occasion and formal makeup appointments
+            are conducted at her home studio in Mango Hill.<br></br> <br></br>
+            Naomi will work with you to create a look you love and won’t let you
+            leave until you are more than 100% happy.
+            <br></br> <br></br>Mobile services are available to groups at a
+            minimum of 2 people or more at the one location (e.g wedding
+            parties, school formal groups, etc),
+            <br></br>
+            <br></br>Travel fees may apply depending on distance.
+          </Paragraph>
+        </Container>
+      </Container>
     </Layout>
   )
 }

@@ -2,7 +2,7 @@ export const SERVICECARDINFO = [
   {
     cardTitle: "TRIAL",
     cardPrice: "90",
-    cardSubText: "Lashes Included",
+    cardSubText: "Conducted at Naomi’s home studio. Includes lashes",
     cardSmallText: false,
   },
 
@@ -29,14 +29,14 @@ export const SERVICECARDINFO = [
   {
     cardTitle: "FLOWER GIRLS",
     cardPrice: "POA",
-    cardSubText: "",
+    cardSubText: "Price on enquiry",
     cardSmallText: true,
   },
 
   {
     cardTitle: "SPECIAL OCCASION",
     cardPrice: "80",
-    cardSubText: "(Formals, Events, Glam) Includes lashes",
+    cardSubText: "Formals, Events, Glam. Includes lashes",
     cardSmallText: false,
   },
 ]

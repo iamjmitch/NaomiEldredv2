@@ -30,3 +30,4 @@ Remake of website for naomieldred.com. Old design used a customised WordPress th
 - ~~Copy Colors~~
 - ~~Copy Assets~~
 - ~~Add SEO~~
+- ~~Add Services Page~~

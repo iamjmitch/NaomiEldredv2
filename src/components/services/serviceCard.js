@@ -101,7 +101,7 @@ const ServiceCard = props => {
           <Paragraph
             fontSize="14px"
             fontWeight="400"
-            textTransform="capitilize"
+            textTransform="capitalize"
             color="black"
             padding="20px 15px"
             textAlign="center "

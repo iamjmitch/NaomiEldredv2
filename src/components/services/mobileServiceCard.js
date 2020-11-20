@@ -5,7 +5,7 @@ import { Container, Paragraph } from "../../styles/shared"
 import { SERVICECARDINFO } from "./serviceCardInfo"
 
 const StyledContainer = styled(Container)`
-  padding: 15px 15px;
+  padding: 15px;
   border-bottom: 1px solid lightgrey;
   box-sizing: border-box;
   &:nth-child(1) {
@@ -18,13 +18,18 @@ const MobileServiceCard = props => {
     <StyledContainer>
       <Container className="textBox" flexDirection="column">
         <Paragraph
-          fontSize="24px"
+          fontSize="22px"
           fontFamily="Montserrat"
           other="width: 100% ;font-weight:700"
         >
           {props.cardTitle}
         </Paragraph>
-        <Paragraph fontFamily="Montserrat" other="width: 100%" textAlign="left">
+        <Paragraph
+          fontFamily="Montserrat"
+          other="width: 100%"
+          textAlign="left"
+          lineHeight="22px"
+        >
           {props.cardSubText}
         </Paragraph>
       </Container>
@@ -33,7 +38,7 @@ const MobileServiceCard = props => {
         <Paragraph
           fontFamily="Montserrat"
           other="font-weight:600"
-          fontSize="35px"
+          fontSize="25px"
         >
           {props.cardSmallText ? "" : "$"}
           {props.cardPrice}

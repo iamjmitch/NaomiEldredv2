@@ -29,6 +29,8 @@ export const Container = styled.div`
   max-width: ${props => (props.maxWidth ? props.maxWidth : "unset")};
   max-width: ${props => (props.maxWidth ? props.maxWidth : "unset")};
   text-align: ${props => (props.textAlign ? props.textAlign : "center")};
+  ${props => props.media && `@media ${props.media}`};
+  ${props => props.other && `${props.other}`};
 `
 export const StyledLink = styled(props => <Link {...props} />)`
   text-decoration: ${props =>
