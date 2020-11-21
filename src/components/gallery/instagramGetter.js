@@ -1,6 +1,7 @@
 import axios from "axios"
 import React, { useState } from "react"
 import styled from "styled-components"
+import Thumbnail from "./thumbnail"
 
 const InstagramPhotos = () => {
   const [photoList, setPhotoList] = useState([])
@@ -38,11 +39,13 @@ const InstagramPhotos = () => {
 
   return (
     <div>
-      {photoList.map(post => (
-        <div>
-          <img src={post.thumbnailUrl} /> <p>{post.caption}</p>
-        </div>
-      ))}
+      {photoList !== [] &&
+        photoList.map(post => (
+          <div>
+            <Thumbnail thumb={post.thumbnailUrl} />
+            <img src={post.thumbnailUrl} />
+          </div>
+        ))}
     </div>
   )
 }
