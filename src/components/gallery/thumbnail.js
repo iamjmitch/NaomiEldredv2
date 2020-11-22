@@ -7,7 +7,7 @@ import { Container, Paragraph } from "../../styles/shared"
 const StyledThumbnail = styled(Container)`
   width: 200px;
   height: 200px;
-  background: black;
+  background: ${props => props.thumb};
 `
 
 const Thumbnail = props => {

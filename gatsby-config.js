@@ -5,7 +5,25 @@ module.exports = {
     author: `@iamjmitch`,
   },
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/assets/img/gallery`,
+        name: "images",
+      },
+    },
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        stylesProvider: {
+          injectFirst: true,
+        },
+      },
+    },
+
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
@@ -15,12 +33,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `Yrsa:wght@200;400;700`,
-          `Old+Standard+TT:wght@200;400;700`,
-          `Roboto:wght@300;400;500,700,900`,
-          `Montserrat:wght@300;400;500,600,700,800,900`,
-        ],
+        fonts: [`Montserrat:wght@300;400;500,600,700,800,900`],
         display: "swap",
       },
     },

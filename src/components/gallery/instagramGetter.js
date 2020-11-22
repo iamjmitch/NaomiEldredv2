@@ -43,7 +43,6 @@ const InstagramPhotos = () => {
         photoList.map(post => (
           <div>
             <Thumbnail thumb={post.thumbnailUrl} />
-            <img src={post.thumbnailUrl} />
           </div>
         ))}
     </div>

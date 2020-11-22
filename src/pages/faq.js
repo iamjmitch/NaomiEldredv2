@@ -4,121 +4,23 @@ import styled from "styled-components"
 import { Container, HeadingH1, Paragraph } from "../styles/shared"
 import Layout from "../components/global/layout"
 import PageHeader from "../components/global/pageHeader"
+import SimpleAccordion from "../components/faq/accordion"
+import { FAQLIST } from "../components/faq/faqList"
 
 const FaqPage = props => {
   return (
     <Layout margin="112.578px 0 0 0" pageName="faq" title="FAQ">
       <PageHeader title="FAQ" />
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus
-        vitae nisl sit amet faucibus. Curabitur quis volutpat massa. Morbi ac
-        tellus odio. Praesent molestie velit vitae justo elementum, non iaculis
-        ex lacinia. Nullam nec consectetur libero. Mauris odio quam, scelerisque
-        ac diam nec, cursus volutpat urna. Praesent non molestie justo,
-        pellentesque lacinia neque. Sed iaculis interdum nibh, et tristique orci
-        efficitur ac. Vestibulum porta est eget venenatis commodo. Sed nec nunc
-        lorem. Aliquam ultrices libero fermentum eros porta consectetur.
-      </Paragraph>
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus
-        vitae nisl sit amet faucibus. Curabitur quis volutpat massa. Morbi ac
-        tellus odio. Praesent molestie velit vitae justo elementum, non iaculis
-        ex lacinia. Nullam nec consectetur libero. Mauris odio quam, scelerisque
-        ac diam nec, cursus volutpat urna. Praesent non molestie justo,
-        pellentesque lacinia neque. Sed iaculis interdum nibh, et tristique orci
-        efficitur ac. Vestibulum porta est eget venenatis commodo. Sed nec nunc
-        lorem. Aliquam ultrices libero fermentum eros porta consectetur.
-      </Paragraph>
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus
-        vitae nisl sit amet faucibus. Curabitur quis volutpat massa. Morbi ac
-        tellus odio. Praesent molestie velit vitae justo elementum, non iaculis
-        ex lacinia. Nullam nec consectetur libero. Mauris odio quam, scelerisque
-        ac diam nec, cursus volutpat urna. Praesent non molestie justo,
-        pellentesque lacinia neque. Sed iaculis interdum nibh, et tristique orci
-        efficitur ac. Vestibulum porta est eget venenatis commodo. Sed nec nunc
-        lorem. Aliquam ultrices libero fermentum eros porta consectetur.
-      </Paragraph>
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus
-        vitae nisl sit amet faucibus. Curabitur quis volutpat massa. Morbi ac
-        tellus odio. Praesent molestie velit vitae justo elementum, non iaculis
-        ex lacinia. Nullam nec consectetur libero. Mauris odio quam, scelerisque
-        ac diam nec, cursus volutpat urna. Praesent non molestie justo,
-        pellentesque lacinia neque. Sed iaculis interdum nibh, et tristique orci
-        efficitur ac. Vestibulum porta est eget venenatis commodo. Sed nec nunc
-        lorem. Aliquam ultrices libero fermentum eros porta consectetur.
-      </Paragraph>
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus
-        vitae nisl sit amet faucibus. Curabitur quis volutpat massa. Morbi ac
-        tellus odio. Praesent molestie velit vitae justo elementum, non iaculis
-        ex lacinia. Nullam nec consectetur libero. Mauris odio quam, scelerisque
-        ac diam nec, cursus volutpat urna. Praesent non molestie justo,
-        pellentesque lacinia neque. Sed iaculis interdum nibh, et tristique orci
-        efficitur ac. Vestibulum porta est eget venenatis commodo. Sed nec nunc
-        lorem. Aliquam ultrices libero fermentum eros porta consectetur.
-      </Paragraph>
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus
-        vitae nisl sit amet faucibus. Curabitur quis volutpat massa. Morbi ac
-        tellus odio. Praesent molestie velit vitae justo elementum, non iaculis
-        ex lacinia. Nullam nec consectetur libero. Mauris odio quam, scelerisque
-        ac diam nec, cursus volutpat urna. Praesent non molestie justo,
-        pellentesque lacinia neque. Sed iaculis interdum nibh, et tristique orci
-        efficitur ac. Vestibulum porta est eget venenatis commodo. Sed nec nunc
-        lorem. Aliquam ultrices libero fermentum eros porta consectetur.
-      </Paragraph>
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus
-        vitae nisl sit amet faucibus. Curabitur quis volutpat massa. Morbi ac
-        tellus odio. Praesent molestie velit vitae justo elementum, non iaculis
-        ex lacinia. Nullam nec consectetur libero. Mauris odio quam, scelerisque
-        ac diam nec, cursus volutpat urna. Praesent non molestie justo,
-        pellentesque lacinia neque. Sed iaculis interdum nibh, et tristique orci
-        efficitur ac. Vestibulum porta est eget venenatis commodo. Sed nec nunc
-        lorem. Aliquam ultrices libero fermentum eros porta consectetur.
-      </Paragraph>
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus
-        vitae nisl sit amet faucibus. Curabitur quis volutpat massa. Morbi ac
-        tellus odio. Praesent molestie velit vitae justo elementum, non iaculis
-        ex lacinia. Nullam nec consectetur libero. Mauris odio quam, scelerisque
-        ac diam nec, cursus volutpat urna. Praesent non molestie justo,
-        pellentesque lacinia neque. Sed iaculis interdum nibh, et tristique orci
-        efficitur ac. Vestibulum porta est eget venenatis commodo. Sed nec nunc
-        lorem. Aliquam ultrices libero fermentum eros porta consectetur.
-      </Paragraph>
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus
-        vitae nisl sit amet faucibus. Curabitur quis volutpat massa. Morbi ac
-        tellus odio. Praesent molestie velit vitae justo elementum, non iaculis
-        ex lacinia. Nullam nec consectetur libero. Mauris odio quam, scelerisque
-        ac diam nec, cursus volutpat urna. Praesent non molestie justo,
-        pellentesque lacinia neque. Sed iaculis interdum nibh, et tristique orci
-        efficitur ac. Vestibulum porta est eget venenatis commodo. Sed nec nunc
-        lorem. Aliquam ultrices libero fermentum eros porta consectetur.
-      </Paragraph>
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus
-        vitae nisl sit amet faucibus. Curabitur quis volutpat massa. Morbi ac
-        tellus odio. Praesent molestie velit vitae justo elementum, non iaculis
-        ex lacinia. Nullam nec consectetur libero. Mauris odio quam, scelerisque
-        ac diam nec, cursus volutpat urna. Praesent non molestie justo,
-        pellentesque lacinia neque. Sed iaculis interdum nibh, et tristique orci
-        efficitur ac. Vestibulum porta est eget venenatis commodo. Sed nec nunc
-        lorem. Aliquam ultrices libero fermentum eros porta consectetur.
-      </Paragraph>
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus
-        vitae nisl sit amet faucibus. Curabitur quis volutpat massa. Morbi ac
-        tellus odio. Praesent molestie velit vitae justo elementum, non iaculis
-        ex lacinia. Nullam nec consectetur libero. Mauris odio quam, scelerisque
-        ac diam nec, cursus volutpat urna. Praesent non molestie justo,
-        pellentesque lacinia neque. Sed iaculis interdum nibh, et tristique orci
-        efficitur ac. Vestibulum porta est eget venenatis commodo. Sed nec nunc
-        lorem. Aliquam ultrices libero fermentum eros porta consectetur.
-      </Paragraph>
+      <Container
+        maxWidth="800px"
+        flexDirection="column"
+        margin=" 0 0 50px 0"
+        media="screen and (max-width:500px){padding: 0 20px}"
+      >
+        {FAQLIST.map(faq => (
+          <SimpleAccordion question={faq.question} answer={faq.answer} />
+        ))}
+      </Container>
     </Layout>
   )
 }
