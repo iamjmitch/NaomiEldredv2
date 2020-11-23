@@ -28,6 +28,7 @@
     "gatsby-plugin-styled-components": "^3.4.0",
     "gatsby-source-filesystem": "^2.6.0",
     "gatsby-transformer-sharp": "^2.7.0",
+    "instagrammer": "^1.0.11",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",

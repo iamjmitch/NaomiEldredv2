@@ -5,9 +5,13 @@ import { Container, ContainerGrid, Paragraph } from "../styles/shared"
 
 import Layout from "../components/global/layout"
 import PageHeader from "../components/global/pageHeader"
-import { SERVICECARDINFO } from "../components/services/serviceCardInfo"
+import {
+  SERVICECARDINFO,
+  SERVICENOTES,
+} from "../components/services/serviceCardInfo"
 import ServiceCard from "../components/services/serviceCard"
 import MobileServiceCard from "../components/services/mobileServiceCard"
+import SimpleAccordion from "../components/faq/accordion"
 
 const StyledContainerGrid = styled(ContainerGrid)`
   @media screen and (max-width: 680px) {
@@ -21,7 +25,7 @@ const StyledContainerGrid = styled(ContainerGrid)`
 
 const StyledMobileContainer = styled(Container)`
   flex-direction: column;
-  padding: 0 5px;
+  padding: 0 20px;
   margin-bottom: px;
   display: none;
   @media screen and (max-width: 500px) {
@@ -73,80 +77,15 @@ const ServicesPage = props => {
         })}
       </StyledMobileContainer>
       <Container
-        other="border-top: 1px solid lightgrey; margin-top:10px"
-        media="screen and (max-width:500px){border:none;}"
+        maxWidth="750px"
+        flexDirection="column"
+        padding="0 20px"
+        margin="50px 0"
+        other="@media screen and (max-width:500px){margin-top:0px;}"
       >
-        <Container
-          flexDirection="column"
-          padding="0 0 20px 0"
-          maxWidth="900px"
-          alignItems="center"
-          media="screen and (max-width:500px){align-items:flex-start;}"
-        >
-          <Paragraph
-            padding="20px "
-            lineHeight="30px"
-            media="screen and (max-width:500px){font-size:22px}"
-            other="font-weight:700"
-          >
-            Notes:
-          </Paragraph>
-          <Paragraph
-            padding="0 20px"
-            lineHeight="30px"
-            textAlign="center"
-            media="screen and (max-width:500px){font-size:20px;text-align:left;}"
-          >
-            Prices current as of 01 June 2018 and subject to change without
-            notice.
-          </Paragraph>
-          <Paragraph
-            padding="50px 20px 20px 20px"
-            lineHeight="30px"
-            media="screen and (max-width:500px){font-size:22px}"
-            other="font-weight:700"
-          >
-            Trials:
-          </Paragraph>
-          <Paragraph
-            padding="0 20px"
-            lineHeight="30px"
-            media="screen and (max-width:500px){font-size:20px;text-align:left;}"
-            textAlign="center"
-          >
-            All makeup trials are at the same cost as the actual makeup
-            application. <br></br>Naomi will work with you to create a look you
-            love and won’t let you leave until you are more than 100% happy.
-            <br></br> If you have an idea of the makeup look you would like,
-            please feel free to bring along photos for your inspiration.
-            <br></br>
-            Please allow up to 1.5 hours for your makeup trial as this is time
-            to really perfect and love your look.
-          </Paragraph>
-          <Paragraph
-            padding="50px 20px 20px 20px"
-            lineHeight="30px"
-            media="screen and (max-width:500px){font-size:22px}"
-            other="font-weight:700"
-          >
-            Travel:
-          </Paragraph>
-          <Paragraph
-            padding="0 20px"
-            lineHeight="30px"
-            media="screen and (max-width:500px){font-size:20px;text-align:left;}"
-            textAlign="center"
-          >
-            All bridal trials, special occasion and formal makeup appointments
-            are conducted at her home studio in Mango Hill.<br></br>
-            Naomi will work with you to create a look you love and won’t let you
-            leave until you are more than 100% happy.
-            <br></br>Mobile services are available to groups at a minimum of 2
-            people or more at the one location (e.g wedding parties, school
-            formal groups, etc),
-            <br></br>Travel fees may apply depending on distance.
-          </Paragraph>
-        </Container>
+        {SERVICENOTES.map(faq => (
+          <SimpleAccordion question={faq.question} answer={faq.answer} />
+        ))}
       </Container>
     </Layout>
   )
