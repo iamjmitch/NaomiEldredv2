@@ -66,6 +66,9 @@ export const ReadMore = styled(Container)`
   border-bottom: 1px solid lightgrey;
   background: white;
   font-family: ${FONT_FAMILY_HEADING};
+  @media screen and (max-width: 725px) {
+    font-size: 18px;
+  }
 `
 
 const ServiceBox = props => {
@@ -88,7 +91,11 @@ const ServiceBox = props => {
         </Paragraph>
       </TextHolder>
       <ReadMore>
-        <StyledLink transition="0.2s linear" to="/services">
+        <StyledLink
+          transition="0.2s linear"
+          to="/services"
+          other="@media screen and (max-width:725px){font-size:18px}"
+        >
           FIND OUT MORE
         </StyledLink>
       </ReadMore>

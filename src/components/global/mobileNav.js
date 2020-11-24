@@ -31,6 +31,8 @@ const StyledMobileNavBar = styled(Container)`
       : "2px solid transparent"};
   // ----------- trigger for not homepage --------------
   ${props => props.pageName !== "home" && "border-bottom:2px solid black"};
+  border-bottom: ${props =>
+    !props.menuOpen ? "2px solid black" : "2px solid transparent"};
   justify-content: space-between;
   display: none;
   transition: ${transitionTime};
