@@ -1,111 +1,57 @@
 import React, { useState } from "react"
 import styled from "styled-components"
+import { Container, HeadingH2 } from "../../styles/shared"
+import { FONT_FAMILY, FONT_FAMILY_HEADING } from "../../styles/typography"
+import { NAVHOVER } from "../../styles/colors"
+import Button from "@material-ui/core/Button"
 
-const Container = styled.div`
-  background: #151515;
-`
-const FormContainer = styled.div`
+const Heading = styled.div``
+const Form = styled.form`
   width: 100%;
-  display: flex;
+  box-sizing: border-box;
+`
+const LineWrapper = styled(Container)`
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 100px 0;
-  max-width: 500px;
-  margin: 0 auto;
-  @media (max-width: 540px) {
-    padding: 100px 20px;
-  }
-  form {
-    overflow: visible;
-    position: relative;
-    width: 100%;
-    div {
-      display: flex;
-      flex-direction: column;
-      span {
-        position: absolute;
-        transition: 0.4s;
-        right: 0;
-        bottom: 35px;
-        z-index: 0;
-      }
-      label {
-        color: #fc2602;
-        margin: 10px 0 3px 0;
-        text-transform: uppercase;
-        font-size: 0.9rem;
-      }
-      input,
-      textarea {
-        background: #262626;
-        border: none;
-        padding: 3px 8px;
-        color: white;
-        text-transform: capitalize;
-        resize: none;
-        z-index: 1;
-      }
-      input[type="email"] {
-        text-transform: lowercase;
-      }
-      textarea {
-        &:focus + span {
-          transform: translateX(100%);
-          bottom: 60px;
-        }
-      }
+  align-items: flex-start;
+  box-sizing: border-box;
+  margin: 10px;
+  font-family: ${FONT_FAMILY};
+  font-size: 16px;
+  label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    @media screen and (max-width: 600px) {
+      font-size: 18px;
     }
-    li {
-      list-style: none;
-      div {
-        background: #fc2602;
-        margin: 10px 0;
-        transition: 0.3s;
-        p {
-          color: white;
-        }
-      }
-      button {
-        background: #fc2602;
-        color: white;
-        min-width: 50px;
-        border: none;
-        font-size: 0.9rem;
-        font-weight: 600;
-        padding: 6px 30px;
-        font-family: "Poppins", sans-serif;
-        margin-top: 10px;
-        cursor: pointer;
-        z-index: 999;
-        align-self: center;
-        transition: all 0.5s;
-        list-style: none;
-        width: 100%;
-        &:hover {
-          color: #fc2602;
-          box-shadow: inset 600px 0px 9px 0px rgb(255 255 255);
-        }
-        @media (max-width: 500px) {
-          padding: 10px;
-        }
-      }
+  }
+  input,
+  textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    font-family: ${FONT_FAMILY};
+    border: 1px solid lightgrey;
+    @media screen and (max-width: 600px) {
+      font-size: 18px;
+      padding: 10px 5px;
     }
   }
 `
 
-const Heading = styled.div`
-  text-align: center;
-  padding-bottom: 30px;
-  h4 {
-    color: #fc2602;
-    font-size: 1.9rem;
-    font-weight: 600;
+const LineCont = styled(Container)`
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
   }
-  h5 {
-    color: #fff;
-    font-size: 0.8rem;
-    font-weight: 500;
+`
+const Submit = styled(Button)`
+  background: ${NAVHOVER};
+  color: white;
+  font-family: ${FONT_FAMILY};
+  font-weight: 600;
+  width: 100%;
+  transition: 0.3s linear;
+  &:hover {
+    background: black;
   }
 `
 
@@ -137,21 +83,18 @@ const ContactForm = props => {
   }
 
   return (
-    <Container id="contact">
-      <FormContainer>
-        <Heading>
-          <h4 data-sal="slide-left" data-sal-easing="ease" data-sal-delay="200">
-            CONTACT ME
-          </h4>
-          <h5
-            data-sal="slide-right"
-            data-sal-easing="ease"
-            data-sal-delay="200"
-          >
-            * REQUIRED FIELDS
-          </h5>
-        </Heading>
-        <form
+    <Container
+      id="contact"
+      flexDirection="column"
+      maxWidth="600px"
+      padding="0 15px"
+      other="margin-bottom: 50px;"
+    >
+      <Container flexDirection="column">
+        <HeadingH2 fontSize="16px" textTransform="none" padding="0 0 15px 0">
+          Required*
+        </HeadingH2>
+        <Form
           method="post"
           netlify-honeypot="bot-field"
           data-netlify="true"
@@ -162,54 +105,55 @@ const ContactForm = props => {
         >
           <input type="hidden" name="bot-field" />
           <input type="hidden" name="form-name" value="contact" />
-          <div
-            data-sal="slide-right"
-            data-sal-easing="ease"
-            data-sal-delay="200"
-          >
-            <label htmlFor="name">Name*</label>
-            <input type="text" name="name" id="name" required />
-          </div>
-          <div
-            data-sal="slide-left"
-            data-sal-easing="ease"
-            data-sal-delay="200"
-          >
-            <label htmlFor="email">Email*</label>
-            <input type="email" name="email" id="email" required />
-          </div>
-          <div
-            data-sal="slide-right"
-            data-sal-easing="ease"
-            data-sal-delay="200"
-          >
-            <label htmlFor="phone">Phone</label>
-            <input type="phone" name="phone" id="phone" />
-          </div>
-          <div
-            data-sal="slide-left"
-            data-sal-easing="ease"
-            data-sal-delay="200"
-          >
-            <label htmlFor="message">Message*</label>
-            <textarea name="message" rows="10" id="message" required></textarea>
-            <span></span>
-          </div>
-          <ul className="actions">
-            <li>
-              <button
-                type="submit"
-                className="button"
-                data-sal="slide-up"
-                data-sal-easing="ease"
-                data-sal-delay="200"
-              >
-                {formText}
-              </button>
-            </li>
-          </ul>
-        </form>
-      </FormContainer>
+          <LineCont>
+            <LineWrapper>
+              <label htmlFor="name">Name *</label>
+              <input type="text" id="name" name="name" required />
+            </LineWrapper>
+            <LineWrapper>
+              <label htmlFor="email">Email *</label>
+              <input type="email" id="email" name="email" required />
+            </LineWrapper>
+          </LineCont>
+          <LineCont>
+            <LineWrapper>
+              <label htmlFor="phone">Phone</label>
+              <input type="phone" id="phone" name="phone" />
+            </LineWrapper>
+            <LineWrapper>
+              <label htmlFor="subject">Subject *</label>
+              <input type="text" id="subject" name="subject" required />
+            </LineWrapper>
+          </LineCont>
+          <LineCont>
+            <LineWrapper>
+              <label htmlFor="location">Location</label>
+              <input type="text" id="location" name="location" />
+            </LineWrapper>
+            <LineWrapper>
+              <label htmlFor="people">Number Of People</label>
+              <input type="number" id="people" name="people" />
+            </LineWrapper>
+          </LineCont>
+          <LineCont>
+            <LineWrapper>
+              <label htmlFor="message">Message *</label>
+              <textarea id="message" name="message" required rows="10" />
+            </LineWrapper>
+          </LineCont>
+          <Container justifyContent="flex-start" padding=" 10px">
+            <Submit
+              type="submit"
+              className="button"
+              data-sal="slide-up"
+              data-sal-easing="ease"
+              data-sal-delay="200"
+            >
+              {formText}
+            </Submit>
+          </Container>
+        </Form>
+      </Container>
     </Container>
   )
 }
