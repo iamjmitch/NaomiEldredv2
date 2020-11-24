@@ -50,8 +50,13 @@ const Submit = styled(Button)`
   font-weight: 600;
   width: 100%;
   transition: 0.3s linear;
+  padding: 10px;
   &:hover {
     background: black;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 18px;
+    padding: 10px 5px;
   }
 `
 
@@ -141,7 +146,11 @@ const ContactForm = props => {
               <textarea id="message" name="message" required rows="10" />
             </LineWrapper>
           </LineCont>
-          <Container justifyContent="flex-start" padding=" 10px">
+          <Container
+            justifyContent="flex-start"
+            padding=" 10px"
+            other=" @media screen and (max-width: 600px) { padding: 10px 0;  }"
+          >
             <Submit
               type="submit"
               className="button"

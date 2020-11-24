@@ -34,7 +34,7 @@ export const FAQLIST = [
   {
     question: "What application method do you use?",
     answer:
-      "Naomi specialises mainly in the use of M.A.C cosmetics which she knows and trusts for a flawless application and longevity. However, Naomi also uses select products she has come to love from brands such as Huda Beauty, Urban Decay and Anastasia Beverly Hills.",
+      "Traditional makeup application with the use of brushes and beauty blenders. Naomi prefers the finish of traditional application and does not provide airbrush service. Lashes are included in all makeup prices.",
   },
   {
     question: "Do I need to prep before the appointment?",
