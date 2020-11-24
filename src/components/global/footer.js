@@ -43,6 +43,7 @@ const SocialLink = styled.a`
 `
 
 const Footer = () => {
+  const date = new Date()
   return (
     <Container flexDirection="column">
       <StyledFooter>
@@ -64,8 +65,13 @@ const Footer = () => {
           </SocialLink>
         </Container>
 
-        <Paragraph fontSize="14px" fontFamily={FONT_FAMILY_HEADING} padding="0">
-          NAOMI ELDRED - ©2020
+        <Paragraph
+          fontSize="14px"
+          fontFamily={FONT_FAMILY_HEADING}
+          padding="0"
+          textAlign="center"
+        >
+          Naomi eldred - ©{date.getFullYear()}.<br></br> All rights reserved.
         </Paragraph>
       </StyledFooter>
       <Container background="#232323" padding="10px 0">
