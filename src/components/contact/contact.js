@@ -96,14 +96,13 @@ const ContactForm = props => {
         </HeadingH2>
         <Form
           method="post"
-          netlify-honeypot="bot-field"
+          data-netlify-recaptcha="true"
           data-netlify="true"
           name="contact"
           action="/"
           id="contactForm"
           onSubmit={handleSubmit}
         >
-          <input type="hidden" name="bot-field" />
           <input type="hidden" name="form-name" value="contact" />
           <LineCont>
             <LineWrapper>
