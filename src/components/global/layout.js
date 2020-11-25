@@ -27,7 +27,8 @@ const StyledLayout = styled.div`
     props.backgroundPos ? props.backgroundPos : ""};
   background-size: cover;
   box-sizing: ${props => (props.boxSizing ? props.boxSizing : "border-box")};
-  min-height: ${props => (props.minHeight ? props.minHeight : "unset")};
+  min-height: ${props =>
+    props.minHeight ? props.minHeight : "calc(100vh - 96.578px)"};
   min-width: ${props => (props.minWidth ? props.minWidth : "unset")};
   max-height: ${props => (props.maxHeight ? props.maxHeight : "unset")};
   max-width: ${props => (props.maxWidth ? props.maxWidth : "unset")};
@@ -47,11 +48,18 @@ const Layout = props => {
       className="pageLayoutContainer"
       {...props}
     >
-      <SEO title={props.title} />
-      <GlobalStyle />
-      <Nav pageName={props.pageName} />
-      <Navbar pageName={props.pageName} />
-      {props.children}
+      <Container
+        other="flex-grow:1"
+        flexDirection="column"
+        className="flexGrowBox"
+        justifyContent="flex-start"
+      >
+        <SEO title={props.title} />
+        <GlobalStyle />
+        <Nav pageName={props.pageName} />
+        <Navbar pageName={props.pageName} />
+        {props.children}
+      </Container>
       <Footer />
     </StyledLayout>
   )
