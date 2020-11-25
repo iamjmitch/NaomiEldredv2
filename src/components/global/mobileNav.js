@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 
 import { Container } from "../../styles/shared"
-import { NAVHOVER } from "../../styles/colors"
+import { PINK } from "../../styles/colors"
 import { FONT_FAMILY_HEADING, WEIGHT } from "../../styles/typography"
 
 import MobileLogo from "../../assets/svg/mobileLogo.svg"
@@ -139,10 +139,10 @@ const StyledLink = styled(props => <Link {...props} />)`
     border-top: 2px solid lightgrey;
   }
   &:hover {
-    color: ${NAVHOVER};
+    color: ${PINK};
   }
   &.active {
-    color: ${NAVHOVER}!important;
+    color: ${PINK}!important;
     font-weight: 600 !important;
   }
 `
@@ -166,7 +166,7 @@ const SocialLink = styled.a`
     transition: ${transitionTime};
     &:hover {
       path {
-        fill: ${NAVHOVER};
+        fill: ${PINK};
         opacity: 1;
       }
     }

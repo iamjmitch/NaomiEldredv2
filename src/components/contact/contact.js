@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { Container, HeadingH2 } from "../../styles/shared"
 import { FONT_FAMILY, FONT_FAMILY_HEADING } from "../../styles/typography"
-import { NAVHOVER } from "../../styles/colors"
+import { PINK } from "../../styles/colors"
 import Button from "@material-ui/core/Button"
 
 const Heading = styled.div``
@@ -44,7 +44,7 @@ const LineCont = styled(Container)`
   }
 `
 const Submit = styled(Button)`
-  background: ${NAVHOVER};
+  background: ${PINK};
   color: white;
   font-family: ${FONT_FAMILY};
   font-weight: 600;

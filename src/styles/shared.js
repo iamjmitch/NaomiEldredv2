@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import React from "react"
 
 import styled from "styled-components"
-import { NAVHOVER } from "./colors"
+import { PINK } from "./colors"
 import { FONT_FAMILY, FONT_FAMILY_HEADING, WEIGHT } from "./typography"
 
 export const Container = styled.div`
@@ -46,7 +46,7 @@ export const StyledLink = styled(props => <Link {...props} />)`
     props.textTransform ? props.textTransform : "capitalize"};
   font-weight: ${props => (props.fontWeight ? props.fontWeight : WEIGHT.BOLD)};
   &:hover {
-    color: ${props => (props.hoverColor ? props.hoverColor : NAVHOVER)};
+    color: ${props => (props.hoverColor ? props.hoverColor : PINK)};
   }
 `
 
@@ -90,7 +90,7 @@ export const HeadingH1 = styled.h1`
   margin: ${props => (props.margin ? props.margin : "0")};
   text-transform: ${props =>
     props.textTransform ? props.textTransform : "uppercase"};
-  color: ${props => (props.color ? props.color : NAVHOVER)};
+  color: ${props => (props.color ? props.color : PINK)};
   font-weight: ${props => (props.fontWeight ? props.fontWeight : WEIGHT.BOLD)};
   letter-spacing: ${props =>
     props.letterSpacing ? props.letterSpacing : "normal"};
@@ -102,7 +102,7 @@ export const HeadingH2 = styled.h2`
   margin: ${props => (props.margin ? props.margin : "0")};
   text-transform: ${props =>
     props.textTransform ? props.textTransform : "uppercase"};
-  color: ${props => (props.color ? props.color : NAVHOVER)};
+  color: ${props => (props.color ? props.color : PINK)};
   font-weight: ${props => (props.fontWeight ? props.fontWeight : WEIGHT.BOLD)};
   letter-spacing: ${props =>
     props.letterSpacing ? props.letterSpacing : "normal"};
@@ -114,7 +114,7 @@ export const HeadingH3 = styled.h3`
   margin: ${props => (props.margin ? props.margin : "0")};
   text-transform: ${props =>
     props.textTransform ? props.textTransform : "uppercase"};
-  color: ${props => (props.color ? props.color : NAVHOVER)};
+  color: ${props => (props.color ? props.color : PINK)};
   font-weight: ${props => (props.fontWeight ? props.fontWeight : WEIGHT.BOLD)};
   letter-spacing: ${props =>
     props.letterSpacing ? props.letterSpacing : "normal"};
@@ -126,7 +126,7 @@ export const HeadingH4 = styled.h4`
   margin: ${props => (props.margin ? props.margin : "0")};  
   text-transform: ${props =>
     props.textTransform ? props.textTransform : "uppercase"};
-  color: ${props => (props.color ? props.color : NAVHOVER)};
+  color: ${props => (props.color ? props.color : PINK)};
     font-weight: ${props =>
       props.fontWeight
         ? props.fontWeight
@@ -140,7 +140,7 @@ export const HeadingH5 = styled.h5`
   margin: ${props => (props.margin ? props.margin : "0")};
   text-transform: ${props =>
     props.textTransform ? props.textTransform : "uppercase"};
-  color: ${props => (props.color ? props.color : NAVHOVER)};
+  color: ${props => (props.color ? props.color : PINK)};
   font-weight: ${props => (props.fontWeight ? props.fontWeight : WEIGHT.BOLD)};
   letter-spacing: ${props =>
     props.letterSpacing ? props.letterSpacing : "normal"};

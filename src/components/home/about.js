@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 import { Container, Paragraph, HeadingH2, HeadingH3 } from "../../styles/shared"
 
-import { NAVHOVER } from "../../styles/colors"
+import { PINK } from "../../styles/colors"
 
 import AboutBorder from "../../assets/img/home/aboutBorder.jpg"
 import AboutImg from "../../assets/img/home/naomi.jpg"
@@ -106,7 +106,7 @@ const AboutMe = () => {
         padding="20px 70px 20px 30px"
         maxWidth="896px"
       >
-        <HeadingH2 fontSize="70px" letterSpacing="5px" color={NAVHOVER}>
+        <HeadingH2 fontSize="70px" letterSpacing="5px" color={PINK}>
           About Naomi
         </HeadingH2>
 

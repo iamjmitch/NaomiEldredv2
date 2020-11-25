@@ -8,7 +8,7 @@ import {
   StyledLink,
 } from "../../styles/shared"
 
-import { NAVHOVER } from "../../styles/colors"
+import { PINK } from "../../styles/colors"
 import { FONT_FAMILY_HEADING } from "../../styles/typography"
 
 const StyledServiceBox = styled(Container)`
@@ -22,7 +22,7 @@ const StyledServiceBox = styled(Container)`
   border: 1px solid lightgrey;
   padding-bottom: 5px;
 
-  background: ${props => (props.bottomColor ? props.bottomColor : NAVHOVER)};
+  background: ${props => (props.bottomColor ? props.bottomColor : PINK)};
   @media screen and (max-width: 1129px) {
     margin-bottom: 0;
   }

@@ -7,7 +7,7 @@ import Facebook from "../../assets/svg/facebook.svg"
 import Instagram from "../../assets/svg/instagram.svg"
 
 import { Container, HeadingH5, Paragraph } from "../../styles/shared"
-import { NAVTRANSPARENT, NAVSOLID, WHITE, NAVHOVER } from "../../styles/colors"
+import { NAVTRANSPARENT, NAVSOLID, WHITE, PINK } from "../../styles/colors"
 import { FONT_FAMILY_HEADING } from "../../styles/typography"
 
 const StyledFooter = styled(Container)`
@@ -35,7 +35,7 @@ const SocialLink = styled.a`
     }
     &:hover {
       path {
-        fill: ${NAVHOVER};
+        fill: ${PINK};
         opacity: 1;
       }
     }

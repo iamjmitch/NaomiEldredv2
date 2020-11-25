@@ -3,15 +3,15 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import { Container, HeadingH3, Paragraph } from "../../styles/shared"
 import { FONT_FAMILY_HEADING } from "../../styles/typography"
-import { NAVHOVER } from "../../styles/colors"
+import { PINK } from "../../styles/colors"
 import { ReadMore } from "../home/servicesBox"
 
 const StyledServiceCard = styled(Container)`
   flex-direction: column;
   border: 1px solid lightgrey;
-  max-width: 250px;
+  max-width: 400px;
   padding-bottom: 5px;
-  background: ${NAVHOVER};
+  background: ${PINK};
   height: 100%;
   box-sizing: border-box;
   justify-content: flex-start;

@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 
 import { Container } from "../../styles/shared"
-import { NAVTRANSPARENT, NAVSOLID, WHITE, NAVHOVER } from "../../styles/colors"
+import { NAVTRANSPARENT, NAVSOLID, WHITE, PINK } from "../../styles/colors"
 import { FONT_FAMILY_HEADING } from "../../styles/typography"
 
 import HeaderLogo from "../../assets/img/global/logo.png"
@@ -40,7 +40,7 @@ const StyledLink = styled(props => <Link {...props} />)`
   cursor: pointer;
   padding-bottom: 2px;
   &:hover {
-    color: ${NAVHOVER};
+    color: ${PINK};
   }
   &.active {
     border-bottom: 1px solid white;
