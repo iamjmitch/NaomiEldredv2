@@ -80,7 +80,7 @@ const ServicesPage = props => {
         maxWidth="900px"
         flexDirection="column"
         padding="0 20px"
-        margin="50px 0"
+        margin="0 0 50px 0"
         other="@media screen and (max-width:500px){margin-top:0px;}"
       >
         {SERVICENOTES.map(faq => (
