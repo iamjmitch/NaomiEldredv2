@@ -21,34 +21,34 @@ const StyledContainer = styled(Container)`
     width: 100%;
   }
 
-  @media screen and (max-width: 850px) {
-    h2 {
-      font-size: 50px;
-    }
-    h3 {
-      font-size: 30px;
-    }
-    p {
-      font-size: 22px;
-    }
-  }
-  @media screen and (max-width: 770px) {
-    h3 {
-      font-size: 25px;
-      padding: 0;
-    }
-  }
-  @media screen and (max-width: 725px) {
-    h2 {
-      font-size: 50px;
-    }
-    h3 {
-      font-size: 25px;
-    }
-    p {
-      font-size: 18px;
-    }
-  }
+  // @media screen and (max-width: 850px) {
+  //   h2 {
+  //     font-size: 50px;
+  //   }
+  //   h3 {
+  //     font-size: 30px;
+  //   }
+  //   p {
+  //     font-size: 22px;
+  //   }
+  // }
+  // @media screen and (max-width: 770px) {
+  //   h3 {
+  //     font-size: 25px;
+  //     padding: 0;
+  //   }
+  // }
+  // @media screen and (max-width: 725px) {
+  //   h2 {
+  //     font-size: 50px;
+  //   }
+  //   h3 {
+  //     font-size: 25px;
+  //   }
+  //   p {
+  //     font-size: 18px;
+  //   }
+  // }
 
   @media screen and (max-width: 725px) {
     h2 {
@@ -139,6 +139,7 @@ const AboutMe = () => {
       maxWidth="1280px"
       other="box-shadow: 1px 2px 20px 2px #b9b9b970;"
       margin="0 15px 50px 15px"
+      fontSize="17px"
       media="screen and (max-width: 725px) {padding-right:0!important; p{font-size:18px;}} @media screen and (max-width: 1280px) {box-shadow:none; padding-right:20px} "
     >
       <StyledContainer background="white">
@@ -152,7 +153,7 @@ const AboutMe = () => {
             fontSize="25px"
             textTransform="none"
             color={PINK}
-            padding="5px 15px"
+            padding="15px 15px 5px 15px"
           >
             Naomi has over 13 years of industry experience
           </HeadingH3>
@@ -160,7 +161,7 @@ const AboutMe = () => {
           <StyledParagraph
             textTransform="none"
             lineHeight="30px"
-            fontSize="22px"
+            fontSize="1rem"
           >
             As a qualified makeup artist with over 1 years industry experience,
             Naomi has worked for some of the worlds leading makeup companies,
@@ -174,13 +175,34 @@ const AboutMe = () => {
           <StyledParagraph
             textTransform="none"
             lineHeight="30px"
-            fontSize="22px"
-            className="notMobile"
+            fontSize="1rem"
+            media="screen and (max-width: 757px){display:none;}"
           >
             With her passion for the industry and knowing the importance for
             beautiful makeup, Naomi will always provide a professional friendly
             service, taking pride in flawless application, attention to detail
             and distinctive individual creativity.
+          </StyledParagraph>
+          <StyledParagraph
+            textTransform="none"
+            lineHeight="30px"
+            fontSize="1rem"
+            media="screen and (max-width: 957px){display:none;}"
+          >
+            Naomi specialises mainly in the use of M.A.C cosmetics which she
+            knows and trusts for a flawless application and longevity. However,
+            Naomi also uses select products she has come to love from brands
+            such as Huda Beauty, Urban Decay and Anastasia Beverly Hills
+          </StyledParagraph>
+          <StyledParagraph
+            textTransform="none"
+            lineHeight="30px"
+            fontSize="1rem"
+            media="screen and (max-width: 1105px){display:none;}"
+          >
+            Naomi is based at her home makeup studio in North Brisbane, North
+            Lakes / Mango Hill. All bridal trials, special occasion and formal
+            makeup appointments are conducted at her home studio.
           </StyledParagraph>
         </HalfStyledContainer>
         <HalfStyledContainer
@@ -192,45 +214,50 @@ const AboutMe = () => {
           padding="50px 0 "
           alignItems="center"
           minWidth="200px"
-          margin="0 0 10px 0"
-          media="screen and (max-width: 1100px) {padding: 20px 0;}"
+          margin="0"
+          media="screen and (max-width: 1100px) {padding: 20px 0;} @media screen and (max-width: 725px){max-height: unset;}"
         >
           <AboutPhoto src={AboutImg} alt="" />
-        </HalfStyledContainer>{" "}
+        </HalfStyledContainer>
       </StyledContainer>
-      <StyledParagraph
-        textTransform="none"
-        lineHeight="30px"
-        fontSize="22px"
-        className="mobileOnly"
-        padding="10px 30px"
+      <Container
+        padding="0 0 0 20px"
+        flexDirection="column"
+        media="screen and (max-width:725px){padding: 0 20px}"
       >
-        With her passion for the industry and knowing the importance for
-        beautiful makeup, Naomi will always provide a professional friendly
-        service, taking pride in flawless application, attention to detail and
-        distinctive individual creativity.
-      </StyledParagraph>
-      <StyledParagraph
-        textTransform="none"
-        lineHeight="30px"
-        fontSize="22px"
-        padding="10px 30px"
-      >
-        Naomi specialises mainly in the use of M.A.C cosmetics which she knows
-        and trusts for a flawless application and longevity. However, Naomi also
-        uses select products she has come to love from brands such as Huda
-        Beauty, Urban Decay and Anastasia Beverly Hills
-      </StyledParagraph>
-      <StyledParagraph
-        textTransform="none"
-        lineHeight="30px"
-        fontSize="22px"
-        padding="10px 30px"
-      >
-        Naomi is based at her home makeup studio in North Brisbane, North Lakes
-        / Mango Hill. All bridal trials, special occasion and formal makeup
-        appointments are conducted at her home studio.
-      </StyledParagraph>
+        <StyledParagraph
+          textTransform="none"
+          lineHeight="30px"
+          fontSize="1rem"
+          media="screen and (min-width: 757px){display:none;}"
+        >
+          With her passion for the industry and knowing the importance for
+          beautiful makeup, Naomi will always provide a professional friendly
+          service, taking pride in flawless application, attention to detail and
+          distinctive individual creativity.
+        </StyledParagraph>
+        <StyledParagraph
+          textTransform="none"
+          lineHeight="30px"
+          fontSize="1rem"
+          media="screen and (min-width: 957px){display:none;}"
+        >
+          Naomi specialises mainly in the use of M.A.C cosmetics which she knows
+          and trusts for a flawless application and longevity. However, Naomi
+          also uses select products she has come to love from brands such as
+          Huda Beauty, Urban Decay and Anastasia Beverly Hills
+        </StyledParagraph>
+        <StyledParagraph
+          textTransform="none"
+          lineHeight="30px"
+          fontSize="1rem"
+          media="screen and (min-width: 1105px){display:none;}"
+        >
+          Naomi is based at her home makeup studio in North Brisbane, North
+          Lakes / Mango Hill. All bridal trials, special occasion and formal
+          makeup appointments are conducted at her home studio.
+        </StyledParagraph>
+      </Container>
     </Container>
   )
 }

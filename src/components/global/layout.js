@@ -8,6 +8,7 @@ import Navbar from "./mobileNav"
 import Footer from "./footer"
 import GlobalStyle from "../../styles/globalStyles"
 import SEO from "../global/SEO"
+import PageHeader from "./pageHeader"
 
 const StyledLayout = styled.div`
   background: ${props => (props.background ? props.background : "transparent")};

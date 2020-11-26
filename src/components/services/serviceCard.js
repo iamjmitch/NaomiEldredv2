@@ -28,7 +28,7 @@ const StyledPrice = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
+  border: 2px solid black;
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -59,20 +59,28 @@ const PriceBuffer = styled(Container)`
 
 const Enquire = styled(ReadMore)`
   font-weight: 700;
+
   text-transform: uppercase;
   @media screen and (max-width: 500px) {
     font-size: 25px;
   }
+`
+const Span = styled.span`
+  height: 3px;
+  background: ${PINK};
+  width: 20%;
+  margin-bottom: 17px;
 `
 
 const ServiceCard = props => {
   return (
     <StyledServiceCard key={props.cardTitle}>
       <Container background="white" flexDirection="column" height="100%">
-        <Container minHeight="94px">
-          <HeadingH3 color="black" padding="20px 0">
+        <Container minHeight="94px" flexDirection="column">
+          <HeadingH3 color="black" padding="20px 0 0 0">
             {props.cardTitle}
           </HeadingH3>
+          <Span></Span>
         </Container>
         <PriceBuffer padding="20px 0">
           <StyledPrice>

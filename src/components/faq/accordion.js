@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles"
 import Accordion from "@material-ui/core/Accordion"
 import AccordionSummary from "@material-ui/core/AccordionSummary"
 import AccordionDetails from "@material-ui/core/AccordionDetails"
-import Typography from "@material-ui/core/Typography"
+import { PINK } from "../../styles/colors"
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
 import { Container, Paragraph } from "../../styles/shared"
 import styled from "styled-components"
@@ -17,6 +17,10 @@ const StyledAccordion = styled(Accordion)`
   p {
     text-align: left;
   }
+`
+
+const StyledExpandMoreIcon = styled(ExpandMoreIcon)`
+  fill: ${PINK};
 `
 
 const StyledAnswer = styled(Paragraph)`
@@ -50,7 +54,7 @@ const SimpleAccordion = props => {
     <div className={classes.root}>
       <StyledAccordion>
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
+          expandIcon={<StyledExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
