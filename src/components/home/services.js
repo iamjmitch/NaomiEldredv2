@@ -10,9 +10,9 @@ import Service2 from "../../assets/img/home/service2.jpg"
 import Service3 from "../../assets/img/home/service3.jpg"
 
 const StyledServiceBoxContainer = styled(ContainerGrid)`
-  margin-top: 100px;
+  margin-top: 50px;
   max-width: 1280px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   grid-gap: 30px;
   box-sizing: border-box;
   align-items: flex-start;

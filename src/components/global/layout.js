@@ -38,6 +38,9 @@ const StyledLayout = styled.div`
   box-sizing: border-box;
   @media screen and (max-width: 960px) {
     font-size: 13px;
+    margin: 96.578px 0 0 0px;
+  }
+  @media screen and (max-width: 725px) {
     margin: 55px 0 0 0px;
   }
 `

@@ -8,13 +8,12 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/assets/img/gallery`,
-        name: "images",
+        name: `gallery`,
+        path: `${__dirname}/src/assets/img/gallery/`,
       },
     },
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-sharp",
-    "gatsby-plugin-react-helmet",
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-material-ui`,
       options: {

@@ -11,6 +11,11 @@ Remake of website for naomieldred.com. Old design used a customised WordPress th
 - Styled Components
 - React Helmet
 - gatsby-plugin-google-fonts
+- gatsby-image
+- gatsby-source-filesystem
+- gatsby-transformer-sharp
+- gatsby-plugin-sharp
+- gatsby-plugin-material-ui
 
 ## Fonts Used
 
@@ -19,10 +24,9 @@ Remake of website for naomieldred.com. Old design used a customised WordPress th
 
 ## Todo's
 
-- Create Homepage
-- Create Portfolio
-- Create contact Page
-- Create FAQ Page
+- Finish Homepage
+- CSS Tweaks
+- Work out a way to incorporate Instagram feed
 
 ## Done Todo's
 
@@ -30,4 +34,7 @@ Remake of website for naomieldred.com. Old design used a customised WordPress th
 - ~~Copy Assets~~
 - ~~Add SEO~~
 - ~~Add Services Page~~
-- ~~Work out a way to incorporate Instagram feed~~
+- ~~Create FAQ Page~~
+- ~~Create contact Page~~
+- ~~Create Portfolio~~
+- ~~Create Portfolio~~
