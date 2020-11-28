@@ -26,6 +26,7 @@ Remake of website for naomieldred.com. Old design used a customised WordPress th
 
 - CSS Tweaks
 - Dummy content replacement
+- Remove unused imports
 
 ## Done Todo's
 

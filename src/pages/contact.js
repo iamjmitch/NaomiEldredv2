@@ -10,6 +10,14 @@ const ContactPage = props => {
   return (
     <Layout margin="112.578px 0 0 0" pageName="contact" title="Contact Naomi">
       <PageHeader title="Contact Naomi" />
+      <Paragraph
+        fontSize="18px"
+        lineHeight="30px"
+        textAlign="center"
+        padding="0 10px 50px 10px"
+      >
+        Please use the below form to get in contact with Naomi.
+      </Paragraph>
       <ContactForm />
     </Layout>
   )

@@ -26,6 +26,7 @@ const LineWrapper = styled(Container)`
   }
   input,
   textarea {
+    background: white;
     width: 100%;
     box-sizing: border-box;
     padding: 5px;
@@ -138,6 +139,16 @@ const ContactForm = props => {
             <LineWrapper>
               <label htmlFor="people">Number Of People</label>
               <input type="number" id="people" name="people" />
+            </LineWrapper>
+          </LineCont>
+          <LineCont>
+            <LineWrapper>
+              <label htmlFor="date">Date</label>
+              <input type="date" id="date" name="date" />
+            </LineWrapper>
+            <LineWrapper>
+              <label htmlFor="time">Time</label>
+              <input type="time" id="time" name="time" />
             </LineWrapper>
           </LineCont>
           <LineCont>
