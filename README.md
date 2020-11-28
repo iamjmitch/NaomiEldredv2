@@ -24,12 +24,12 @@ Remake of website for naomieldred.com. Old design used a customised WordPress th
 
 ## Todo's
 
-- Finish Homepage
 - CSS Tweaks
-- Work out a way to incorporate Instagram feed
+- Dummy content replacement
 
 ## Done Todo's
 
+- ~~Finish Homepage~~
 - ~~Copy Colors~~
 - ~~Copy Assets~~
 - ~~Add SEO~~
@@ -38,3 +38,4 @@ Remake of website for naomieldred.com. Old design used a customised WordPress th
 - ~~Create contact Page~~
 - ~~Create Portfolio~~
 - ~~Create Portfolio~~
+- ~~Work out a way to incorporate Instagram feed~~ Not exactly the way I wanted to however without an API key, live getting feed becomes harder
