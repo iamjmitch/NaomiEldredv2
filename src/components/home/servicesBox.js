@@ -86,7 +86,7 @@ const ServiceBox = props => {
         >
           {props.title}
         </HeadingH3>
-        <Paragraph lineHeight="30px" padding="0 30px 20px 30px">
+        <Paragraph lineHeight="30px" padding="0 20px 20px 20px" fontSize="16px">
           {props.subtext}
         </Paragraph>
       </TextHolder>

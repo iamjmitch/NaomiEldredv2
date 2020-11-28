@@ -32,7 +32,7 @@ const MobileServiceCard = props => {
             other="width: 100%"
             textAlign="left"
             lineHeight="18px"
-            fontSize="18px"
+            fontSize="16px"
             padding="10px 0 0 0"
           >
             {props.cardSubText}

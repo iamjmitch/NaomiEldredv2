@@ -46,7 +46,7 @@ const StyledContainer = styled(Container)`
   //     font-size: 25px;
   //   }
   //   p {
-  //     font-size: 18px;
+  //     font-size: 16px;
   //   }
   // }
 
@@ -140,7 +140,7 @@ const AboutMe = () => {
       other="box-shadow: 1px 2px 20px 2px #b9b9b970;"
       margin="0 15px 50px 15px"
       fontSize="17px"
-      media="screen and (max-width: 725px) {padding-right:0!important; p{font-size:18px;}} @media screen and (max-width: 1280px) {box-shadow:none; padding-right:20px} "
+      media="screen and (max-width: 725px) {padding-right:0!important; p{font-size:16px;}} @media screen and (max-width: 1280px) {box-shadow:none; padding-right:20px} "
     >
       <StyledContainer background="white">
         <HalfStyledContainer

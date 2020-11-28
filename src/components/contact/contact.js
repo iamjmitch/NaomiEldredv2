@@ -21,7 +21,7 @@ const LineWrapper = styled(Container)`
     font-weight: 600;
     margin-bottom: 5px;
     @media screen and (max-width: 600px) {
-      font-size: 18px;
+      font-size: 16px;
     }
   }
   input,
@@ -32,7 +32,7 @@ const LineWrapper = styled(Container)`
     font-family: ${FONT_FAMILY};
     border: 1px solid lightgrey;
     @media screen and (max-width: 600px) {
-      font-size: 18px;
+      font-size: 16px;
       padding: 10px 5px;
     }
   }
@@ -55,7 +55,7 @@ const Submit = styled(Button)`
     background: black;
   }
   @media screen and (max-width: 600px) {
-    font-size: 18px;
+    font-size: 16px;
     padding: 10px 5px;
   }
 `

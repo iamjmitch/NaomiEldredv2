@@ -80,45 +80,51 @@ const Nav = props => {
 
   return (
     <StyledNav scrolled={scrolled} {...props}>
-      <StyledLink className={props.pageName === "home" ? "active" : ""} to="/">
-        Home
-      </StyledLink>
-      <StyledLink
-        className={props.pageName === "services" ? "active" : ""}
-        to="/services"
-      >
-        Services
-      </StyledLink>
-      <StyledLink
-        className={props.pageName === "gallery" ? "active" : ""}
-        to="/gallery"
-      >
-        Gallery
-      </StyledLink>
+      <Container justifyContent="flex-end">
+        <StyledLink
+          className={props.pageName === "home" ? "active" : ""}
+          to="/"
+        >
+          Home
+        </StyledLink>
+        <StyledLink
+          className={props.pageName === "services" ? "active" : ""}
+          to="/services"
+        >
+          Services
+        </StyledLink>
+        <StyledLink
+          className={props.pageName === "gallery" ? "active" : ""}
+          to="/gallery"
+        >
+          Gallery
+        </StyledLink>
+      </Container>
       <StyledLink to="/">
         <ImgContainer>
           <img src={HeaderLogo} alt="Naomi Eldred Make-up Artist" />
         </ImgContainer>
       </StyledLink>
-
-      <StyledLink
-        className={props.pageName === "faq" ? "active" : ""}
-        to="/faq"
-      >
-        FAQ
-      </StyledLink>
-      <StyledLink
-        className={props.pageName === "about" ? "active" : ""}
-        to="/about"
-      >
-        About
-      </StyledLink>
-      <StyledLink
-        className={props.pageName === "contact" ? "active" : ""}
-        to="/contact"
-      >
-        Contact
-      </StyledLink>
+      <Container justifyContent="flex-start">
+        <StyledLink
+          className={props.pageName === "faq" ? "active" : ""}
+          to="/faq"
+        >
+          FAQ
+        </StyledLink>
+        <StyledLink
+          className={props.pageName === "about" ? "active" : ""}
+          to="/about"
+        >
+          About
+        </StyledLink>
+        <StyledLink
+          className={props.pageName === "contact" ? "active" : ""}
+          to="/contact"
+        >
+          Contact
+        </StyledLink>
+      </Container>
     </StyledNav>
   )
 }

@@ -21,6 +21,7 @@ const StyledButton = styled(Button)`
   }
   @media screen and (max-width: 725px) {
     font-size: 20px;
+    margin: 0;
   }
 `
 
@@ -45,6 +46,9 @@ const StyledContainer = styled(Container)`
   @media screen and (max-width: 725px) {
     &.mobile {
       display: flex;
+      h2 {
+        font-size: 8vw;
+      }
     }
 
     &.desk {
@@ -56,12 +60,14 @@ const StyledContainer = styled(Container)`
 const CTA = props => {
   return (
     <StyledContainer
+      width="1280px"
+      maxWidth="100%"
       flexDirection="column"
-      other="position:relative; h2{z-index:1;} margin: 0 0 100px 0;"
+      other="position:relative; h2{z-index:1;} margin: 0 0 50px 0;"
       minHeight="25vh"
       fontFamily={FONT_FAMILY}
       padding="50px 0"
-      media="screen and (max-width: 725px){margin: 20px 0 50px 0}"
+      media="screen and (max-width: 725px){margin: 20px 0 0 0}"
       className={props.className}
     >
       <Span />

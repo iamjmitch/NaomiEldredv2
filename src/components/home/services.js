@@ -30,6 +30,7 @@ const StyledServiceBoxContainer = styled(ContainerGrid)`
 
   @media screen and (max-width: 720px) {
     margin-top: 20px;
+    margin-bottom: 0px;
   }
   @media screen and (max-width: 500px) {
     margin-top: 20px;

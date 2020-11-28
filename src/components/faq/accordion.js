@@ -80,7 +80,7 @@ const SimpleAccordion = props => {
                 textTransform="none"
                 padding="0 5px"
                 lineHeight="25px"
-                fontSize="18px"
+                fontSize="16px"
               >
                 {props.answer}
               </Paragraph>
