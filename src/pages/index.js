@@ -13,7 +13,7 @@ const StyledContainer = styled(Container)``
 
 const IndexPage = () => {
   return (
-    <Layout pageName="home" title="Home">
+    <Layout pageName="home" title="">
       <Hero />
       <StyledContainer background="white" flexDirection="column">
         <AboutMe />
