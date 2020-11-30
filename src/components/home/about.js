@@ -119,11 +119,25 @@ const AboutMe = () => {
           Naomi has over 13 years of industry experience
         </HeadingH3>
         <Span />
-        <StyledParagraph textTransform="none" lineHeight="30px" fontSize="22px">
+        <StyledParagraph
+          textTransform="none"
+          lineHeight="30px"
+          fontSize="22px"
+          data-sal="slide-left"
+          data-sal-delay="100"
+          data-sal-easing="ease"
+        >
           Naomi Eldred is a freelance makeup artist servicing the Northern
           Brisbane area based from her studio located in North Lakes.
         </StyledParagraph>
-        <StyledParagraph textTransform="none" lineHeight="30px" fontSize="22px">
+        <StyledParagraph
+          textTransform="none"
+          lineHeight="30px"
+          fontSize="22px"
+          data-sal="slide-right"
+          data-sal-delay="100"
+          data-sal-easing="ease"
+        >
           She specialises in bridal, formal and special occasion makeup
           application. She prides herself on producing flawless makeup with
           attention to detail, ensuring that you not only look beautiful but you
@@ -134,6 +148,9 @@ const AboutMe = () => {
           lineHeight="30px"
           fontSize="22px"
           className="notMobile"
+          data-sal="slide-left"
+          data-sal-delay="100"
+          data-sal-easing="ease"
         >
           Naomi is based at her home makeup studio in North Brisbane, North
           Lakes / Mango Hill. All bridal trials, special occasion and formal

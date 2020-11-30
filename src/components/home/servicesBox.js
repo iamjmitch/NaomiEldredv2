@@ -58,6 +58,11 @@ const TextHolder = styled(Container)`
       font-size: 36px;
     }
   }
+  @media screen and (max-width: 725px) {
+    .notMobile {
+      display: none;
+    }
+  }
 `
 
 export const ReadMore = styled(Container)`
@@ -73,20 +78,30 @@ export const ReadMore = styled(Container)`
 
 const ServiceBox = props => {
   return (
-    <StyledServiceBox bottomColor={props.bottomColor}>
+    <StyledServiceBox
+      bottomColor={props.bottomColor}
+      data-sal={props.dataSal ? props.dataSal : "slide-up"}
+      data-sal-delay="0"
+      data-sal-easing="ease"
+    >
       <ImgContainer>
-        <img src={props.image} />
+        <img className="lazyload" data-src={props.image} />
       </ImgContainer>
       <TextHolder>
         <HeadingH3
           color="black"
-          padding="25px 0 35px 0"
+          padding="5px 0 15px 0"
           fontSize="40px"
           fontWeight="700"
         >
           {props.title}
         </HeadingH3>
-        <Paragraph lineHeight="30px" padding="0 20px 20px 20px" fontSize="16px">
+        <Paragraph
+          lineHeight="30px"
+          padding="0 20px"
+          fontSize="16px"
+          // className="notMobile"
+        >
           {props.subtext}
         </Paragraph>
       </TextHolder>

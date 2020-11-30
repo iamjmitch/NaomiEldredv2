@@ -14,7 +14,7 @@ const StyledGallery = styled.div`
   width: 1280px;
   display: grid;
   grid-template-columns: repeat(auto-fit, 314px);
-  grid-auto-rows: 320px;
+  grid-auto-rows: 314px;
   grid-gap: 8px;
   justify-content: center;
   margin-bottom: 100px;
@@ -28,19 +28,32 @@ const StyledGallery = styled.div`
   }
   @media screen and (max-width: 1300px) {
     width: 100%;
-    padding: 0 10px;
+    padding: 0 20px;
+    
     grid-gap: 0.5em;
     h3 {
       font-size: 9vw;
     }
   }
-  @media screen and (max-width: 670px) {
-    grid-template-columns: repeat(auto-fit, 190px);
-    grid-auto-rows: 190px;
+  @media screen and (max-width: 725px) {
+    grid-template-columns: repeat(auto-fit, 150px);
+    grid-auto-rows: 150px;
+  }
+  @media screen and (max-width: 661px) {
+    grid-template-columns: repeat(auto-fit, 220px);
+    grid-auto-rows: 220px;
+  }
+  @media screen and (max-width: 500px) {
+    grid-template-columns: repeat(auto-fit, 170px);
+    grid-auto-rows: 170px;
+    grid-gap: 20px;
+   
+  }
   }
   @media screen and (max-width: 410px) {
     grid-template-columns: repeat(auto-fit, 150px);
     grid-auto-rows: 150px;
+    padding: 0 20px;
   }
 `
 
@@ -51,7 +64,13 @@ const InstaGallery = () => {
       media="screen and (max-width: 1000px) {h3 {font-size: 9vw;}}"
       other="h3{letter-spacing: 5px;}"
     >
-      <HeadingH3 fontSize="50px" padding=" 0 0 50px 0">
+      <HeadingH3
+        fontSize="50px"
+        padding=" 0 0 50px 0"
+        data-sal="slide-right"
+        data-sal-delay="50"
+        data-sal-easing="ease"
+      >
         Naomi on Instagram
       </HeadingH3>
       <StyledGallery>

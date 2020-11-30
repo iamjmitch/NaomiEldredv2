@@ -22,6 +22,16 @@ const StyledServiceCard = styled(Container)`
       font-size: 40px;
     }
   }
+
+  // &:hover {
+  //   border: 1px solid ${PINK}};
+  // }
+  // &:hover .price{
+  //     border-color:${PINK}
+  // }
+  // &:hover .price p{
+  //   color: ${PINK}!important;
+  //   }
 `
 
 const StyledPrice = styled.div`
@@ -51,6 +61,14 @@ const StyledPrice = styled.div`
   }
  
 }
+`
+const StyledLink = styled(props => <Link {...props} />)`
+  text-decoration: none;
+  color: black;
+  transition: 0.3s linear;
+  &:hover {
+    color: ${PINK};
+  }
 `
 
 const PriceBuffer = styled(Container)`
@@ -83,7 +101,7 @@ const ServiceCard = props => {
           <Span></Span>
         </Container>
         <PriceBuffer padding="20px 0">
-          <StyledPrice>
+          <StyledPrice className="price">
             <Paragraph
               lineHeight="20px"
               fontFamily={FONT_FAMILY_HEADING}
@@ -118,7 +136,10 @@ const ServiceCard = props => {
             {props.cardSubText}
           </Paragraph>
         </Container>
-        <Enquire>Enquire</Enquire>
+
+        <Enquire>
+          <StyledLink to="/contact">Find out more</StyledLink>
+        </Enquire>
       </Container>
     </StyledServiceCard>
   )

@@ -14,9 +14,9 @@ const StyledImg = styled.div`
 
 const InstaPic = props => {
   return (
-    <StyledImg>
+    <StyledImg data-sal="fade" data-sal-delay="100" data-sal-easing="ease">
       <a href={props.url} target="_blank">
-        <img src={props.img} alt="Instagram Photo" />
+        <img className="lazyload" data-src={props.img} alt="Instagram Photo" />
       </a>
     </StyledImg>
   )

@@ -10,6 +10,7 @@ import AboutImg from "../../assets/img/home/naomi.jpg"
 
 const StyledContainer = styled(Container)`
   width: 1280px;
+  overflow-x: hidden;
 
   justify-content: unset;
   align-items: unset;
@@ -217,7 +218,13 @@ const AboutMe = () => {
           margin="0"
           media="screen and (max-width: 1100px) {padding: 20px 0;} @media screen and (max-width: 725px){max-height: unset;}"
         >
-          <AboutPhoto src={AboutImg} alt="" />
+          <AboutPhoto
+            src={AboutImg}
+            alt=""
+            data-sal="fade"
+            data-sal-delay="400"
+            data-sal-easing="ease"
+          />
         </HalfStyledContainer>
       </StyledContainer>
       <Container

@@ -40,6 +40,7 @@ const StyledLink = styled(props => <Link {...props} />)`
 `
 
 const StyledContainer = styled(Container)`
+  overflow-x: hidden;
   &.mobile {
     display: none;
   }
@@ -71,10 +72,22 @@ const CTA = props => {
       className={props.className}
     >
       <Span />
-      <HeadingH2 color="white" fontSize="40px" padding="0 20px 20px 20px">
+      <HeadingH2
+        color="white"
+        fontSize="40px"
+        padding="0 20px 20px 20px"
+        data-sal="slide-left"
+        data-sal-delay="100"
+        data-sal-easing="ease"
+      >
         Ready to add some glam to your next event?
       </HeadingH2>
-      <StyledLink to="/contact">
+      <StyledLink
+        to="/contact"
+        data-sal="slide-right"
+        data-sal-delay="200"
+        data-sal-easing="ease"
+      >
         <StyledButton>Book Now</StyledButton>
       </StyledLink>
     </StyledContainer>

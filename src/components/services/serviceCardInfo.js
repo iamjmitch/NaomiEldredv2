@@ -3,7 +3,7 @@ export const SERVICECARDINFO = [
   {
     cardTitle: "Trials",
     cardPrice: "90",
-    cardSubText: "Conducted at Naomi’s home studio.",
+    // cardSubText: "Conducted at Naomi’s home studio.",
     cardSmallText: false,
   },
 
@@ -30,14 +30,14 @@ export const SERVICECARDINFO = [
   {
     cardTitle: "Flower Girls",
     cardPrice: "POA",
-    cardSubText: ["Price on enquiry.", <br></br>, "Lashes not included"],
+    cardSubText: "Lashes not included",
     cardSmallText: true,
   },
 
   {
     cardTitle: "Special Occasion",
     cardPrice: "80",
-    cardSubText: "Formals, Events, Glam.",
+    // cardSubText: "Formals, Events, Glam.",
     cardSmallText: false,
   },
 ]
@@ -67,13 +67,13 @@ export const SERVICENOTES = [
   {
     question: "Travel",
     answer: [
-      "All makeup trials are at the same cost as the actual makeup application.",
+      "Naomi is based at her home makeup studio in North Brisbane, North Lakes / Mango Hill. All bridal trials, special occasion and formal makeup appointments are conducted at her home studio.",
       <br></br>,
       <br></br>,
-      "Naomi will work with you to create a look you love and won’t let you leave until you are more than 100% happy.",
+      "Mobile services are available to groups at a minimum of 2 people or more at the one location (e.g wedding parties, school formal groups, etc).",
       <br></br>,
       <br></br>,
-      "If you have an idea of the makeup look you would like, please feel free to bring along photos for your inspiration.Please allow up to 1.5 hours for your makeup trial as this is time to really perfect and love your look.",
+      "Travel fees may apply",
     ],
   },
 ]

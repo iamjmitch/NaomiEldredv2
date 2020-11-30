@@ -43,19 +43,22 @@ const ServiceBoxContainer = () => {
     <StyledServiceBoxContainer gridGap="unset">
       <ServiceBox
         title="Weddings"
-        subtext="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et lacinia ipsum. Donec fermentum dolor at rhoncus aliquam. Curabitur ut."
+        subtext="With years of specialisation in wedding makeup, naomi is sure to help enure your special day is memorable."
         image={Service1}
+        dataSal="fade"
       ></ServiceBox>
       <ServiceBox
         title="Formals"
-        subtext="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et lacinia ipsum. Donec fermentum dolor at rhoncus aliquam. Curabitur ut."
+        subtext="No stanger to formal makeup, Naomi will enure that you get a look to match your formal dress"
         image={Service2}
         class="middle"
+        dataSal="fade"
       ></ServiceBox>
       <ServiceBox
         title="Special Events"
-        subtext="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et lacinia ipsum. Donec fermentum dolor at rhoncus aliquam. Curabitur ut."
+        subtext="What ever the occasion, Naomi can help give you that perfect look"
         image={Service3}
+        dataSal="fade"
       ></ServiceBox>
     </StyledServiceBoxContainer>
   )

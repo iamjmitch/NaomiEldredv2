@@ -19,7 +19,12 @@ const GalleryImage = ({ id, fluid, ...props }) => {
   }
 
   return (
-    <StyledImg onClick={handleOpen}>
+    <StyledImg
+      onClick={handleOpen}
+      data-sal="fade"
+      data-sal-delay="50"
+      data-sal-easing="ease"
+    >
       <Img key={id} fluid={fluid} />
     </StyledImg>
   )

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Naomi Eldred Make-up Artist`,
-    description: `Make-up Artist`,
+    title: `Naomi Eldred - Make-up Artist | North Lakes`,
+    description: `Professional Makeup Artist Servicing North Lakes, Mango Hill and North Brisbane Suburbs Specialising in Weddings, Bridal, Formal Events and M.A.C Make-up`,
     author: `@iamjmitch`,
   },
   plugins: [
@@ -22,12 +22,14 @@ module.exports = {
         },
       },
     },
-
+    `gatsby-plugin-scroll-reveal`,
+    {
+      resolve: `gatsby-remark-images`,
+    },
+    `gatsby-remark-lazy-load`,
     {
       resolve: `gatsby-plugin-styled-components`,
-      options: {
-        // Add any options here
-      },
+      options: {},
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
