@@ -15,6 +15,7 @@ const StyledServiceCard = styled(Container)`
   height: 100%;
   box-sizing: border-box;
   justify-content: flex-start;
+  box-shadow: 1px 1px 4px 0px #00000020;
 
   @media screen and (max-width: 500px) {
     max-width: 100%;
@@ -38,7 +39,7 @@ const StyledPrice = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid black;
+  border: 3px solid black;
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -92,7 +93,12 @@ const Span = styled.span`
 
 const ServiceCard = props => {
   return (
-    <StyledServiceCard key={props.cardTitle}>
+    <StyledServiceCard
+      key={props.cardTitle}
+      data-sal="slide-up"
+      data-sal-delay="100"
+      data-sal-easing="ease"
+    >
       <Container background="white" flexDirection="column" height="100%">
         <Container minHeight="94px" flexDirection="column">
           <HeadingH3 color="black" padding="20px 0 0 0">

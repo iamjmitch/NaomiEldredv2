@@ -9,6 +9,7 @@ const StyledContainer = styled(Container)`
   border: 1px solid lightgrey;
   box-sizing: border-box;
   margin-bottom: 20px;
+  overflow-x: hidden;
   &:nth-child(1) {
     border-top: 1px solid lightgrey;
   }
@@ -16,7 +17,11 @@ const StyledContainer = styled(Container)`
 
 const MobileServiceCard = props => {
   return (
-    <StyledContainer>
+    <StyledContainer
+      data-sal="slide-right"
+      data-sal-delay="50"
+      data-sal-easing="ease"
+    >
       <Container className="textBox" flexDirection="column">
         <Paragraph
           fontSize="18px"

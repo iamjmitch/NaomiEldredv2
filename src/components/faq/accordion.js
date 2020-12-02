@@ -14,6 +14,7 @@ const StyledAccordion = styled(Accordion)`
   border: 1px solid lightgrey;
   border-radius: 0 !important;
   box-shadow: none;
+  overflow-x: hidden;
   p {
     text-align: left;
   }

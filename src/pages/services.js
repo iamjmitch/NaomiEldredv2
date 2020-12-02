@@ -43,7 +43,7 @@ const ServicesPage = props => {
 
       {/* ------------------------------------------------ */}
       <StyledContainerGrid
-        maxWidth="900px"
+        maxWidth="855px"
         gridTemplateCol="repeat(auto-fit,minmax(220px, 1fr))"
         gridGap="20px"
         justifyItems="center"
@@ -77,7 +77,7 @@ const ServicesPage = props => {
         })}
       </StyledMobileContainer>
       <Container
-        maxWidth="900px"
+        maxWidth="855px"
         flexDirection="column"
         padding="0 20px"
         margin="0 0 50px 0"

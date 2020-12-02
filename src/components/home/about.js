@@ -10,6 +10,7 @@ import AboutImg from "../../assets/img/home/naomi.jpg"
 
 const StyledContainer = styled(Container)`
   width: 1280px;
+  overflow-x: hidden;
   margin-top: -200px;
   justify-content: unset;
   align-items: unset;
@@ -106,7 +107,7 @@ const AboutMe = () => {
         padding="20px 70px 20px 30px"
         maxWidth="896px"
       >
-        <HeadingH2 fontSize="70px" letterSpacing="5px" color={PINK}>
+        <HeadingH2 fontSize="50px" letterSpacing="5px" color={PINK}>
           About Naomi
         </HeadingH2>
 
@@ -122,7 +123,7 @@ const AboutMe = () => {
         <StyledParagraph
           textTransform="none"
           lineHeight="30px"
-          fontSize="22px"
+          fontSize="16px"
           data-sal="slide-left"
           data-sal-delay="100"
           data-sal-easing="ease"
@@ -133,7 +134,7 @@ const AboutMe = () => {
         <StyledParagraph
           textTransform="none"
           lineHeight="30px"
-          fontSize="22px"
+          fontSize="16px"
           data-sal="slide-right"
           data-sal-delay="100"
           data-sal-easing="ease"
@@ -146,7 +147,7 @@ const AboutMe = () => {
         <StyledParagraph
           textTransform="none"
           lineHeight="30px"
-          fontSize="22px"
+          fontSize="16px"
           className="notMobile"
           data-sal="slide-left"
           data-sal-delay="100"

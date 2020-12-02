@@ -22,8 +22,12 @@ const FaqPage = props => {
           lineHeight="30px"
           textAlign="center"
           padding="0 10px 50px 10px"
+          data-sal="slide-right"
+          data-sal-delay="400"
+          data-sal-easing="ease"
         >
-          Below you will find a list of the most asked questions by clients.{" "}
+          Below you will find a list of the most asked questions by Naomi's
+          clients.
           <br></br> If you have any further questions, Please don't hesitate to
           get in contact
         </Paragraph>

@@ -97,7 +97,14 @@ const ContactForm = props => {
       other="margin-bottom: 50px;"
     >
       <Container flexDirection="column">
-        <HeadingH2 fontSize="16px" textTransform="none" padding="0 0 15px 0">
+        <HeadingH2
+          fontSize="16px"
+          textTransform="none"
+          padding="0 0 15px 0"
+          data-sal="slide-left"
+          data-sal-delay="100"
+          data-sal-easing="ease"
+        >
           Required*
         </HeadingH2>
         <Form

@@ -15,6 +15,9 @@ const ContactPage = props => {
         lineHeight="30px"
         textAlign="center"
         padding="0 10px 50px 10px"
+        data-sal="slide-right"
+        data-sal-delay="100"
+        data-sal-easing="ease"
       >
         Please use the below form to get in contact with Naomi.
       </Paragraph>

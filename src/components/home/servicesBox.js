@@ -33,6 +33,7 @@ const StyledServiceBox = styled(Container)`
 
 const ImgContainer = styled(Container)`
   width: 100%;
+  height: 200px;
 
   img {
     object-fit: cover;
@@ -91,7 +92,7 @@ const ServiceBox = props => {
         <HeadingH3
           color="black"
           padding="5px 0 15px 0"
-          fontSize="40px"
+          fontSize="30px"
           fontWeight="700"
         >
           {props.title}
@@ -100,6 +101,7 @@ const ServiceBox = props => {
           lineHeight="30px"
           padding="0 20px"
           fontSize="16px"
+          textAlign="center"
           // className="notMobile"
         >
           {props.subtext}

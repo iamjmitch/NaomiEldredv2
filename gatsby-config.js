@@ -1,8 +1,24 @@
 module.exports = {
   siteMetadata: {
-    title: `Naomi Eldred - Make-up Artist | North Lakes`,
-    description: `Professional Makeup Artist Servicing North Lakes, Mango Hill and North Brisbane Suburbs Specialising in Weddings, Bridal, Formal Events and M.A.C Make-up`,
-    author: `@iamjmitch`,
+    title: "Naomi Eldred - Makeup Artist | North Lakes, Brisbane",
+    description:
+      "Professional Makeup Artist Servicing North Lakes, Mango Hill and North Brisbane Suburbs Specialising in Weddings, Bridal, Formal Events and M.A.C Make-up",
+    keywords: [
+      "makeup artist",
+      "make-up artist",
+      "formal",
+      "bridal",
+      "makeup",
+      "north lakes",
+      "brisbane",
+      "mango hill",
+    ],
+    url: "https://naomieldred.netlify.app/",
+    ogImage: "static.og-image.png",
+    favicon: {
+      ico: "static/favicon.ico",
+    },
+    lang: `en`,
   },
   plugins: [
     {

@@ -147,14 +147,20 @@ const AboutMe = () => {
         <HalfStyledContainer
           className="rightCol"
           flexDirection="column"
-          padding="10px 20px 0 20px"
+          padding="50px"
           maxWidth="896px"
+          data-sal="slide-right"
+          data-sal-delay="400"
+          data-sal-easing="ease"
         >
           <HeadingH3
             fontSize="25px"
             textTransform="none"
             color={PINK}
             padding="15px 15px 5px 15px"
+            data-sal="slide-left"
+            data-sal-delay="100"
+            data-sal-easing="ease"
           >
             Naomi has over 13 years of industry experience
           </HeadingH3>
@@ -218,13 +224,7 @@ const AboutMe = () => {
           margin="0"
           media="screen and (max-width: 1100px) {padding: 20px 0;} @media screen and (max-width: 725px){max-height: unset;}"
         >
-          <AboutPhoto
-            src={AboutImg}
-            alt=""
-            data-sal="fade"
-            data-sal-delay="400"
-            data-sal-easing="ease"
-          />
+          <AboutPhoto src={AboutImg} alt="naomi eldred" />
         </HalfStyledContainer>
       </StyledContainer>
       <Container
