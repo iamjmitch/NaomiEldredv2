@@ -1,10 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
-
-import { Container, HeadingH3, HeadingH2, Paragraph } from "../../styles/shared"
-import { FONT_FAMILY } from "../../styles/typography"
-import { PINK } from "../../styles/colors"
+import { Container, HeadingH3 } from "../../styles/shared"
 import { INSTALIST } from "../home/instList"
 import InstaPic from "./instaPic"
 
@@ -29,11 +25,19 @@ const StyledGallery = styled.div`
   @media screen and (max-width: 1300px) {
     width: 100%;
     padding: 0 20px;
+    grid-template-columns: repeat(auto-fit, 23vw);
+    grid-auto-rows: 23vw;
     
     grid-gap: 0.5em;
     h3 {
-      font-size: 9vw;
+      font-size: 40px;
     }
+  }
+
+  @media screen and (max-width: 743px) {
+    
+    grid-template-columns: repeat(auto-fit, 22vw);
+    grid-auto-rows: 22vw;
   }
   @media screen and (max-width: 725px) {
     grid-template-columns: repeat(auto-fit, 150px);
@@ -61,7 +65,7 @@ const InstaGallery = () => {
   return (
     <Container
       flexDirection="column"
-      media="screen and (max-width: 1000px) {h3 {font-size: 9vw;}}"
+      media="screen and (max-width: 1000px) {h3 {font-size: 40px;}}"
       other="h3{letter-spacing: 5px;}"
     >
       <HeadingH3

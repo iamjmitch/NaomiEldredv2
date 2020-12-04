@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import styled from "styled-components"
 import { Container, Paragraph } from "../../styles/shared"
-
-import { SERVICECARDINFO } from "./serviceCardInfo"
 
 const StyledContainer = styled(Container)`
   padding: 20px 15px;

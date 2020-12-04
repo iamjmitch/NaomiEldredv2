@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react"
-import { Link } from "gatsby"
-import styled from "styled-components"
-import { Container, HeadingH1, Paragraph } from "../styles/shared"
+import React from "react"
+
+import { Paragraph } from "../styles/shared"
 import Layout from "../components/global/layout"
 import PageHeader from "../components/global/pageHeader"
 import ContactForm from "../components/contact/contact"

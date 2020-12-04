@@ -26,6 +26,7 @@ const StyledServiceBox = styled(Container)`
   @media screen and (max-width: 1129px) {
     margin-bottom: 0;
   }
+
   @media screen and (max-width: 725px) {
     box-shadow: none;
   }
@@ -59,9 +60,24 @@ const TextHolder = styled(Container)`
       font-size: 36px;
     }
   }
+
+  @media screen and (max-width: 950px) {
+    padding: 20px 0;
+    h3 {
+      font-size: 25px !important;
+    }
+  }
+
   @media screen and (max-width: 725px) {
     .notMobile {
       display: none;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 20px 0;
+    h3 {
+      font-size: 30px !important;
     }
   }
 `
@@ -86,7 +102,7 @@ const ServiceBox = props => {
       data-sal-easing="ease"
     >
       <ImgContainer>
-        <img className="lazyload" data-src={props.image} />
+        <img className="lazyload" data-src={props.image} alt="decorative" />
       </ImgContainer>
       <TextHolder>
         <HeadingH3

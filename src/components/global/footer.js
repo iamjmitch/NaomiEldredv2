@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react"
-import { Link } from "gatsby"
+import React from "react"
+
 import styled from "styled-components"
 
 import Iamjmitch from "../../assets/svg/iamjmitch.svg"
@@ -7,7 +7,7 @@ import Facebook from "../../assets/svg/facebook.svg"
 import Instagram from "../../assets/svg/instagram.svg"
 
 import { Container, HeadingH5, Paragraph } from "../../styles/shared"
-import { NAVTRANSPARENT, NAVSOLID, WHITE, PINK } from "../../styles/colors"
+import { PINK } from "../../styles/colors"
 import { FONT_FAMILY_HEADING } from "../../styles/typography"
 
 const StyledFooter = styled(Container)`

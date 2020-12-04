@@ -1,8 +1,5 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
-
-import { Container, Paragraph } from "../../styles/shared"
-
 import Img from "gatsby-image"
 
 const StyledImg = styled.div`

@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 import ServiceBox from "./servicesBox"
 
-import { Container, ContainerGrid } from "../../styles/shared"
+import { ContainerGrid } from "../../styles/shared"
 
 import Service1 from "../../assets/img/home/service1.jpg"
 import Service2 from "../../assets/img/home/service2.jpg"
@@ -16,7 +16,7 @@ const StyledServiceBoxContainer = styled(ContainerGrid)`
   grid-gap: 30px;
   box-sizing: border-box;
   align-items: flex-start;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(254px, 1fr));
   justify-content: space-between;
   @media screen and (max-width: 1300px) {
     padding: 0 20px;
@@ -27,7 +27,16 @@ const StyledServiceBoxContainer = styled(ContainerGrid)`
 
     margin-top: 100px;
   }
+  @media screen and (max-width: 950px) {
+    grid-gap: 10px;
+  }
+  @media screen and (max-width: 824px) {
+    grid-gap: 5px;
+  }
 
+  @media screen and (max-width: 809px) {
+    grid-template-columns: repeat(auto-fit, minmax(314px, 1fr));
+  }
   @media screen and (max-width: 720px) {
     margin-top: 20px;
     margin-bottom: 0px;
@@ -35,6 +44,7 @@ const StyledServiceBoxContainer = styled(ContainerGrid)`
   @media screen and (max-width: 500px) {
     margin-top: 20px;
     grid-template-columns: 1fr;
+    grid-gap: 20px;
   }
 `
 

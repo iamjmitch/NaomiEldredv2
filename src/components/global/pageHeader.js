@@ -1,24 +1,22 @@
-import React, { useState, useEffect } from "react"
-import { Link } from "gatsby"
+import React from "react"
 import styled from "styled-components"
+import { Container, HeadingH1 } from "../../styles/shared"
 
-import Layout from "./layout"
+// --------Turned off for now ---------
 
-import { Container, HeadingH1, Paragraph } from "../../styles/shared"
-
-const ImgContainer = styled(Container)`
-  height: 250px;
-  margin-top: 5px;
-  overflow: hidden;
-  max-width: 1280px;
-  background-position: center;
-  @media screen and (max-width: 725px) {
-    height: 175px;
-  }
-  @media screen and (max-width: 500px) {
-    height: 100px;
-  }
-`
+// const ImgContainer = styled(Container)`
+//   height: 250px;
+//   margin-top: 5px;
+//   overflow: hidden;
+//   max-width: 1280px;
+//   background-position: center;
+//   @media screen and (max-width: 725px) {
+//     height: 175px;
+//   }
+//   @media screen and (max-width: 500px) {
+//     height: 100px;
+//   }
+// `
 
 const HeaderContainer = styled(Container)`
   flex-direction: column;

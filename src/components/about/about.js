@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Container, Paragraph, HeadingH2, HeadingH3 } from "../../styles/shared"
+import { Container, Paragraph, HeadingH3 } from "../../styles/shared"
 
 import { PINK } from "../../styles/colors"
 

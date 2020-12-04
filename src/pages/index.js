@@ -7,7 +7,7 @@ import ServiceBoxContainer from "../components/home/services"
 import CTA from "../components/home/cta"
 import InstaGallery from "../components/home/insta"
 
-import { Container, HeadingH3 } from "../styles/shared"
+import { Container } from "../styles/shared"
 
 const StyledContainer = styled(Container)``
 

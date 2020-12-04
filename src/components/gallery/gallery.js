@@ -4,7 +4,7 @@ import styled from "styled-components"
 import GalleryImage from "./galleryImage"
 import { PINK } from "../../styles/colors"
 
-import { Container, Paragraph, ContainerGrid } from "../../styles/shared"
+import { Container } from "../../styles/shared"
 
 const useGallery = () => {
   const data = useStaticQuery(graphql`
@@ -94,7 +94,7 @@ const Gallery = () => {
         ))}
       </StyledGallery>
       <Lightbox show={showLightbox} onClick={() => setShowLightbox(false)}>
-        <img src={selectedImage} />
+        <img src={selectedImage} alt="protfolio piece" />
       </Lightbox>
     </Container>
   )
