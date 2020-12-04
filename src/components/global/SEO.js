@@ -46,7 +46,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: `/og-image.png`,
+          content: `https://naomieldred.netlify.app/og-image.png`,
         },
 
         {
@@ -64,6 +64,10 @@ function SEO({ description, lang, meta, title }) {
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          property: `twitter:image`,
+          content: `https://naomieldred.netlify.app/og-image.png`,
         },
       ].concat(meta)}
     />
