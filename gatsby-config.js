@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Naomi Eldred - Makeup Artist | North Lakes, Brisbane",
+    title: "Naomi Eldred - Makeup Artist",
     description:
       "Professional Makeup Artist Servicing North Lakes, Mango Hill and North Brisbane Suburbs Specialising in Weddings, Bridal, Formal Events and M.A.C Make-up",
     keywords: [

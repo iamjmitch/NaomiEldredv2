@@ -12,6 +12,7 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             keywords
+            siteUrl
           }
         }
       }
@@ -51,7 +52,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: `https://naomieldred.netlify.app/og-image.jpg`,
+          content: `${site.siteMetadata.siteUrl}og-image.jpg`,
         },
 
         {
