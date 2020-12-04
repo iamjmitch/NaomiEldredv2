@@ -13,14 +13,15 @@ module.exports = {
       "brisbane",
       "mango hill",
     ],
-    url: "https://naomieldred.netlify.app/",
-    ogImage: "static.og-image.png",
+    siteUrl: "https://naomieldred.netlify.app/",
+
     favicon: {
       ico: "static/favicon.ico",
     },
     lang: `en`,
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
