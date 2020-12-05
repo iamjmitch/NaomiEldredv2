@@ -59,7 +59,7 @@ const ServiceBoxContainer = () => {
       ></ServiceBox>
       <ServiceBox
         title="Formals"
-        subtext="Naomi will enure that you get a look to highlight your formal ensemble"
+        subtext="With a vast knowledge of formal makeup, Naomi will enure that you get a look to highlight your formal ensemble"
         image={Service2}
         class="middle"
         dataSal="fade"
