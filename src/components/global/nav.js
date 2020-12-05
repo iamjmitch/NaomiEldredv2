@@ -21,7 +21,7 @@ const StyledNav = styled(Container)`
   padding: ${props => (props.scrolled ? "12px 0" : "12px 0 20px 0")};
   ${props => props.pageName !== "home" && `background:${NAVSOLID}`};
   ${props => props.pageName !== "home" && `padding:12px 0`};
-  @media screen and (max-width: 725px) {
+  @media screen and (max-width: 800px) {
     display: none;
     min-height: unset;
   }

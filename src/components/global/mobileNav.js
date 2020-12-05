@@ -44,7 +44,7 @@ const StyledMobileNavBar = styled(Container)`
     props.pageName !== "home" && "box-shadow:0px 1px 7px 1px #0000009c"};
   flex-wrap: nowrap;
   padding: 0 10px;
-  @media screen and (max-width: 725px) {
+  @media screen and (max-width: 800px) {
     display: flex;
   }
 `
