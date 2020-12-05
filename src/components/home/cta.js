@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-import { Container, HeadingH2 } from "../../styles/shared"
+import { Container, HeadingH2, Paragraph } from "../../styles/shared"
 import { FONT_FAMILY } from "../../styles/typography"
 import { PINK } from "../../styles/colors"
 import Button from "@material-ui/core/Button"
@@ -47,7 +47,7 @@ const StyledContainer = styled(Container)`
   @media screen and (max-width: 725px) {
     &.mobile {
       display: flex;
-      h2 {
+      p {
         font-size: 8vw;
       }
     }
@@ -72,7 +72,7 @@ const CTA = props => {
       className={props.className}
     >
       <Span />
-      <HeadingH2
+      <Paragraph
         color="white"
         fontSize="40px"
         padding="0 20px 20px 20px"
@@ -81,7 +81,7 @@ const CTA = props => {
         data-sal-easing="ease"
       >
         Ready to add some glam to your next event?
-      </HeadingH2>
+      </Paragraph>
       <StyledLink
         to="/contact"
         data-sal="slide-right"
