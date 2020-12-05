@@ -94,8 +94,8 @@ const Nav = props => {
           Services
         </StyledLink>
         <StyledLink
-          className={props.pageName === "gallery" ? "active" : ""}
-          to="/gallery"
+          className={props.pageName === "portfolio" ? "active" : ""}
+          to="/portfolio"
         >
           Gallery
         </StyledLink>
