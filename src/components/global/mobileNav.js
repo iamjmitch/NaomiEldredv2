@@ -234,7 +234,7 @@ const MobileNav = props => {
           to="/portfolio"
           onClick={() => setMenuOpen(false)}
         >
-          Gallery
+          Portfolio
         </StyledLink>
         <StyledLink
           className={props.pageName === "faq" ? "active" : ""}

@@ -97,7 +97,7 @@ const Nav = props => {
           className={props.pageName === "portfolio" ? "active" : ""}
           to="/portfolio"
         >
-          Gallery
+          Portfolio
         </StyledLink>
       </Container>
       <StyledLink to="/">
