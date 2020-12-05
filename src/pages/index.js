@@ -11,10 +11,15 @@ import { Container } from "../styles/shared"
 
 const StyledContainer = styled(Container)``
 
+const StyledH1 = styled.h1`
+  display: none;
+`
+
 const IndexPage = () => {
   return (
     <Layout pageName="home" title="Home">
       <Hero />
+
       <StyledContainer background="white" flexDirection="column">
         <AboutMe />
         <CTA className="mobile" />

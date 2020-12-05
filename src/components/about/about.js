@@ -147,7 +147,7 @@ const AboutMe = () => {
         <HalfStyledContainer
           className="rightCol"
           flexDirection="column"
-          padding="50px"
+          padding="20px"
           maxWidth="896px"
           data-sal="slide-right"
           data-sal-delay="400"
