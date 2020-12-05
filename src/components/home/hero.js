@@ -82,7 +82,7 @@ const Hero = () => {
         <img
           srcSet={`${heroImg500} 500w, ${heroImg725} 725w, ${heroImg1280} 1280w, ${heroImg1920} 1920w, ${heroImgFull} 2200w `}
           src={heroImg725}
-          alt=""
+          alt="Hero"
         />
       </StyledSpan>
       <LogoContainer>

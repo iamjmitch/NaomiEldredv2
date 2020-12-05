@@ -168,7 +168,7 @@ const AboutMe = () => {
         alignItems="center"
         minWidth="200px"
       >
-        <AboutPhoto src={AboutImg} alt="" />
+        <AboutPhoto src={AboutImg} alt="Naomi Eldred" />
       </HalfStyledContainer>
     </StyledContainer>
   )
