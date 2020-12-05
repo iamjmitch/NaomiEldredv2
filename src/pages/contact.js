@@ -22,10 +22,11 @@ const ContactPage = props => {
         data-sal="slide-right"
         data-sal-delay="100"
         data-sal-easing="ease"
-        other="b{font-weight:600;}"
+        other="b{font-weight:600;color:rgb(196, 70, 119);}"
       >
-        Please use the below form to get in contact with Naomi. <br></br>
         <b>Due to COVID-19, Naomi is not currently taking bookings.</b>
+        <br></br>
+        Please use the below form to get in contact with Naomi.
       </Paragraph>
       <ContactForm />
     </Layout>
