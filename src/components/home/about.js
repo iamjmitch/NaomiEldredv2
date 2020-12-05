@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Container, Paragraph, HeadingH2, HeadingH3 } from "../../styles/shared"
+import { Container, Paragraph, HeadingH2, HeadingH1 } from "../../styles/shared"
 
 import { PINK } from "../../styles/colors"
 
@@ -26,7 +26,7 @@ const StyledContainer = styled(Container)`
     h2 {
       font-size: 50px;
     }
-    h3 {
+    h1 {
       font-size: 18px;
     }
     p {
@@ -111,14 +111,14 @@ const AboutMe = () => {
           About Naomi
         </HeadingH2>
 
-        <HeadingH3
+        <HeadingH1
           fontSize="20px"
           textTransform="none"
           color="#000000b0"
           padding="5px 15px"
         >
           Naomi has over 13 years of industry experience
-        </HeadingH3>
+        </HeadingH1>
         <Span />
         <StyledParagraph
           textTransform="none"
