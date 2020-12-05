@@ -7,7 +7,12 @@ import { FAQLIST } from "../components/faq/faqList"
 
 const FaqPage = props => {
   return (
-    <Layout margin="112.578px 0 0 0" pageName="faq" title="FAQ">
+    <Layout
+      margin="112.578px 0 0 0"
+      pageName="faq"
+      title="FAQ"
+      description="Frequently Asked Questions - Naomi Eldred Makeup Artist North lakes and Mango Hill"
+    >
       <PageHeader title="FAQ" />
       <Container
         maxWidth="800px"

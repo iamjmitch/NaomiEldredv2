@@ -7,7 +7,12 @@ import ContactForm from "../components/contact/contact"
 
 const ContactPage = props => {
   return (
-    <Layout margin="112.578px 0 0 0" pageName="contact" title="Contact Naomi">
+    <Layout
+      margin="112.578px 0 0 0"
+      pageName="contact"
+      title="Contact Naomi"
+      description="Book an appointment - Naomi Eldred Makeup Artist North lakes and Mango Hill"
+    >
       <PageHeader title="Contact Naomi" />
       <Paragraph
         fontSize="18px"

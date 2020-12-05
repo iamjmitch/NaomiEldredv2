@@ -35,7 +35,12 @@ const StyledMobileContainer = styled(Container)`
 
 const ServicesPage = props => {
   return (
-    <Layout margin="112.578px 0 0 0" pageName="services" title="Services">
+    <Layout
+      margin="112.578px 0 0 0"
+      pageName="services"
+      title="Services"
+      description="Services and pricing - Naomi Eldred Makeup Artist North lakes and Mango Hill"
+    >
       <PageHeader
         title="Services"
         img="https://naomieldred.com/wp-content/uploads/2018/06/20180604_121945-1.jpg"
