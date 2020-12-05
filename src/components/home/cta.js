@@ -79,6 +79,7 @@ const CTA = props => {
         data-sal="slide-left"
         data-sal-delay="100"
         data-sal-easing="ease"
+        other="z-index:1; font-weight:700;"
       >
         Ready to add some glam to your next event?
       </Paragraph>
