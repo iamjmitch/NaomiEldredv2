@@ -23,7 +23,8 @@ const ContactPage = props => {
         data-sal-delay="100"
         data-sal-easing="ease"
       >
-        Please use the below form to get in contact with Naomi.
+        Please use the below form to get in contact with Naomi. <br></br>
+        <br></br> Due to COVID-19, Naomi is not currently taking bookings.
       </Paragraph>
       <ContactForm />
     </Layout>
