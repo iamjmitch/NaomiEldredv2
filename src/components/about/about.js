@@ -170,7 +170,7 @@ const AboutMe = () => {
             lineHeight="30px"
             fontSize="1rem"
           >
-            As a qualified makeup artist with over 1 years industry experience,
+            As a qualified makeup artist with over 13 years industry experience,
             Naomi has worked for some of the worlds leading makeup companies,
             with most of her time spent with M.A.C cosmetics. Her years of
             experience with this leading international brand has given her the

@@ -13,7 +13,7 @@ module.exports = {
       "brisbane",
       "mango hill",
     ],
-    siteUrl: "https://naomieldred.netlify.app/",
+    siteUrl: "https://naomieldred.com/",
 
     favicon: {
       ico: "static/favicon.ico",
