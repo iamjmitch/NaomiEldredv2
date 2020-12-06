@@ -32,6 +32,7 @@ const LogoContainer = styled(Container)`
     padding: 0 30px;
     width: auto;
     height: 20vh;
+    max-height: 165px;
     overflow: visible;
   }
   @media screen and (max-width: 1100px) {
