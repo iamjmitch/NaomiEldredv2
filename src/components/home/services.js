@@ -53,13 +53,13 @@ const ServiceBoxContainer = () => {
     <StyledServiceBoxContainer gridGap="unset">
       <ServiceBox
         title="Weddings"
-        subtext="Having years of specialisation in wedding makeup application, Naomi is sure to help enure your special day is memorable."
+        subtext="Having years of specialisation in wedding makeup application, Naomi will help ensure your special day is memorable."
         image={Service1}
         dataSal="fade"
       ></ServiceBox>
       <ServiceBox
         title="Formals"
-        subtext="With a vast knowledge of formal makeup, Naomi will enure that you get a look to highlight your formal ensemble"
+        subtext="With a vast knowledge of formal makeup, Naomi will ensure that you get a look to highlight your formal ensemble"
         image={Service2}
         class="middle"
         dataSal="fade"
