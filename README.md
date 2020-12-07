@@ -1,6 +1,6 @@
 # Naomieldred.com (version 2)
 
-![alt text](https://naomieldred.com/screenshot.jpg "Screenshot")
+![Screenshot](https://naomieldred.com/screenshot.jpg)
 
 Remake of website for naomieldred.com. Old design used a customised WordPress theme. Redesigned and created in GatsbyJS
 
