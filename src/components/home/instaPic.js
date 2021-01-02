@@ -14,7 +14,13 @@ const InstaPic = props => {
   return (
     <StyledImg data-sal="fade" data-sal-delay="100" data-sal-easing="ease">
       <a href={props.url} target="_blank" rel="noreferrer">
-        <img className="lazyload" data-src={props.img} alt="from Instagram" />
+        <img
+          className="lazyload"
+          data-src-set={`./insta/200w/${props.img} 200w, ./insta/400w/${props.img} 400w, ./insta/full/${props.img} 800w`}
+          data-src={`./insta/full/${props.img}`}
+          sizes="50vw"
+          alt="from Instagram"
+        />
       </a>
     </StyledImg>
   )
