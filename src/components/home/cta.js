@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-import { Container, HeadingH2, Paragraph } from "../../styles/shared"
+import { Container, Paragraph } from "../../styles/shared"
 import { FONT_FAMILY } from "../../styles/typography"
 import { PINK } from "../../styles/colors"
 import Button from "@material-ui/core/Button"
