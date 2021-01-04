@@ -42,6 +42,12 @@ module.exports = {
     },
     `gatsby-plugin-scroll-reveal`,
     {
+      resolve: `gatsby-plugin-clicky`,
+      options: {
+        siteId: "101292479",
+      },
+    },
+    {
       resolve: `gatsby-remark-images`,
     },
     `gatsby-remark-lazy-load`,

@@ -20,6 +20,7 @@ Remake of website for naomieldred.com. Old design used a customised WordPress th
 - gatsby-plugin-material-ui
 - gatsby-plugin-scroll-reveal
 - gatsby-remark-images
+- gatsby-plugin-clicky
 
 ## Fonts Used
 
