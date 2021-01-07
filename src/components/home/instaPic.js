@@ -7,6 +7,8 @@ const StyledImg = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.2s
+    opacity: 1;
   }
   a img:hover {
     opacity: 0.8;
