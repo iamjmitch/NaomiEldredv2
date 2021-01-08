@@ -62,29 +62,48 @@ const Submit = styled(Button)`
 
 const ContactForm = props => {
   const [formText, setFormText] = useState("SEND")
+  const [isBot, setIsBot] = useState(false)
   const handleSubmit = event => {
     event.preventDefault()
     setFormText("SENDING...")
     let contactForm = document.querySelector("#contactForm")
+    let messageData = document.querySelector("#message").value
+    let honeyPVal = document.querySelector("#honey")
     const formData = new FormData(contactForm)
-    fetch(contactForm.getAttribute("action"), {
-      method: "POST",
-      headers: {
-        Accept: "application/x-www-form-urlencoded;charset=UTF-8",
-        "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
-      },
-      body: new URLSearchParams(formData).toString(),
-    }).then(res => {
-      if (res) {
-        setTimeout(function () {
-          setFormText("MESSAGE SENT")
-        }, 2000)
-        contactForm.reset()
-        setTimeout(function () {
-          setFormText("SEND")
-        }, 7000)
+
+    const handleSend = () => {
+      fetch(contactForm.getAttribute("action"), {
+        method: "POST",
+        headers: {
+          Accept: "application/x-www-form-urlencoded;charset=UTF-8",
+          "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+        },
+        body: new URLSearchParams(formData).toString(),
+      }).then(res => {
+        if (res) {
+          setTimeout(function () {
+            setFormText("MESSAGE SENT")
+          }, 2000)
+          contactForm.reset()
+          setTimeout(function () {
+            setFormText("SEND")
+          }, 7000)
+        }
+      })
+    }
+
+    if (messageData.includes("http") || messageData.includes(".com")) {
+      if (!isBot) {
+        setIsBot(true)
+        setFormText("Please Prove You Are Human")
+      } else if (honeyPVal.value === "4" || honeyPVal.value === 4) {
+        handleSend()
+      } else {
+        setFormText("Try Again")
       }
-    })
+    } else {
+      handleSend()
+    }
   }
 
   return (
@@ -163,6 +182,14 @@ const ContactForm = props => {
               <textarea id="message" name="message" required rows="10" />
             </LineWrapper>
           </LineCont>
+          {isBot && (
+            <LineCont>
+              <LineWrapper>
+                <img src="./captcha.png" />
+                <input required type="number" id="honey" name="honey" />
+              </LineWrapper>
+            </LineCont>
+          )}
           <Container
             justifyContent="flex-start"
             padding=" 10px"
