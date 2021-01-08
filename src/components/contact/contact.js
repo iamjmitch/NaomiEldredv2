@@ -185,7 +185,7 @@ const ContactForm = props => {
           {isBot && (
             <LineCont>
               <LineWrapper>
-                <img src="./captcha.png" />
+                <img src="../captcha.png" />
                 <input required type="number" id="honey" name="honey" />
               </LineWrapper>
             </LineCont>
