@@ -92,7 +92,7 @@ const ContactForm = props => {
       })
     }
 
-    if (messageData.includes("http") || messageData.includes(".com")) {
+    if (messageData.includes("http") || messageData.includes(".com") || messageData.includes("www.") {
       if (!isBot) {
         setIsBot(true)
         setFormText("Please Prove You Are Human")
