@@ -4,6 +4,7 @@ import { Container, HeadingH2 } from "../../styles/shared"
 import { FONT_FAMILY } from "../../styles/typography"
 import { PINK } from "../../styles/colors"
 import Button from "@material-ui/core/Button"
+import { QuestionAnswer } from "@material-ui/icons"
 
 const Form = styled.form`
   width: 100%;
@@ -66,11 +67,15 @@ const ContactForm = props => {
   const handleSubmit = event => {
     event.preventDefault()
     setFormText("SENDING...")
+    //get form
     let contactForm = document.querySelector("#contactForm")
+    //get value of the message textbox
     let messageData = document.querySelector("#message").value
+    //get value of the honeypot question
     let honeyPVal = document.querySelector("#honey")
     const formData = new FormData(contactForm)
 
+    //function to handle the sending of form on successful validation
     const handleSend = () => {
       fetch(contactForm.getAttribute("action"), {
         method: "POST",
@@ -93,13 +98,16 @@ const ContactForm = props => {
     }
 
     if (
+      //if the message box contains any sort of link to a website, validation will fail and ask to prove if human. Capture Question is image
       messageData.includes("http") ||
       messageData.includes(".com") ||
       messageData.includes("www.")
     ) {
+      // triggers the initial bot check box
       if (!isBot) {
         setIsBot(true)
         setFormText("Please Prove You Are Human")
+        // currently hard coded Question Answer. may make it slightly more challenging based on success rate of blocking bots
       } else if (honeyPVal.value === "4" || honeyPVal.value === 4) {
         handleSend()
       } else {
@@ -186,6 +194,7 @@ const ContactForm = props => {
               <textarea id="message" name="message" required rows="10" />
             </LineWrapper>
           </LineCont>
+          {/* only shows if fails bot validation */}
           {isBot && (
             <LineCont>
               <LineWrapper>
