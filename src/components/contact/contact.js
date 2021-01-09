@@ -4,7 +4,6 @@ import { Container, HeadingH2 } from "../../styles/shared"
 import { FONT_FAMILY } from "../../styles/typography"
 import { PINK } from "../../styles/colors"
 import Button from "@material-ui/core/Button"
-import { QuestionAnswer } from "@material-ui/icons"
 
 const Form = styled.form`
   width: 100%;
