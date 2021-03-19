@@ -17,21 +17,7 @@ body {
     -webkit-tap-highlight-color: transparent;
   }
 
-  /* width */
-::-webkit-scrollbar {
-  width: 20px;
-}
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #c44677;
-  border-radius: 10px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #b9215c;
-}
 
 `
 
