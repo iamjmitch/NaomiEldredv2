@@ -49,13 +49,13 @@ const Footer = () => {
       <StyledFooter>
         <HeadingH5 fontSize="18px">Connect With Naomi</HeadingH5>
         <Container padding="20px 0">
-          <SocialLink
+          {/* <SocialLink
             href="https://www.facebook.com/NaomiEldredMakeup"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Facebook />
-          </SocialLink>
+          </SocialLink> */}
           <SocialLink
             href="https://www.instagram.com/naomieldredmakeup/"
             target="_blank"
