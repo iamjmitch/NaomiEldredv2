@@ -74,6 +74,16 @@ const ContactForm = props => {
     let honeyPVal = document.querySelector("#honey")
     const formData = new FormData(contactForm)
 
+    const fakeSend = () => {
+      setTimeout(function () {
+        setFormText("MESSAGE SENT")
+      }, 2000)
+      contactForm.reset()
+      setTimeout(function () {
+        setFormText("SEND")
+      }, 7000)
+    }
+
     //function to handle the sending of form on successful validation
     const handleSend = () => {
       fetch(contactForm.getAttribute("action"), {
@@ -86,7 +96,7 @@ const ContactForm = props => {
       }).then(res => {
         if (res) {
           setTimeout(function () {
-            setFormText("MESSAGE SENT")
+            setFormText("SENT")
           }, 2000)
           contactForm.reset()
           setTimeout(function () {
@@ -100,18 +110,11 @@ const ContactForm = props => {
       //if the message box contains any sort of link to a website, validation will fail and ask to prove if human. Capture Question is image
       messageData.includes("http") ||
       messageData.includes(".com") ||
+      messageData.includes("$ ") ||
       messageData.includes("www.")
     ) {
-      // triggers the initial bot check box
-      if (!isBot) {
-        setIsBot(true)
-        setFormText("Please Prove You Are Human")
-        // currently hard coded Question Answer. may make it slightly more challenging based on success rate of blocking bots
-      } else if (honeyPVal.value === "4" || honeyPVal.value === 4) {
-        handleSend()
-      } else {
-        setFormText("Try Again")
-      }
+      //trigger fake send
+      fakeSend()
     } else {
       handleSend()
     }
