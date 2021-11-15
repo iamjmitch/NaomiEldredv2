@@ -24,11 +24,13 @@ const ContactPage = props => {
         data-sal-easing="ease"
         other="b{font-weight:600;color:rgb(196, 70, 119);}"
       >
-        <b>Due to COVID-19, Naomi is currently taking limited bookings.</b>
+        <b>Naomi Is Not Currently Taking On Any New Clients</b>
         <br></br>
-        Please use the below form to get in contact with Naomi.
+        Due To A Large Volume Of Bookings, Naomi Is Not Currently Unable To Take
+        On New Bookings <br></br>This Page Will Be Updated Once New Booking Are
+        Being Accepted
       </Paragraph>
-      <ContactForm />
+      {/* <ContactForm /> */}
     </Layout>
   )
 }
