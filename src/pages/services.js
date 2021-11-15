@@ -57,26 +57,6 @@ const ServicesPage = props => {
         padding="0 20px"
         margin="0 0 20px 0"
       >
-        <Paragraph
-          fontSize="12px"
-          lineHeight="30px"
-          textAlign="center"
-          padding="0 10px 50px 10px"
-          data-sal="slide-right"
-          data-sal-delay="100"
-          data-sal-easing="ease"
-          other="b{font-weight:600;color:rgb(196, 70, 119); font-size:1.2em;}"
-        >
-          <b>Please Note: Naomi is not currently taking on any new clients</b>
-          {/* <br></br>
-        <br></br>
-        Due to a large number of recent bookings, Naomi is currently unable to
-        take on any new bookings. <br></br>Your interest in Naomi's services are
-        greatly appreciated
-        <br></br>
-        <br></br>
-        <b>This page will be updated once new bookings are being accepted</b> */}
-        </Paragraph>
         {SERVICECARDINFO.map(item => {
           return (
             <ServiceCard
