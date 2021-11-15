@@ -1,8 +1,8 @@
 import React from "react"
 
 import styled from "styled-components"
-import { Container, ContainerGrid } from "../styles/shared"
-import { Paragraph } from "../styles/shared"
+import { Container, ContainerGrid, Paragraph } from "../styles/shared"
+
 import Layout from "../components/global/layout"
 import PageHeader from "../components/global/pageHeader"
 import {

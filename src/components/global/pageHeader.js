@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Container, HeadingH1 } from "../../styles/shared"
-import { Paragraph } from "../styles/shared"
+import { Container, HeadingH1, Paragraph } from "../../styles/shared"
 
 // --------Turned off for now ---------
 
@@ -55,14 +54,6 @@ const PageHeader = props => {
         other="b{font-weight:600;color:rgb(196, 70, 119); font-size:1.2em;}"
       >
         <b>Please Note: Naomi is not currently taking on any new clients</b>
-        {/* <br></br>
-        <br></br>
-        Due to a large number of recent bookings, Naomi is currently unable to
-        take on any new bookings. <br></br>Your interest in Naomi's services are
-        greatly appreciated
-        <br></br>
-        <br></br>
-        <b>This page will be updated once new bookings are being accepted</b> */}
       </Paragraph>
     </HeaderContainer>
   )
