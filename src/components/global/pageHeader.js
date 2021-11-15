@@ -54,7 +54,7 @@ const PageHeader = props => {
           data-sal-easing="ease"
           other="b{font-weight:600;color:rgb(196, 70, 119); font-size:1.2em;}"
         >
-          <b>Please Note: Naomi is not currently taking on any new clients</b>
+          <b>Please Note: Naomi is not currently taking on any new bookings</b>
         </Paragraph>
       )}
     </HeaderContainer>
