@@ -32,7 +32,7 @@ const ContactPage = props => {
         greatly appreciated
         <br></br>
         <br></br>
-        <b>This page will be updated once new bookings sre being accepted</b>
+        <b>This page will be updated once new bookings are being accepted</b>
       </Paragraph>
       {/* <ContactForm /> */}
     </Layout>
