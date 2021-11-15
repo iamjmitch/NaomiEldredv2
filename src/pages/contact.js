@@ -26,8 +26,8 @@ const ContactPage = props => {
       >
         <b>Naomi Is Not Currently Taking On Any New Clients</b>
         <br></br>
-        Due To A Large Volume Of Bookings, Naomi Is Not Currently Unable To Take
-        On New Bookings <br></br>This Page Will Be Updated Once New Booking Are
+        Due To A Large Volume Of Bookings, Naomi Is Currently Unable To Take On
+        New Bookings <br></br>This Page Will Be Updated Once New Booking Are
         Being Accepted
       </Paragraph>
       {/* <ContactForm /> */}
