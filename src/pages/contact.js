@@ -28,8 +28,8 @@ const ContactPage = props => {
         <br></br>
         <br></br>
         Due to a large number of recent bookings, Naomi is currently unable to
-        take on any new bookings. Your interest in Naomi's services are greatly
-        appreciated
+        take on any new bookings. <br></br>Your interest in Naomi's services are
+        greatly appreciated
         <br></br>
         <br></br>
         <b>This page will be updated once new bookings sre being accepted</b>
