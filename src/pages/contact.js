@@ -22,14 +22,17 @@ const ContactPage = props => {
         data-sal="slide-right"
         data-sal-delay="100"
         data-sal-easing="ease"
-        other="b{font-weight:600;color:rgb(196, 70, 119);}"
+        other="b{font-weight:600;color:rgb(196, 70, 119); font-size:1.2em;}"
       >
         <b>Naomi Is Not Currently Taking On Any New Clients</b>
         <br></br>
         <br></br>
-        Due To A Large Volume Of Bookings, Naomi Is Currently Unable To Take On
-        New Bookings <br></br>
-        <br></br>This Page Will Be Updated Once New Booking Are Being Accepted
+        Due To A Large Number Of Recent Bookings, Naomi Is Currently Unable To
+        Take On Any New Bookings. Your Interest In Naomi's Services Is Greatly
+        Appreciated
+        <br></br>
+        <br></br>
+        <b>This Page Will Be Updated Once New Bookings Are Being Accepted</b>
       </Paragraph>
       {/* <ContactForm /> */}
     </Layout>
