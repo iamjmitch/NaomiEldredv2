@@ -43,18 +43,20 @@ const PageHeader = props => {
       <HeadingH1 padding="50px 0" color="black">
         {props.title}
       </HeadingH1>
-      <Paragraph
-        fontSize="12px"
-        lineHeight="30px"
-        textAlign="center"
-        padding="0 10px 50px 10px"
-        data-sal="slide-right"
-        data-sal-delay="100"
-        data-sal-easing="ease"
-        other="b{font-weight:600;color:rgb(196, 70, 119); font-size:1.2em;}"
-      >
-        <b>Please Note: Naomi is not currently taking on any new clients</b>
-      </Paragraph>
+      {props.title != "Contact Naomi" && (
+        <Paragraph
+          fontSize="12px"
+          lineHeight="30px"
+          textAlign="center"
+          padding="0 10px 50px 10px"
+          data-sal="slide-right"
+          data-sal-delay="100"
+          data-sal-easing="ease"
+          other="b{font-weight:600;color:rgb(196, 70, 119); font-size:1.2em;}"
+        >
+          <b>Please Note: Naomi is not currently taking on any new clients</b>
+        </Paragraph>
+      )}
     </HeaderContainer>
   )
 }
